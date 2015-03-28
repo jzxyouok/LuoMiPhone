@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F5D1AAE1AC577BF0028536F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1AAD1AC577BF0028536F /* main.m */; };
+		7F5D1AB11AC577BF0028536F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1AB01AC577BF0028536F /* AppDelegate.m */; };
+		7F5D1ABA1AC577BF0028536F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5D1AB81AC577BF0028536F /* Main.storyboard */; };
+		7F5D1ABC1AC577BF0028536F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F5D1ABB1AC577BF0028536F /* Images.xcassets */; };
+		7F5D1ABF1AC577BF0028536F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F5D1ABD1AC577BF0028536F /* LaunchScreen.xib */; };
+		7F5D1ACB1AC577BF0028536F /* LuoMiPhoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1ACA1AC577BF0028536F /* LuoMiPhoneTests.m */; };
+		7F5D1AE11AC57D8F0028536F /* GroupBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1ADF1AC57D8F0028536F /* GroupBuyViewController.m */; };
+		7F5D1AE21AC57D8F0028536F /* GroupBuyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F5D1AE01AC57D8F0028536F /* GroupBuyViewController.xib */; };
+		7F5D1AE61AC57DA90028536F /* NearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1AE41AC57DA90028536F /* NearbyViewController.m */; };
+		7F5D1AE71AC57DA90028536F /* NearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F5D1AE51AC57DA90028536F /* NearbyViewController.xib */; };
+		7F5D1AEB1AC57DB40028536F /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1AE91AC57DB40028536F /* MyViewController.m */; };
+		7F5D1AEC1AC57DB40028536F /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F5D1AEA1AC57DB40028536F /* MyViewController.xib */; };
+		7F5D1AF01AC57DBE0028536F /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1AEE1AC57DBE0028536F /* MoreViewController.m */; };
+		7F5D1AF11AC57DBE0028536F /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F5D1AEF1AC57DBE0028536F /* MoreViewController.xib */; };
+		7F5D1AF61AC585F90028536F /* InfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1AF51AC585F90028536F /* InfiniteScrollView.m */; };
+		7F5D1B061AC58D5A0028536F /* GroupbyScrollTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1B041AC58D5A0028536F /* GroupbyScrollTableViewCell.m */; };
+		7F5D1B071AC58D5A0028536F /* GroupbyScrollTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F5D1B051AC58D5A0028536F /* GroupbyScrollTableViewCell.xib */; };
+		7F7CB95E1AC690DA0009738E /* LMRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7CB95C1AC690DA0009738E /* LMRefreshControl.m */; };
+		7F7CB95F1AC690DA0009738E /* LMRefreshControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7CB95D1AC690DA0009738E /* LMRefreshControl.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F5D1AC51AC577BF0028536F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F5D1AA01AC577BF0028536F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F5D1AA71AC577BF0028536F;
+			remoteInfo = LuoMiPhone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7F5D1AA81AC577BF0028536F /* LuoMiPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuoMiPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F5D1AAC1AC577BF0028536F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F5D1AAD1AC577BF0028536F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7F5D1AAF1AC577BF0028536F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7F5D1AB01AC577BF0028536F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7F5D1AB91AC577BF0028536F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7F5D1ABB1AC577BF0028536F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7F5D1ABE1AC577BF0028536F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7F5D1AC41AC577BF0028536F /* LuoMiPhoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuoMiPhoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F5D1AC91AC577BF0028536F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F5D1ACA1AC577BF0028536F /* LuoMiPhoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LuoMiPhoneTests.m; sourceTree = "<group>"; };
+		7F5D1ADE1AC57D8F0028536F /* GroupBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupBuyViewController.h; sourceTree = "<group>"; };
+		7F5D1ADF1AC57D8F0028536F /* GroupBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupBuyViewController.m; sourceTree = "<group>"; };
+		7F5D1AE01AC57D8F0028536F /* GroupBuyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupBuyViewController.xib; sourceTree = "<group>"; };
+		7F5D1AE31AC57DA90028536F /* NearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyViewController.h; sourceTree = "<group>"; };
+		7F5D1AE41AC57DA90028536F /* NearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyViewController.m; sourceTree = "<group>"; };
+		7F5D1AE51AC57DA90028536F /* NearbyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyViewController.xib; sourceTree = "<group>"; };
+		7F5D1AE81AC57DB40028536F /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		7F5D1AE91AC57DB40028536F /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		7F5D1AEA1AC57DB40028536F /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		7F5D1AED1AC57DBE0028536F /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		7F5D1AEE1AC57DBE0028536F /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		7F5D1AEF1AC57DBE0028536F /* MoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
+		7F5D1AF41AC585F90028536F /* InfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteScrollView.h; sourceTree = "<group>"; };
+		7F5D1AF51AC585F90028536F /* InfiniteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteScrollView.m; sourceTree = "<group>"; };
+		7F5D1B031AC58D5A0028536F /* GroupbyScrollTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupbyScrollTableViewCell.h; sourceTree = "<group>"; };
+		7F5D1B041AC58D5A0028536F /* GroupbyScrollTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupbyScrollTableViewCell.m; sourceTree = "<group>"; };
+		7F5D1B051AC58D5A0028536F /* GroupbyScrollTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupbyScrollTableViewCell.xib; sourceTree = "<group>"; };
+		7F7CB95B1AC690DA0009738E /* LMRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMRefreshControl.h; sourceTree = "<group>"; };
+		7F7CB95C1AC690DA0009738E /* LMRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMRefreshControl.m; sourceTree = "<group>"; };
+		7F7CB95D1AC690DA0009738E /* LMRefreshControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LMRefreshControl.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F5D1AA51AC577BF0028536F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F5D1AC11AC577BF0028536F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F5D1A9F1AC577BF0028536F = {
+			isa = PBXGroup;
+			children = (
+				7F5D1AAA1AC577BF0028536F /* LuoMiPhone */,
+				7F5D1AC71AC577BF0028536F /* LuoMiPhoneTests */,
+				7F5D1AA91AC577BF0028536F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F5D1AA91AC577BF0028536F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F5D1AA81AC577BF0028536F /* LuoMiPhone.app */,
+				7F5D1AC41AC577BF0028536F /* LuoMiPhoneTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F5D1AAA1AC577BF0028536F /* LuoMiPhone */ = {
+			isa = PBXGroup;
+			children = (
+				7F5D1B011AC58D130028536F /* CustomTableViewCell */,
+				7F5D1AF21AC585CC0028536F /* CustomLibrary */,
+				7F5D1AAF1AC577BF0028536F /* AppDelegate.h */,
+				7F5D1AB01AC577BF0028536F /* AppDelegate.m */,
+				7F5D1AB81AC577BF0028536F /* Main.storyboard */,
+				7F5D1ABB1AC577BF0028536F /* Images.xcassets */,
+				7F5D1ABD1AC577BF0028536F /* LaunchScreen.xib */,
+				7F5D1AAB1AC577BF0028536F /* Supporting Files */,
+				7F5D1ADE1AC57D8F0028536F /* GroupBuyViewController.h */,
+				7F5D1ADF1AC57D8F0028536F /* GroupBuyViewController.m */,
+				7F5D1AE01AC57D8F0028536F /* GroupBuyViewController.xib */,
+				7F5D1AE31AC57DA90028536F /* NearbyViewController.h */,
+				7F5D1AE41AC57DA90028536F /* NearbyViewController.m */,
+				7F5D1AE51AC57DA90028536F /* NearbyViewController.xib */,
+				7F5D1AE81AC57DB40028536F /* MyViewController.h */,
+				7F5D1AE91AC57DB40028536F /* MyViewController.m */,
+				7F5D1AEA1AC57DB40028536F /* MyViewController.xib */,
+				7F5D1AED1AC57DBE0028536F /* MoreViewController.h */,
+				7F5D1AEE1AC57DBE0028536F /* MoreViewController.m */,
+				7F5D1AEF1AC57DBE0028536F /* MoreViewController.xib */,
+			);
+			path = LuoMiPhone;
+			sourceTree = "<group>";
+		};
+		7F5D1AAB1AC577BF0028536F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F5D1AAC1AC577BF0028536F /* Info.plist */,
+				7F5D1AAD1AC577BF0028536F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F5D1AC71AC577BF0028536F /* LuoMiPhoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F5D1ACA1AC577BF0028536F /* LuoMiPhoneTests.m */,
+				7F5D1AC81AC577BF0028536F /* Supporting Files */,
+			);
+			path = LuoMiPhoneTests;
+			sourceTree = "<group>";
+		};
+		7F5D1AC81AC577BF0028536F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F5D1AC91AC577BF0028536F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F5D1AF21AC585CC0028536F /* CustomLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				7F7CB95A1AC690C20009738E /* LMPullToRefresh */,
+				7F5D1AF31AC585E80028536F /* InfiniteScrollView */,
+			);
+			name = CustomLibrary;
+			sourceTree = "<group>";
+		};
+		7F5D1AF31AC585E80028536F /* InfiniteScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				7F5D1AF41AC585F90028536F /* InfiniteScrollView.h */,
+				7F5D1AF51AC585F90028536F /* InfiniteScrollView.m */,
+			);
+			name = InfiniteScrollView;
+			sourceTree = "<group>";
+		};
+		7F5D1B011AC58D130028536F /* CustomTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F5D1B021AC58D1C0028536F /* 团购 */,
+			);
+			name = CustomTableViewCell;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		7F5D1B021AC58D1C0028536F /* 团购 */ = {
+			isa = PBXGroup;
+			children = (
+				7F5D1B031AC58D5A0028536F /* GroupbyScrollTableViewCell.h */,
+				7F5D1B041AC58D5A0028536F /* GroupbyScrollTableViewCell.m */,
+				7F5D1B051AC58D5A0028536F /* GroupbyScrollTableViewCell.xib */,
+			);
+			name = "团购";
+			sourceTree = "<group>";
+		};
+		7F7CB95A1AC690C20009738E /* LMPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				7F7CB95B1AC690DA0009738E /* LMRefreshControl.h */,
+				7F7CB95C1AC690DA0009738E /* LMRefreshControl.m */,
+				7F7CB95D1AC690DA0009738E /* LMRefreshControl.xib */,
+			);
+			name = LMPullToRefresh;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F5D1AA71AC577BF0028536F /* LuoMiPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F5D1ACE1AC577BF0028536F /* Build configuration list for PBXNativeTarget "LuoMiPhone" */;
+			buildPhases = (
+				7F5D1AA41AC577BF0028536F /* Sources */,
+				7F5D1AA51AC577BF0028536F /* Frameworks */,
+				7F5D1AA61AC577BF0028536F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LuoMiPhone;
+			productName = LuoMiPhone;
+			productReference = 7F5D1AA81AC577BF0028536F /* LuoMiPhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7F5D1AC31AC577BF0028536F /* LuoMiPhoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F5D1AD11AC577BF0028536F /* Build configuration list for PBXNativeTarget "LuoMiPhoneTests" */;
+			buildPhases = (
+				7F5D1AC01AC577BF0028536F /* Sources */,
+				7F5D1AC11AC577BF0028536F /* Frameworks */,
+				7F5D1AC21AC577BF0028536F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F5D1AC61AC577BF0028536F /* PBXTargetDependency */,
+			);
+			name = LuoMiPhoneTests;
+			productName = LuoMiPhoneTests;
+			productReference = 7F5D1AC41AC577BF0028536F /* LuoMiPhoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F5D1AA01AC577BF0028536F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = GF;
+				TargetAttributes = {
+					7F5D1AA71AC577BF0028536F = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					7F5D1AC31AC577BF0028536F = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 7F5D1AA71AC577BF0028536F;
+					};
+				};
+			};
+			buildConfigurationList = 7F5D1AA31AC577BF0028536F /* Build configuration list for PBXProject "LuoMiPhone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F5D1A9F1AC577BF0028536F;
+			productRefGroup = 7F5D1AA91AC577BF0028536F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F5D1AA71AC577BF0028536F /* LuoMiPhone */,
+				7F5D1AC31AC577BF0028536F /* LuoMiPhoneTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F5D1AA61AC577BF0028536F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F5D1ABA1AC577BF0028536F /* Main.storyboard in Resources */,
+				7F5D1ABF1AC577BF0028536F /* LaunchScreen.xib in Resources */,
+				7F5D1B071AC58D5A0028536F /* GroupbyScrollTableViewCell.xib in Resources */,
+				7F5D1AEC1AC57DB40028536F /* MyViewController.xib in Resources */,
+				7F7CB95F1AC690DA0009738E /* LMRefreshControl.xib in Resources */,
+				7F5D1AE71AC57DA90028536F /* NearbyViewController.xib in Resources */,
+				7F5D1AF11AC57DBE0028536F /* MoreViewController.xib in Resources */,
+				7F5D1ABC1AC577BF0028536F /* Images.xcassets in Resources */,
+				7F5D1AE21AC57D8F0028536F /* GroupBuyViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F5D1AC21AC577BF0028536F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F5D1AA41AC577BF0028536F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F5D1AF01AC57DBE0028536F /* MoreViewController.m in Sources */,
+				7F5D1B061AC58D5A0028536F /* GroupbyScrollTableViewCell.m in Sources */,
+				7F5D1AB11AC577BF0028536F /* AppDelegate.m in Sources */,
+				7F5D1AE61AC57DA90028536F /* NearbyViewController.m in Sources */,
+				7F7CB95E1AC690DA0009738E /* LMRefreshControl.m in Sources */,
+				7F5D1AAE1AC577BF0028536F /* main.m in Sources */,
+				7F5D1AE11AC57D8F0028536F /* GroupBuyViewController.m in Sources */,
+				7F5D1AF61AC585F90028536F /* InfiniteScrollView.m in Sources */,
+				7F5D1AEB1AC57DB40028536F /* MyViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F5D1AC01AC577BF0028536F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F5D1ACB1AC577BF0028536F /* LuoMiPhoneTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F5D1AC61AC577BF0028536F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F5D1AA71AC577BF0028536F /* LuoMiPhone */;
+			targetProxy = 7F5D1AC51AC577BF0028536F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7F5D1AB81AC577BF0028536F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F5D1AB91AC577BF0028536F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7F5D1ABD1AC577BF0028536F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F5D1ABE1AC577BF0028536F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F5D1ACC1AC577BF0028536F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7F5D1ACD1AC577BF0028536F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F5D1ACF1AC577BF0028536F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/LuoMiPhone/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = LuoMiPhone;
+			};
+			name = Debug;
+		};
+		7F5D1AD01AC577BF0028536F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/LuoMiPhone/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = LuoMiPhone;
+			};
+			name = Release;
+		};
+		7F5D1AD21AC577BF0028536F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LuoMiPhoneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = LuoMiPhoneTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuoMiPhone.app/LuoMiPhone";
+			};
+			name = Debug;
+		};
+		7F5D1AD31AC577BF0028536F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LuoMiPhoneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = LuoMiPhoneTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuoMiPhone.app/LuoMiPhone";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F5D1AA31AC577BF0028536F /* Build configuration list for PBXProject "LuoMiPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F5D1ACC1AC577BF0028536F /* Debug */,
+				7F5D1ACD1AC577BF0028536F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F5D1ACE1AC577BF0028536F /* Build configuration list for PBXNativeTarget "LuoMiPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F5D1ACF1AC577BF0028536F /* Debug */,
+				7F5D1AD01AC577BF0028536F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F5D1AD11AC577BF0028536F /* Build configuration list for PBXNativeTarget "LuoMiPhoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F5D1AD21AC577BF0028536F /* Debug */,
+				7F5D1AD31AC577BF0028536F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F5D1AA01AC577BF0028536F /* Project object */;
+}
