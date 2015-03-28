@@ -12,7 +12,7 @@
 
 @property(nonatomic,weak) IBOutlet InfiniteScrollView *picScrollView;
 
-@property(nonatomic,weak) IBOutlet InfiniteScrollView *actionScrollView;
+@property(nonatomic,weak) IBOutlet UIScrollView *actionScrollView;
 
 @property(nonatomic,weak) IBOutlet NSLayoutConstraint *scrollHeightConstraint;
 @end

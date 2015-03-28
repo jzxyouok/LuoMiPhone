@@ -26,6 +26,8 @@
 		7F5D1B071AC58D5A0028536F /* GroupbyScrollTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F5D1B051AC58D5A0028536F /* GroupbyScrollTableViewCell.xib */; };
 		7F7CB95E1AC690DA0009738E /* LMRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7CB95C1AC690DA0009738E /* LMRefreshControl.m */; };
 		7F7CB95F1AC690DA0009738E /* LMRefreshControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7CB95D1AC690DA0009738E /* LMRefreshControl.xib */; };
+		7F7CB9641AC6A4FC0009738E /* FirstScrollMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7CB9631AC6A4FC0009738E /* FirstScrollMenuView.m */; };
+		7F7CB9661AC6A51A0009738E /* FirstScrollMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7CB9651AC6A51A0009738E /* FirstScrollMenuView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,9 @@
 		7F7CB95B1AC690DA0009738E /* LMRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMRefreshControl.h; sourceTree = "<group>"; };
 		7F7CB95C1AC690DA0009738E /* LMRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMRefreshControl.m; sourceTree = "<group>"; };
 		7F7CB95D1AC690DA0009738E /* LMRefreshControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LMRefreshControl.xib; sourceTree = "<group>"; };
+		7F7CB9621AC6A4FC0009738E /* FirstScrollMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstScrollMenuView.h; sourceTree = "<group>"; };
+		7F7CB9631AC6A4FC0009738E /* FirstScrollMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstScrollMenuView.m; sourceTree = "<group>"; };
+		7F7CB9651AC6A51A0009738E /* FirstScrollMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstScrollMenuView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +116,7 @@
 		7F5D1AAA1AC577BF0028536F /* LuoMiPhone */ = {
 			isa = PBXGroup;
 			children = (
+				7F7CB9601AC6A4980009738E /* CustomView */,
 				7F5D1B011AC58D130028536F /* CustomTableViewCell */,
 				7F5D1AF21AC585CC0028536F /* CustomLibrary */,
 				7F5D1AAF1AC577BF0028536F /* AppDelegate.h */,
@@ -208,6 +214,24 @@
 			name = LMPullToRefresh;
 			sourceTree = "<group>";
 		};
+		7F7CB9601AC6A4980009738E /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				7F7CB9611AC6A4BD0009738E /* 团购 */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
+		7F7CB9611AC6A4BD0009738E /* 团购 */ = {
+			isa = PBXGroup;
+			children = (
+				7F7CB9621AC6A4FC0009738E /* FirstScrollMenuView.h */,
+				7F7CB9631AC6A4FC0009738E /* FirstScrollMenuView.m */,
+				7F7CB9651AC6A51A0009738E /* FirstScrollMenuView.xib */,
+			);
+			name = "团购";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -291,6 +315,7 @@
 				7F5D1ABA1AC577BF0028536F /* Main.storyboard in Resources */,
 				7F5D1ABF1AC577BF0028536F /* LaunchScreen.xib in Resources */,
 				7F5D1B071AC58D5A0028536F /* GroupbyScrollTableViewCell.xib in Resources */,
+				7F7CB9661AC6A51A0009738E /* FirstScrollMenuView.xib in Resources */,
 				7F5D1AEC1AC57DB40028536F /* MyViewController.xib in Resources */,
 				7F7CB95F1AC690DA0009738E /* LMRefreshControl.xib in Resources */,
 				7F5D1AE71AC57DA90028536F /* NearbyViewController.xib in Resources */,
@@ -321,6 +346,7 @@
 				7F7CB95E1AC690DA0009738E /* LMRefreshControl.m in Sources */,
 				7F5D1AAE1AC577BF0028536F /* main.m in Sources */,
 				7F5D1AE11AC57D8F0028536F /* GroupBuyViewController.m in Sources */,
+				7F7CB9641AC6A4FC0009738E /* FirstScrollMenuView.m in Sources */,
 				7F5D1AF61AC585F90028536F /* InfiniteScrollView.m in Sources */,
 				7F5D1AEB1AC57DB40028536F /* MyViewController.m in Sources */,
 			);

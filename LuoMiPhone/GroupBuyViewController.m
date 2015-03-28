@@ -23,9 +23,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.refreshControl = [LMRefreshControl initRefreshControl:self targetAction:@selector(startLoading) scrollView:self.tableView];
-
+    self.tableView.tableFooterView = [[UIView alloc] init];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     self.scrollPicHeight = 280;
     [self.tableView registerNib:[UINib nibWithNibName:groupbyScrollTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:groupbyScrollTableViewCellIdentifier];
     //self.groupbyScrollTableViewCell =  [(GroupbyScrollTableViewCell *)[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:groupbyScrollTableViewCellIdentifier];
@@ -43,7 +46,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -54,27 +57,36 @@
     });
     [groupbyScrollTableViewCell setNeedsDisplay];
     [groupbyScrollTableViewCell layoutIfNeeded];
+    
     CGSize groupbyScrollTableViewCellSize = [groupbyScrollTableViewCell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     if (indexPath.row == 0) {
         //return groupbyScrollTableViewCellSize.height + 1;
-        //return 280;
-       return  self.scrollPicHeight ;
+        return 280;
+       //return  self.scrollPicHeight ;
     }
-    return 280;
+     return 40;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *firstCellIdentifier = @"GroupbyScrollTableViewCell";
-    GroupbyScrollTableViewCell *cell = (GroupbyScrollTableViewCell *)[tableView dequeueReusableCellWithIdentifier:firstCellIdentifier forIndexPath:indexPath];
-    cell.picScrollView.viewTapped = ^(NSInteger index){
-        NSLog(@"view tapped at index = %ld", (long)index);
-    };
-    cell.picScrollView.closeButtonClicked = ^void(){
-        cell.scrollHeightConstraint.constant = 0;
-        self.scrollPicHeight = 180;
-        [self.tableView reloadData];
-    };
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    if(indexPath.row == 0){
+        static NSString *firstCellIdentifier = groupbyScrollTableViewCellIdentifier;
+        GroupbyScrollTableViewCell *cell = (GroupbyScrollTableViewCell *)[tableView dequeueReusableCellWithIdentifier:firstCellIdentifier forIndexPath:indexPath];
+        cell.picScrollView.viewTapped = ^(NSInteger index){
+            NSLog(@"view tapped at index = %ld", (long)index);
+        };
+        cell.picScrollView.closeButtonClicked = ^void(){
+            cell.scrollHeightConstraint.constant = 0;
+            self.scrollPicHeight = 180;
+            [self.tableView reloadData];
+        };
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+        return cell;
+    }
+    static NSString *cellIdentifier = @"cellIdentifier";
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    cell.backgroundColor = [UIColor blueColor];
     return cell;
 }
 

@@ -62,7 +62,6 @@ static const CGFloat imageViewDefaultHeight = 20;
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
     self.frame = CGRectMake(0, 0, self.scrollView.frame.size.width, self.scrollView.contentOffset.y);
-    
     self.pullingPercent = ABS(self.scrollView.contentOffset.y) / RefreshControlDefaultLoadingHeight;
     if ((ABS(self.scrollView.contentOffset.y) < RefreshControlDefaultLoadingHeight) && self.isDragging) {
         self.imageViewHeightConstraint.constant = (self.imageView.image.size.height - imageViewDefaultHeight) * self.pullingPercent + imageViewDefaultHeight;
@@ -77,12 +76,18 @@ static const CGFloat imageViewDefaultHeight = 20;
 }
 
 - (void)endRefresh{
-    [UIView animateWithDuration:1 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
-    
+//    [UIView animateWithDuration:1 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
+//    
+//
+//    } completion:^(BOOL finished){
+//    }];
+//    
+    [UIView animateWithDuration:0.5 animations:^{
         [self.scrollView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
 
     } completion:^(BOOL finished){
         [self.imageView stopAnimating];
+
     }];
 }
 
@@ -91,10 +96,21 @@ static const CGFloat imageViewDefaultHeight = 20;
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     self.isDragging = YES;
 }
+
+//- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+//    
+//    if (ABS(self.scrollView.contentOffset.y) > RefreshControlDefaultLoadingHeight){
+//
+//        [self.scrollView setContentInset:UIEdgeInsetsMake(RefreshControlAnimationHeight, 0, 0, 0)];
+//    }
+//}
+
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    if (ABS(self.scrollView.contentOffset.y) > RefreshControlDefaultLoadingHeight){
-        
-        [self.scrollView setContentInset:UIEdgeInsetsMake(RefreshControlAnimationHeight, 0, 0, 0)];
+    if ((ABS(self.scrollView.contentOffset.y) > RefreshControlDefaultLoadingHeight) && (self.scrollView.contentOffset.y < 0 )){
+        [UIView animateWithDuration:0.2 animations:^{
+            [self.scrollView setContentInset:UIEdgeInsetsMake(RefreshControlAnimationHeight, 0, 0, 0)];
+            
+        } ];
         self.imageViewHeightConstraint.constant = self.imageView.image.size.height;
         self.imageViewWidthConstraint.constant = self.imageView.image.size.width;
         [self.imageView startAnimating];

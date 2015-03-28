@@ -20,26 +20,30 @@
                             <constraint firstAttribute="height" constant="100" id="uGi-yj-NKe"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="179" translatesAutoresizingMaskIntoConstraints="NO" id="Aj8-XW-0t1" customClass="InfiniteScrollView">
-                        <rect key="frame" x="0.0" y="100" width="320" height="179"/>
-                        <color key="backgroundColor" red="0.94117647059999998" green="0.0" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="180" translatesAutoresizingMaskIntoConstraints="NO" id="Pkb-Zc-mi9">
+                        <rect key="frame" x="0.0" y="100" width="320" height="180"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="179" id="rdB-ft-yEf"/>
+                            <constraint firstAttribute="height" constant="180" id="19H-Xl-Adc"/>
                         </constraints>
-                    </view>
+                    </scrollView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="qI8-0R-o8l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2J3-aT-Qpg"/>
-                    <constraint firstAttribute="trailing" secondItem="Aj8-XW-0t1" secondAttribute="trailing" id="2jg-lL-Xaa"/>
-                    <constraint firstItem="Aj8-XW-0t1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6bk-BL-pHZ"/>
                     <constraint firstAttribute="trailing" secondItem="qI8-0R-o8l" secondAttribute="trailing" id="8U3-i3-qz2"/>
-                    <constraint firstItem="Aj8-XW-0t1" firstAttribute="top" secondItem="qI8-0R-o8l" secondAttribute="bottom" id="DCP-PJ-DBP"/>
-                    <constraint firstAttribute="bottom" secondItem="Aj8-XW-0t1" secondAttribute="bottom" id="eNo-ok-hNb"/>
+                    <constraint firstItem="Pkb-Zc-mi9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9hM-Ij-NHT"/>
+                    <constraint firstAttribute="trailing" secondItem="Pkb-Zc-mi9" secondAttribute="trailing" id="GEE-v5-Yt5"/>
+                    <constraint firstItem="Pkb-Zc-mi9" firstAttribute="top" secondItem="qI8-0R-o8l" secondAttribute="bottom" id="UVH-eN-C2R"/>
+                    <constraint firstAttribute="bottom" secondItem="Pkb-Zc-mi9" secondAttribute="bottom" id="XLe-cb-yzM"/>
                     <constraint firstItem="qI8-0R-o8l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xcO-SJ-BmY"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="XLe-cb-yzM"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
-                <outlet property="actionScrollView" destination="Aj8-XW-0t1" id="YuO-xi-1KK"/>
+                <outlet property="actionScrollView" destination="Pkb-Zc-mi9" id="Ycw-Fh-UfC"/>
                 <outlet property="picScrollView" destination="qI8-0R-o8l" id="deE-L1-ROx"/>
                 <outlet property="scrollHeightConstraint" destination="uGi-yj-NKe" id="KIR-qc-mEf"/>
             </connections>
