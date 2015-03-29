@@ -36,13 +36,14 @@ static const CGFloat imageViewDefaultHeight = 20;
     LMRefreshControl *refreshControl = (LMRefreshControl *)[nibViews firstObject];
     refreshControl.scrollView = scrollView;
     refreshControl.frame = CGRectMake(0, 0, refreshControl.scrollView.frame.size.width, 0);
-   
+    [refreshControl.scrollView addSubview:refreshControl];
     [refreshControl.scrollView addObserver:refreshControl forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
     refreshControl.target = target;
     refreshControl.targetAction = targetAction;
     refreshControl.loadingImages = [[NSMutableArray alloc] initWithCapacity:3];
     refreshControl.dropDownImages = [[NSMutableArray alloc] initWithCapacity:60];
     scrollView.delegate = refreshControl;
+    refreshControl.scrollView.delegate = refreshControl;
     for (int i = 1; i < 4; i++) {
         UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_loading_0%d",i]];
         [refreshControl.loadingImages addObject:image];
@@ -55,8 +56,7 @@ static const CGFloat imageViewDefaultHeight = 20;
     refreshControl.imageView.animationImages = refreshControl.loadingImages;
     refreshControl.imageView.animationDuration = refreshControl.loadingImages.count * 0.1;
     refreshControl.imageView.animationRepeatCount = HUGE_VAL;
-    refreshControl.isDragging = NO;
-    [scrollView addSubview:refreshControl];
+    refreshControl.isDragging = YES;
     return refreshControl;
 }
 
@@ -69,48 +69,34 @@ static const CGFloat imageViewDefaultHeight = 20;
         int index = self.pullingPercent * self.dropDownImages.count;
         self.imageView.image = [self.dropDownImages objectAtIndex:index];
     }else if (ABS(self.scrollView.contentOffset.y) > RefreshControlDefaultLoadingHeight) {
-       
+        
     }
     
-    NSLog(@"frame = %@",NSStringFromCGRect(self.frame));
+    NSLog(@"frame = %@",NSStringFromCGRect(self.scrollView.frame));
 }
 
 - (void)endRefresh{
-//    [UIView animateWithDuration:1 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
-//    
-//
-//    } completion:^(BOOL finished){
-//    }];
-//    
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:1 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
+        
         [self.scrollView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
-
+        
     } completion:^(BOOL finished){
         [self.imageView stopAnimating];
-
     }];
 }
 
 #pragma uiscrolldelegate
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+}
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     self.isDragging = YES;
 }
-
-//- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
-//    
-//    if (ABS(self.scrollView.contentOffset.y) > RefreshControlDefaultLoadingHeight){
-//
-//        [self.scrollView setContentInset:UIEdgeInsetsMake(RefreshControlAnimationHeight, 0, 0, 0)];
-//    }
-//}
-
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    if ((ABS(self.scrollView.contentOffset.y) > RefreshControlDefaultLoadingHeight) && (self.scrollView.contentOffset.y < 0 )){
-        [UIView animateWithDuration:0.2 animations:^{
-            [self.scrollView setContentInset:UIEdgeInsetsMake(RefreshControlAnimationHeight, 0, 0, 0)];
-            
-        } ];
+    if ((ABS(self.scrollView.contentOffset.y) > RefreshControlDefaultLoadingHeight) && (self.scrollView.contentOffset.y < 0)){
+        
+        [self.scrollView setContentInset:UIEdgeInsetsMake(RefreshControlAnimationHeight, 0, 0, 0)];
         self.imageViewHeightConstraint.constant = self.imageView.image.size.height;
         self.imageViewWidthConstraint.constant = self.imageView.image.size.width;
         [self.imageView startAnimating];
@@ -126,8 +112,6 @@ static const CGFloat imageViewDefaultHeight = 20;
     [self removeObserver:self.scrollView forKeyPath:@"contentOffset"];
 }
 
-- (void)layoutSubviews{
-    [super layoutSubviews];
-}
+
 
 @end
