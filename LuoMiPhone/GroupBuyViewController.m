@@ -11,9 +11,11 @@
 #import "LMRefreshControl.h"
 #import "GroupBuyViewController.h"
 #import "SelectedBrandMenuViewCell.h"
+#import "CommentGiftTableViewCell.h"
 
 #define groupbyScrollTableViewCellIdentifier  @"GroupbyScrollTableViewCell"
 #define selectedBrandTableViewCellIdentifier @"SelectedBrandMenuViewCell"
+#define commentGiftTableViewCellIdentifer  @"CommentGiftTableViewCell"
 
 @interface GroupBuyViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -35,6 +37,7 @@
     self.scrollPicHeight = 280;
     [self.tableView registerNib:[UINib nibWithNibName:groupbyScrollTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:groupbyScrollTableViewCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:selectedBrandTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:selectedBrandTableViewCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:commentGiftTableViewCellIdentifer bundle:nil] forCellReuseIdentifier:commentGiftTableViewCellIdentifer];
 }
 
 -(void)startLoading{
@@ -55,7 +58,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 3;
+    return 10;
 }
 
 
@@ -88,6 +91,8 @@
        return  self.scrollPicHeight ;
     } else if (indexPath.row == 2){
         return 164;
+    } else if (indexPath.row == 4){
+        return 70;
     }
     return 100;
 }
@@ -124,9 +129,17 @@
         
         return cell;
     }
+    if (indexPath.row == 4) {
+        static NSString *commentGiftTableViewCellIdentiferIdentifer = commentGiftTableViewCellIdentifer;
+        CommentGiftTableViewCell *cell = (CommentGiftTableViewCell *)[tableView dequeueReusableCellWithIdentifier:commentGiftTableViewCellIdentiferIdentifer forIndexPath:indexPath];
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        return cell;
+    }
     static NSString *cellIdentifier = @"cellIdentifier";
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    cell.backgroundColor = [UIColor blueColor];
+    cell.backgroundColor = [UIColor lightGrayColor];
     return cell;
 }
 

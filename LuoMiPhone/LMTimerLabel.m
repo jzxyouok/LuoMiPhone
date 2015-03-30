@@ -29,11 +29,13 @@
 
 -(void)start{
     if (self.timer == nil) {
-        self.timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateTimerLabel) userInfo:nil repeats:YES];
+        self.timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(updateTimerLabel) userInfo:nil repeats:YES];
 
     }
     [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
-
+    if (startCountDate == nil) {
+        startCountDate = [NSDate date];
+    }
     if ([self.timer isValid]) {
         [self.timer fire];
     }

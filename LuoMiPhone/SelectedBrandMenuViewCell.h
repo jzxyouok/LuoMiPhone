@@ -11,4 +11,5 @@
 @interface SelectedBrandMenuViewCell : UITableViewCell
 
 @property(nonatomic,weak) IBOutlet UILabel *timeLabel;
+@property(nonatomic,weak) IBOutlet UICollectionView *collectionView;
 @end
