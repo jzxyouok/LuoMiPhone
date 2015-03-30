@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSu-mA-bYy">
-                                <rect key="frame" x="202" y="9" width="42" height="21"/>
+                                <rect key="frame" x="167" y="9" width="105" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
             <connections>
                 <outlet property="timeLabel" destination="mSu-mA-bYy" id="Ty3-L3-3OT"/>
             </connections>
-            <point key="canvasLocation" x="498" y="189"/>
+            <point key="canvasLocation" x="453" y="189"/>
         </tableViewCell>
     </objects>
 </document>

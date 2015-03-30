@@ -32,6 +32,8 @@
         self.timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateTimerLabel) userInfo:nil repeats:YES];
 
     }
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+
     if ([self.timer isValid]) {
         [self.timer fire];
     }
