@@ -14,7 +14,7 @@ static const CGFloat RefreshControlAnimationHeight = 50;
 static const CGFloat ImageViewDefaultWidth = 20;
 static const CGFloat imageViewDefaultHeight = 20;
 
-@interface LMRefreshControl ()<UIScrollViewDelegate>
+@interface LMRefreshControl ()
 
 @property(nonatomic,strong) UIScrollView *scrollView;
 @property(nonatomic,strong) NSMutableArray *loadingImages;

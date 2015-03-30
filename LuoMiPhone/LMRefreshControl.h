@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LMRefreshControl : UIView
+@interface LMRefreshControl : UIView<UIScrollViewDelegate>
 
 +(LMRefreshControl *)initRefreshControl:(id)target targetAction:(SEL)targetAction scrollView:(UIScrollView *)scrollView;
 

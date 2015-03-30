@@ -9,8 +9,11 @@
 #import "GroupBuyViewController.h"
 #import "GroupbyScrollTableViewCell.h"
 #import "LMRefreshControl.h"
+#import "GroupBuyViewController.h"
+#import "SelectedBrandMenuViewCell.h"
 
 #define groupbyScrollTableViewCellIdentifier  @"GroupbyScrollTableViewCell"
+#define selectedBrandTableViewCellIdentifier @"SelectedBrandMenuViewCell"
 
 @interface GroupBuyViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -25,14 +28,13 @@
     [super viewDidLoad];
    // self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
     self.automaticallyAdjustsScrollViewInsets = NO;
+   
     self.refreshControl = [LMRefreshControl initRefreshControl:self targetAction:@selector(startLoading) scrollView:self.tableView];
-//    self.tableView.delegate = self;
-//    
-//    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     self.scrollPicHeight = 280;
     [self.tableView registerNib:[UINib nibWithNibName:groupbyScrollTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:groupbyScrollTableViewCellIdentifier];
-    //self.groupbyScrollTableViewCell =  [(GroupbyScrollTableViewCell *)[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:groupbyScrollTableViewCellIdentifier];
-    // Do any additional setup after loading the view from its nib.
+    [self.tableView registerNib:[UINib nibWithNibName:selectedBrandTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:selectedBrandTableViewCellIdentifier];
 }
 
 -(void)startLoading{
@@ -43,21 +45,29 @@
     [self.refreshControl endRefresh];
 }
 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [self.refreshControl scrollViewWillBeginDragging:scrollView];
+}
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    [self.refreshControl scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
 
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (section == 0) {
-        return 1;
-    }else if(section == 1){
-        return 1;
-    }
-    return 2;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
-}// Default is 1 if not implemented
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return 3;
+}
 
+
+//- (CGFloat)tableView:(UITableView *)tableView
+//estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return 44;
+//}
+//
+//- (CGFloat)tableView:(UITableView *)tableView
+//heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return 44;
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     static GroupbyScrollTableViewCell *groupbyScrollTableViewCell;
@@ -69,24 +79,29 @@
     [groupbyScrollTableViewCell layoutIfNeeded];
     
     CGSize groupbyScrollTableViewCellSize = [groupbyScrollTableViewCell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    if (indexPath.row % 2 == 1) {
+        return 10;
+    }
     if (indexPath.row == 0) {
         //return groupbyScrollTableViewCellSize.height + 1;
        // return 280;
        return  self.scrollPicHeight ;
-    }
-     return 40;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section == 0){
-        return 0;
+    } else if (indexPath.row == 2){
+        return 164;
     }
     return 100;
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
- /*   if(indexPath.section == 0){
+    if (indexPath.row % 2 == 1) {
+        static NSString *separatorIdentifier = @"separatorIdentifier";
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:separatorIdentifier];
+        cell.backgroundColor = [UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1.0];
+        return cell;
+    }
+    if(indexPath.row == 0){
         static NSString *firstCellIdentifier = groupbyScrollTableViewCellIdentifier;
         GroupbyScrollTableViewCell *cell = (GroupbyScrollTableViewCell *)[tableView dequeueReusableCellWithIdentifier:firstCellIdentifier forIndexPath:indexPath];
         cell.picScrollView.viewTapped = ^(NSInteger index){
@@ -100,7 +115,15 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         return cell;
-    }*/
+    }
+    if (indexPath.row == 2) {
+        static NSString *SelectedBrandMenuViewCellIdentifier = selectedBrandTableViewCellIdentifier;
+        SelectedBrandMenuViewCell *cell = (SelectedBrandMenuViewCell *)[tableView dequeueReusableCellWithIdentifier:SelectedBrandMenuViewCellIdentifier forIndexPath:indexPath];
+       
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        return cell;
+    }
     static NSString *cellIdentifier = @"cellIdentifier";
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     cell.backgroundColor = [UIColor blueColor];
