@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="更多" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAM-hk-bcX">
-                                <rect key="frame" x="273" y="9" width="34" height="21"/>
+                                <rect key="frame" x="272" y="12" width="28" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -34,6 +34,12 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rra-ca-eKw">
+                                <rect key="frame" x="306" y="12" width="6" height="18"/>
+                                <state key="normal" backgroundImage="ArrowHeader">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -57,12 +63,22 @@
                             <outlet property="delegate" destination="KGk-i7-Jjw" id="KkH-7j-rPy"/>
                         </connections>
                     </collectionView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mei-Sv-bn1">
+                        <rect key="frame" x="0.0" y="39" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="320" id="hU8-jA-Mv5"/>
+                            <constraint firstAttribute="height" constant="1" id="zEz-sf-aRe"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="mei-Sv-bn1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7hM-P5-6nv"/>
                     <constraint firstItem="qXS-0I-mkr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="DVE-wM-ony"/>
                     <constraint firstAttribute="trailing" secondItem="lWm-gX-ARY" secondAttribute="trailing" id="HNg-tB-ZKo"/>
                     <constraint firstItem="lWm-gX-ARY" firstAttribute="top" secondItem="qXS-0I-mkr" secondAttribute="bottom" constant="1" id="YI7-KP-uGX"/>
                     <constraint firstItem="lWm-gX-ARY" firstAttribute="top" secondItem="qXS-0I-mkr" secondAttribute="bottom" constant="1" id="dDW-Np-FYD"/>
+                    <constraint firstItem="mei-Sv-bn1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="39" id="mAg-r2-6Ss"/>
                     <constraint firstItem="qXS-0I-mkr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ppe-eG-wgK"/>
                     <constraint firstItem="lWm-gX-ARY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ryW-L1-n5H"/>
                     <constraint firstAttribute="bottom" secondItem="lWm-gX-ARY" secondAttribute="bottom" id="tAR-Qb-iwE"/>
@@ -76,4 +92,7 @@
             <point key="canvasLocation" x="453" y="189"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ArrowHeader" width="6" height="11"/>
+    </resources>
 </document>

@@ -42,6 +42,8 @@
 		7F7CB95F1AC690DA0009738E /* LMRefreshControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7CB95D1AC690DA0009738E /* LMRefreshControl.xib */; };
 		7F7CB9641AC6A4FC0009738E /* FirstScrollMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7CB9631AC6A4FC0009738E /* FirstScrollMenuView.m */; };
 		7F7CB9661AC6A51A0009738E /* FirstScrollMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7CB9651AC6A51A0009738E /* FirstScrollMenuView.xib */; };
+		7FA778901ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7788E1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.m */; };
+		7FA778911ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA7788F1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,9 @@
 		7F7CB9621AC6A4FC0009738E /* FirstScrollMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstScrollMenuView.h; sourceTree = "<group>"; };
 		7F7CB9631AC6A4FC0009738E /* FirstScrollMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstScrollMenuView.m; sourceTree = "<group>"; };
 		7F7CB9651AC6A51A0009738E /* FirstScrollMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstScrollMenuView.xib; sourceTree = "<group>"; };
+		7FA7788D1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckAllGroupByButtonTableViewCell.h; sourceTree = "<group>"; };
+		7FA7788E1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckAllGroupByButtonTableViewCell.m; sourceTree = "<group>"; };
+		7FA7788F1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckAllGroupByButtonTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +295,9 @@
 				7F2C30551ACA9EE800181E65 /* GroupListHeaderTableViewCell.h */,
 				7F2C30561ACA9EE800181E65 /* GroupListHeaderTableViewCell.m */,
 				7F2C30571ACA9EE800181E65 /* GroupListHeaderTableViewCell.xib */,
+				7FA7788D1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.h */,
+				7FA7788E1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.m */,
+				7FA7788F1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib */,
 			);
 			name = "团购";
 			sourceTree = "<group>";
@@ -415,6 +423,7 @@
 				7F5D1AF11AC57DBE0028536F /* MoreViewController.xib in Resources */,
 				7F5D1ABC1AC577BF0028536F /* Images.xcassets in Resources */,
 				7F2C30591ACA9EE800181E65 /* GroupListHeaderTableViewCell.xib in Resources */,
+				7FA778911ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib in Resources */,
 				7F5D1AE21AC57D8F0028536F /* GroupBuyViewController.xib in Resources */,
 				7F2C304B1ACA6E9200181E65 /* CountDownTimerView.xib in Resources */,
 				7F2296C11AC975F500932E7B /* SelectedBrandCollectionViewCell.xib in Resources */,
@@ -450,6 +459,7 @@
 				7F2C30581ACA9EE800181E65 /* GroupListHeaderTableViewCell.m in Sources */,
 				7F7CB9641AC6A4FC0009738E /* FirstScrollMenuView.m in Sources */,
 				7F2C304F1ACA79C500181E65 /* GroupByListTableViewCell.m in Sources */,
+				7FA778901ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.m in Sources */,
 				7F5D1AF61AC585F90028536F /* InfiniteScrollView.m in Sources */,
 				7F2C30491ACA6E8800181E65 /* CountDownTimerView.m in Sources */,
 				7F5D1AEB1AC57DB40028536F /* MyViewController.m in Sources */,

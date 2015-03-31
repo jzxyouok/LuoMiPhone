@@ -93,8 +93,9 @@ static const CGFloat imageViewDefaultHeight = 20;
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     self.isDragging = YES;
 }
+
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    if ((ABS(self.scrollView.contentOffset.y) > RefreshControlDefaultLoadingHeight) && (self.scrollView.contentOffset.y < 0)){
+   if ((ABS(self.scrollView.contentOffset.y) > RefreshControlDefaultLoadingHeight) && (self.scrollView.contentOffset.y < 0)){
         
         [self.scrollView setContentInset:UIEdgeInsetsMake(RefreshControlAnimationHeight, 0, 0, 0)];
         self.imageViewHeightConstraint.constant = self.imageView.image.size.height;
@@ -106,6 +107,11 @@ static const CGFloat imageViewDefaultHeight = 20;
 #pragma clang diagnostic pop
         self.isDragging = NO;
     }
+    
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    
 }
 
 -(void)dealloc{

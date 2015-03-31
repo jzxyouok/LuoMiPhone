@@ -50,9 +50,6 @@
         UIView *view = [views objectAtIndex:i];
         view.userInteractionEnabled = YES;
         [view addGestureRecognizer:tapGesture];
-        
-        
-        
     }
     
     self.currentIndex = 0;
@@ -70,9 +67,10 @@
     self.pageControl.pageIndicatorTintColor = [UIColor blackColor];
     self.pageControl.currentPage = self.currentIndex;
     self.pageControl.numberOfPages = views.count;
-    self.timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(autoScroll) userInfo:nil repeats:YES];
+    self.timer = [NSTimer timerWithTimeInterval:3.0 target:self selector:@selector(autoScroll) userInfo:nil repeats:YES];
     
-   
+   [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setBackgroundImage:[UIImage imageNamed:@"GroupByScrollCancel"] forState:UIControlStateNormal];
     button.frame = CGRectMake(self.scrollView.frame.size.width - 30, 5, 30, 30);
@@ -93,6 +91,7 @@
 }
 
 -(void)autoScroll{
+    NSLog(@"auto scroll invoked");
     [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x + self.scrollView.frame.size.width, self.scrollView.contentOffset.y) animated:YES];
 }
 
@@ -158,16 +157,25 @@
     [self.scrollView setContentOffset:CGPointMake(self.frame.size.width, 0) animated:NO];
 }
 
--(void)scrollViewDidScroll:(UIScrollView *)scrollView{
 
-}
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     self.previousScrollViewOffsetX = scrollView.contentOffset.x;
 }
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    
 }
 
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+    
+}// called on finger up as we are moving
+
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+
+    [self setScrollViewParameters:scrollView];
+}
+
+-(void)setScrollViewParameters:(UIScrollView *)scrollView{
     if (scrollView.contentOffset.x > self.previousScrollViewOffsetX) {
         self.currentIndex = self.currentIndex + 1;
     }else if(scrollView.contentOffset.x < self.previousScrollViewOffsetX){
@@ -182,10 +190,12 @@
     self.previousScrollViewOffsetX = scrollView.contentOffset.x;
     [self setContentViews:self.displayViews currentIndex:self.currentIndex];
     self.pageControl.currentPage = self.currentIndex;
-    
 }
 
+
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    [self setScrollViewParameters:scrollView];
+
 }
 
 @end

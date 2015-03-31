@@ -14,10 +14,15 @@
 #import "CommentGiftTableViewCell.h"
 #import "GroupByListTableViewCell.h"
 #import "GroupByListModal.h"
+#import "CheckAllGroupByButtonTableViewCell.h"
+#import "GroupListHeaderTableViewCell.h"
+
 #define groupbyScrollTableViewCellIdentifier  @"GroupbyScrollTableViewCell"
 #define selectedBrandTableViewCellIdentifier @"SelectedBrandMenuViewCell"
 #define commentGiftTableViewCellIdentifer  @"CommentGiftTableViewCell"
 #define groupByListTableViewCellIdentifier @"GroupByListTableViewCell"
+#define checkAllGroupByButtonTableViewCellIdentifer @"CheckAllGroupByButtonTableViewCell"
+#define groupListHeaderTableViewCellIdentifer @"GroupListHeaderTableViewCell"
 
 @interface GroupBuyViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -25,13 +30,14 @@
 //@property(nonatomic,strong) GroupbyScrollTableViewCell *groupbyScrollTableViewCell;
 @property(nonatomic,strong) LMRefreshControl *refreshControl;
 @property(nonatomic,strong) GroupByListModal *groupListModal;
+@property(nonatomic,assign) NSInteger tableRows;
 @end
 
 @implementation GroupBuyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   // self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.automaticallyAdjustsScrollViewInsets = NO;
    
     self.refreshControl = [LMRefreshControl initRefreshControl:self targetAction:@selector(startLoading) scrollView:self.tableView];
@@ -42,8 +48,13 @@
     [self.tableView registerNib:[UINib nibWithNibName:selectedBrandTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:selectedBrandTableViewCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:commentGiftTableViewCellIdentifer bundle:nil] forCellReuseIdentifier:commentGiftTableViewCellIdentifer];
     [self.tableView registerNib:[UINib nibWithNibName:groupByListTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:groupByListTableViewCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:checkAllGroupByButtonTableViewCellIdentifer bundle:nil] forCellReuseIdentifier:checkAllGroupByButtonTableViewCellIdentifer];
+    [self.tableView registerNib:[UINib nibWithNibName:groupListHeaderTableViewCellIdentifer bundle:nil] forCellReuseIdentifier:groupListHeaderTableViewCellIdentifer];
+    
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[UIImage imageNamed:@"mc"],@"image",@"1毛钱吃麦当劳",@"listTitle",@"1毛钱吃麦当劳原味板烧鸡腿堡",@"listDetail",@"￥0.1",@"listPrice",@"已售344245",@"listSales", nil];
     self.groupListModal = [[GroupByListModal alloc] initWith:dic];
+    self.tableRows = 20;
+    self.tableView.backgroundColor = [UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1.0];
 }
 
 -(void)startLoading{
@@ -64,19 +75,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 20;
+    return self.tableRows;
 }
 
-
-//- (CGFloat)tableView:(UITableView *)tableView
-//estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return 44;
-//}
-//
-//- (CGFloat)tableView:(UITableView *)tableView
-//heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return 44;
-//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     static GroupbyScrollTableViewCell *groupbyScrollTableViewCell;
@@ -88,7 +89,12 @@
     [groupbyScrollTableViewCell layoutIfNeeded];
     
     CGSize groupbyScrollTableViewCellSize = [groupbyScrollTableViewCell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    
+    if (indexPath.row == self.tableRows - 1) {
+        return 70;
+    }
+    if (indexPath.row == 6) {
+        return 40;
+    }
     if (indexPath.row == 0) {
         //return groupbyScrollTableViewCellSize.height + 1;
        // return 280;
@@ -109,6 +115,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    if (indexPath.row == 6){
+        static NSString *ListHeaderTableViewCell = groupListHeaderTableViewCellIdentifer;
+        GroupListHeaderTableViewCell *cell = (GroupListHeaderTableViewCell *)[tableView dequeueReusableCellWithIdentifier:ListHeaderTableViewCell forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }
+    
+    if (indexPath.row == self.tableRows - 1){
+        static NSString *checkAllGroupByButtonTableViewCell = checkAllGroupByButtonTableViewCellIdentifer;
+        CheckAllGroupByButtonTableViewCell *cell = (CheckAllGroupByButtonTableViewCell *)[tableView dequeueReusableCellWithIdentifier:checkAllGroupByButtonTableViewCell forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }
     if (indexPath.row > 6){
         static NSString *GroupByListTableViewCellIdentifier = groupByListTableViewCellIdentifier;
         GroupByListTableViewCell *cell = (GroupByListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:GroupByListTableViewCellIdentifier forIndexPath:indexPath];
