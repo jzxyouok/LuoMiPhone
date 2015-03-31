@@ -20,4 +20,12 @@
     // Configure the view for the selected state
 }
 
+-(void)setGroupByListModal:(GroupByListModal *)modal{
+    self.imageView.image = modal.image;
+    self.listDetailLabel.text = modal.listDetail;
+    self.listPriceLabel.text = modal.listPrice;
+    self.listSalesLabel.text = modal.listSales;
+    self.listTitleLabel.text = modal.listTitle;
+}
+
 @end

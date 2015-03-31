@@ -13,7 +13,7 @@
 #import "SelectedBrandMenuViewCell.h"
 #import "CommentGiftTableViewCell.h"
 #import "GroupByListTableViewCell.h"
-
+#import "GroupByListModal.h"
 #define groupbyScrollTableViewCellIdentifier  @"GroupbyScrollTableViewCell"
 #define selectedBrandTableViewCellIdentifier @"SelectedBrandMenuViewCell"
 #define commentGiftTableViewCellIdentifer  @"CommentGiftTableViewCell"
@@ -24,6 +24,7 @@
 @property(nonatomic,assign) CGFloat scrollPicHeight;
 //@property(nonatomic,strong) GroupbyScrollTableViewCell *groupbyScrollTableViewCell;
 @property(nonatomic,strong) LMRefreshControl *refreshControl;
+@property(nonatomic,strong) GroupByListModal *groupListModal;
 @end
 
 @implementation GroupBuyViewController
@@ -41,6 +42,8 @@
     [self.tableView registerNib:[UINib nibWithNibName:selectedBrandTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:selectedBrandTableViewCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:commentGiftTableViewCellIdentifer bundle:nil] forCellReuseIdentifier:commentGiftTableViewCellIdentifer];
     [self.tableView registerNib:[UINib nibWithNibName:groupByListTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:groupByListTableViewCellIdentifier];
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[UIImage imageNamed:@"mc"],@"image",@"1毛钱吃麦当劳",@"listTitle",@"1毛钱吃麦当劳原味板烧鸡腿堡",@"listDetail",@"￥0.1",@"listPrice",@"已售344245",@"listSales", nil];
+    self.groupListModal = [[GroupByListModal alloc] initWith:dic];
 }
 
 -(void)startLoading{
@@ -85,9 +88,7 @@
     [groupbyScrollTableViewCell layoutIfNeeded];
     
     CGSize groupbyScrollTableViewCellSize = [groupbyScrollTableViewCell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    if (indexPath.row % 2 == 1) {
-        return 10;
-    }
+    
     if (indexPath.row == 0) {
         //return groupbyScrollTableViewCellSize.height + 1;
        // return 280;
@@ -99,6 +100,9 @@
     }else if (indexPath.row > 6){
         return 100;
     }
+    if (indexPath.row % 2 == 1) {
+        return 10;
+    }
     return 100;
 }
 
@@ -108,6 +112,7 @@
     if (indexPath.row > 6){
         static NSString *GroupByListTableViewCellIdentifier = groupByListTableViewCellIdentifier;
         GroupByListTableViewCell *cell = (GroupByListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:GroupByListTableViewCellIdentifier forIndexPath:indexPath];
+        [cell setGroupByListModal:self.groupListModal];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
