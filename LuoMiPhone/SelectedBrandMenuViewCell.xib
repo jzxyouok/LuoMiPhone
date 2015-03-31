@@ -48,6 +48,7 @@
                     </view>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lWm-gX-ARY">
                         <rect key="frame" x="0.0" y="41" width="320" height="123"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="123" id="Zw3-XH-b3V"/>
                         </constraints>

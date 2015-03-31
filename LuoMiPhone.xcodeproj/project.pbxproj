@@ -132,6 +132,13 @@
 			name = CustomCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		7F2C30401ACA506900181E65 /* FontLayoutManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FontLayoutManager;
+			sourceTree = "<group>";
+		};
 		7F5D1A9F1AC577BF0028536F = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +215,7 @@
 		7F5D1AF21AC585CC0028536F /* CustomLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				7F2C30401ACA506900181E65 /* FontLayoutManager */,
 				7F2296B81AC9600500932E7B /* LMTimerLabel */,
 				7F7CB95A1AC690C20009738E /* LMPullToRefresh */,
 				7F5D1AF31AC585E80028536F /* InfiniteScrollView */,

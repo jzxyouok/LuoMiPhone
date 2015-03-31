@@ -8,7 +8,7 @@
 
 #import "LMTimerLabel.h"
 
-#define kDefaultTimeFormat  @"HH:mm:ss"
+#define kDefaultTimeFormat  @"HH : mm : ss"
 
 
 
@@ -45,6 +45,7 @@
     if (self) {
         self.timeLabel = theLabel;
         self.date1970 = [NSDate dateWithTimeIntervalSince1970:0];
+      
         [self updateTimerLabel];
     }
     return self;
@@ -59,7 +60,6 @@
     return _timeFormat;
 }
 
-
 -(void)setTimerToStopInterval:(NSTimeInterval)timeInterval{
     if (timeInterval > 0) {
         self.timerInterval = timeInterval;
@@ -68,7 +68,6 @@
 }
 
 - (NSDateFormatter*)dateFormatter{
-    
     if (_dateFormatter == nil) {
         _dateFormatter = [[NSDateFormatter alloc] init];
         _dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_GB"];
@@ -83,7 +82,22 @@
     NSDate *timeToShow = [NSDate date];
     NSTimeInterval timerInterval = [[NSDate date] timeIntervalSinceDate:startCountDate];
     timeToShow = [self.timerToStop dateByAddingTimeInterval:timerInterval * -1];
-    self.timeLabel.text = [self.dateFormatter stringFromDate:timeToShow];
+    if ([self.dateFormatter stringFromDate:timeToShow].length > 0) {
+        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[self.dateFormatter stringFromDate:timeToShow]];
+        [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, 2)];
+        [attributedString addAttribute:NSBackgroundColorAttributeName value:[UIColor colorWithRed:85/255.0 green:85/255.0 blue:93/255.0 alpha:1.0] range:NSMakeRange(0, 2)];
+
+        [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, 2)];
+
+        [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(5, 2)];
+
+        [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(10, 2)];
+
+         [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:85/255.0 green:85/255.0 blue:93/255.0 alpha:1.0] range:NSMakeRange(3, 1)];
+        [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:85/255.0 green:85/255.0 blue:93/255.0 alpha:1.0] range:NSMakeRange(8, 1)];
+        self.timeLabel.attributedText = attributedString;
+    }
+    
 }
 
 @end
