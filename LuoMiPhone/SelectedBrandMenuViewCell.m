@@ -9,6 +9,7 @@
 #import "SelectedBrandMenuViewCell.h"
 #import "LMTimerLabel.h"
 #import "SelectedBrandCollectionViewCell.h"
+#import "CountDownTimerView.h"
 
 @interface SelectedBrandMenuViewCell ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
@@ -23,6 +24,10 @@
     [self.lmTimerLabel setTimerToStopInterval:60*60*10]; //** Or you can use [timer3 setCountDownToDate:aDate];
     [self.lmTimerLabel start];
     [self.collectionView registerNib:[UINib nibWithNibName:@"SelectedBrandCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"SelectedBrandCollectionViewCell"];
+    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CountDownTimerView" owner:self options:nil];
+    CountDownTimerView *countTimerView = (CountDownTimerView *)[views firstObject];
+    countTimerView.frame = CGRectMake(self.toEndLabel.frame.origin.x + self.toEndLabel.frame.size.width, 10, 100, 20);
+    [self.contentView addSubview:countTimerView];
 }
 
 //- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{

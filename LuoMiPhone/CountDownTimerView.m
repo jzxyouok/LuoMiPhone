@@ -1,21 +1,19 @@
 //
-//  LMTimerLabel.m
+//  CountDownTimerView.m
 //  LuoMiPhone
 //
-//  Created by Tim Geng on 3/30/15.
+//  Created by Tim Geng on 3/31/15.
 //  Copyright (c) 2015 GF. All rights reserved.
 //
 
-#import "LMTimerLabel.h"
+#import "CountDownTimerView.h"
 
 #define kDefaultTimeFormat  @"HH:mm:ss"
 
-
-
-@interface LMTimerLabel (){
-    
+@interface CountDownTimerView (){
     NSDate *startCountDate;
 }
+
 @property(nonatomic,strong) NSDate *date1970;
 @property(nonatomic,assign) NSTimeInterval timerInterval;
 @property(nonatomic,strong) NSDate *timerToStop;
@@ -25,31 +23,15 @@
 
 @end
 
-@implementation LMTimerLabel
+@implementation CountDownTimerView
 
--(void)start{
-    if (self.timer == nil) {
-        self.timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(updateTimerLabel) userInfo:nil repeats:YES];
-
-    }
-    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
-    if (startCountDate == nil) {
-        startCountDate = [NSDate date];
-    }
-    if ([self.timer isValid]) {
-        [self.timer fire];
-    }
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
 }
-- (id)initWithLabel:(UILabel *)theLabel{
-    self = [super init];
-    if (self) {
-        self.timeLabel = theLabel;
-        self.date1970 = [NSDate dateWithTimeIntervalSince1970:0];
-      
-        [self updateTimerLabel];
-    }
-    return self;
-}
+*/
 
 - (NSString*)timeFormat
 {
@@ -77,15 +59,44 @@
     return _dateFormatter;
 }
 
+-(void)awakeFromNib{
+    self.hourLabel.layer.cornerRadius = 5;
+    self.hourLabel.layer.masksToBounds = YES;
+    self.minuteLabel.layer.cornerRadius = 5;
+    self.minuteLabel.layer.masksToBounds = YES;
+    self.secondLabel.layer.cornerRadius = 5;
+    self.secondLabel.layer.masksToBounds = YES;
+    if (self.timer == nil) {
+        self.timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(updateTimerLabel) userInfo:nil repeats:YES];
+        
+    }
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    if (startCountDate == nil) {
+        startCountDate = [NSDate date];
+    }
+    self.timerInterval = 60*60*10;
+    
+    self.timerToStop = [NSDate dateWithTimeIntervalSince1970:self.timerInterval];
+    if ([self.timer isValid]) {
+        [self.timer fire];
+    }
+}
+
 -(void)updateTimerLabel{
     
     NSDate *timeToShow = [NSDate date];
     NSTimeInterval timerInterval = [[NSDate date] timeIntervalSinceDate:startCountDate];
     timeToShow = [self.timerToStop dateByAddingTimeInterval:timerInterval * -1];
     if ([self.dateFormatter stringFromDate:timeToShow].length > 0) {
-        
+        NSString *timeString = [self.dateFormatter stringFromDate:timeToShow];
+        NSArray *timeComponenets = [timeString componentsSeparatedByString:@":"];
+        self.hourLabel.text = [timeComponenets objectAtIndex:0];
+        self.minuteLabel.text = [timeComponenets objectAtIndex:1];
+        self.secondLabel.text = [timeComponenets objectAtIndex:2];
     }
     
 }
+
+
 
 @end

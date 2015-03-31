@@ -12,4 +12,5 @@
 
 @property(nonatomic,weak) IBOutlet UILabel *timeLabel;
 @property(nonatomic,weak) IBOutlet UICollectionView *collectionView;
+@property(nonatomic,weak) IBOutlet UILabel *toEndLabel;
 @end

@@ -12,10 +12,12 @@
 #import "GroupBuyViewController.h"
 #import "SelectedBrandMenuViewCell.h"
 #import "CommentGiftTableViewCell.h"
+#import "GroupByListTableViewCell.h"
 
 #define groupbyScrollTableViewCellIdentifier  @"GroupbyScrollTableViewCell"
 #define selectedBrandTableViewCellIdentifier @"SelectedBrandMenuViewCell"
 #define commentGiftTableViewCellIdentifer  @"CommentGiftTableViewCell"
+#define groupByListTableViewCellIdentifier @"GroupByListTableViewCell"
 
 @interface GroupBuyViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -38,6 +40,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:groupbyScrollTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:groupbyScrollTableViewCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:selectedBrandTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:selectedBrandTableViewCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:commentGiftTableViewCellIdentifer bundle:nil] forCellReuseIdentifier:commentGiftTableViewCellIdentifer];
+    [self.tableView registerNib:[UINib nibWithNibName:groupByListTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:groupByListTableViewCellIdentifier];
 }
 
 -(void)startLoading{
@@ -58,7 +61,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 10;
+    return 20;
 }
 
 
@@ -93,6 +96,8 @@
         return 164;
     } else if (indexPath.row == 4){
         return 70;
+    }else if (indexPath.row > 6){
+        return 100;
     }
     return 100;
 }
@@ -100,6 +105,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    if (indexPath.row > 6){
+        static NSString *GroupByListTableViewCellIdentifier = groupByListTableViewCellIdentifier;
+        GroupByListTableViewCell *cell = (GroupByListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:GroupByListTableViewCellIdentifier forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }
     if (indexPath.row % 2 == 1) {
         static NSString *separatorIdentifier = @"separatorIdentifier";
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:separatorIdentifier];
@@ -137,6 +148,7 @@
         
         return cell;
     }
+    
     static NSString *cellIdentifier = @"cellIdentifier";
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     cell.backgroundColor = [UIColor lightGrayColor];

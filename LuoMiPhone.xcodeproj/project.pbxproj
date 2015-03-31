@@ -14,6 +14,11 @@
 		7F2296C11AC975F500932E7B /* SelectedBrandCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2296BF1AC975F500932E7B /* SelectedBrandCollectionViewCell.xib */; };
 		7F2296C51AC97EE500932E7B /* CommentGiftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2296C31AC97EE500932E7B /* CommentGiftTableViewCell.m */; };
 		7F2296C61AC97EE500932E7B /* CommentGiftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2296C41AC97EE500932E7B /* CommentGiftTableViewCell.xib */; };
+		7F2C30491ACA6E8800181E65 /* CountDownTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C30481ACA6E8800181E65 /* CountDownTimerView.m */; };
+		7F2C304B1ACA6E9200181E65 /* CountDownTimerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2C304A1ACA6E9200181E65 /* CountDownTimerView.xib */; };
+		7F2C304F1ACA79C500181E65 /* GroupByListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C304D1ACA79C500181E65 /* GroupByListTableViewCell.m */; };
+		7F2C30501ACA79C500181E65 /* GroupByListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2C304E1ACA79C500181E65 /* GroupByListTableViewCell.xib */; };
+		7F2C30531ACA811600181E65 /* GroupByListModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C30521ACA811600181E65 /* GroupByListModal.m */; };
 		7F5D1AAE1AC577BF0028536F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1AAD1AC577BF0028536F /* main.m */; };
 		7F5D1AB11AC577BF0028536F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1AB01AC577BF0028536F /* AppDelegate.m */; };
 		7F5D1ABA1AC577BF0028536F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5D1AB81AC577BF0028536F /* Main.storyboard */; };
@@ -59,6 +64,14 @@
 		7F2296C21AC97EE500932E7B /* CommentGiftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentGiftTableViewCell.h; sourceTree = "<group>"; };
 		7F2296C31AC97EE500932E7B /* CommentGiftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentGiftTableViewCell.m; sourceTree = "<group>"; };
 		7F2296C41AC97EE500932E7B /* CommentGiftTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentGiftTableViewCell.xib; sourceTree = "<group>"; };
+		7F2C30471ACA6E8800181E65 /* CountDownTimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownTimerView.h; sourceTree = "<group>"; };
+		7F2C30481ACA6E8800181E65 /* CountDownTimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownTimerView.m; sourceTree = "<group>"; };
+		7F2C304A1ACA6E9200181E65 /* CountDownTimerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountDownTimerView.xib; sourceTree = "<group>"; };
+		7F2C304C1ACA79C500181E65 /* GroupByListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupByListTableViewCell.h; sourceTree = "<group>"; };
+		7F2C304D1ACA79C500181E65 /* GroupByListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupByListTableViewCell.m; sourceTree = "<group>"; };
+		7F2C304E1ACA79C500181E65 /* GroupByListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupByListTableViewCell.xib; sourceTree = "<group>"; };
+		7F2C30511ACA811600181E65 /* GroupByListModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupByListModal.h; sourceTree = "<group>"; };
+		7F2C30521ACA811600181E65 /* GroupByListModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupByListModal.m; sourceTree = "<group>"; };
 		7F5D1AA81AC577BF0028536F /* LuoMiPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuoMiPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F5D1AAC1AC577BF0028536F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F5D1AAD1AC577BF0028536F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +131,9 @@
 			children = (
 				7F2296B91AC9604900932E7B /* LMTimerLabel.h */,
 				7F2296BA1AC9604900932E7B /* LMTimerLabel.m */,
+				7F2C30471ACA6E8800181E65 /* CountDownTimerView.h */,
+				7F2C30481ACA6E8800181E65 /* CountDownTimerView.m */,
+				7F2C304A1ACA6E9200181E65 /* CountDownTimerView.xib */,
 			);
 			name = LMTimerLabel;
 			sourceTree = "<group>";
@@ -137,6 +153,15 @@
 			children = (
 			);
 			name = FontLayoutManager;
+			sourceTree = "<group>";
+		};
+		7F2C30541ACA812200181E65 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				7F2C30511ACA811600181E65 /* GroupByListModal.h */,
+				7F2C30521ACA811600181E65 /* GroupByListModal.m */,
+			);
+			name = Modal;
 			sourceTree = "<group>";
 		};
 		7F5D1A9F1AC577BF0028536F = {
@@ -160,6 +185,7 @@
 		7F5D1AAA1AC577BF0028536F /* LuoMiPhone */ = {
 			isa = PBXGroup;
 			children = (
+				7F2C30541ACA812200181E65 /* Modal */,
 				7F2296BC1AC975D100932E7B /* CustomCollectionViewCell */,
 				7F7CB9601AC6A4980009738E /* CustomView */,
 				7F5D1B011AC58D130028536F /* CustomTableViewCell */,
@@ -253,6 +279,9 @@
 				7F2296C21AC97EE500932E7B /* CommentGiftTableViewCell.h */,
 				7F2296C31AC97EE500932E7B /* CommentGiftTableViewCell.m */,
 				7F2296C41AC97EE500932E7B /* CommentGiftTableViewCell.xib */,
+				7F2C304C1ACA79C500181E65 /* GroupByListTableViewCell.h */,
+				7F2C304D1ACA79C500181E65 /* GroupByListTableViewCell.m */,
+				7F2C304E1ACA79C500181E65 /* GroupByListTableViewCell.xib */,
 			);
 			name = "团购";
 			sourceTree = "<group>";
@@ -365,6 +394,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2C30501ACA79C500181E65 /* GroupByListTableViewCell.xib in Resources */,
 				7F2296B71AC94C8E00932E7B /* SelectedBrandMenuViewCell.xib in Resources */,
 				7F5D1ABA1AC577BF0028536F /* Main.storyboard in Resources */,
 				7F5D1ABF1AC577BF0028536F /* LaunchScreen.xib in Resources */,
@@ -377,6 +407,7 @@
 				7F5D1AF11AC57DBE0028536F /* MoreViewController.xib in Resources */,
 				7F5D1ABC1AC577BF0028536F /* Images.xcassets in Resources */,
 				7F5D1AE21AC57D8F0028536F /* GroupBuyViewController.xib in Resources */,
+				7F2C304B1ACA6E9200181E65 /* CountDownTimerView.xib in Resources */,
 				7F2296C11AC975F500932E7B /* SelectedBrandCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +430,7 @@
 				7F5D1B061AC58D5A0028536F /* GroupbyScrollTableViewCell.m in Sources */,
 				7F2296C01AC975F500932E7B /* SelectedBrandCollectionViewCell.m in Sources */,
 				7F5D1AB11AC577BF0028536F /* AppDelegate.m in Sources */,
+				7F2C30531ACA811600181E65 /* GroupByListModal.m in Sources */,
 				7F2296BB1AC9604900932E7B /* LMTimerLabel.m in Sources */,
 				7F2296B61AC94C8E00932E7B /* SelectedBrandMenuViewCell.m in Sources */,
 				7F5D1AE61AC57DA90028536F /* NearbyViewController.m in Sources */,
@@ -407,7 +439,9 @@
 				7F2296C51AC97EE500932E7B /* CommentGiftTableViewCell.m in Sources */,
 				7F5D1AE11AC57D8F0028536F /* GroupBuyViewController.m in Sources */,
 				7F7CB9641AC6A4FC0009738E /* FirstScrollMenuView.m in Sources */,
+				7F2C304F1ACA79C500181E65 /* GroupByListTableViewCell.m in Sources */,
 				7F5D1AF61AC585F90028536F /* InfiniteScrollView.m in Sources */,
+				7F2C30491ACA6E8800181E65 /* CountDownTimerView.m in Sources */,
 				7F5D1AEB1AC57DB40028536F /* MyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
