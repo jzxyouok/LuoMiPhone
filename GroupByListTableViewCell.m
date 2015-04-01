@@ -8,7 +8,7 @@
 
 #import "GroupByListTableViewCell.h"
 #import "UIImageView+AddSubImageView.h"
-
+#import "UILabel+ChangeText.h"
 @implementation GroupByListTableViewCell
 
 - (void)awakeFromNib {
@@ -28,7 +28,7 @@
     self.listSalesLabel.text = modal.listSales;
     self.listTitleLabel.text = modal.listTitle;
     [self.imageView addBookImageView];
-    
+    [self.listPriceLabel changeAttributedString];
 }
 
 @end

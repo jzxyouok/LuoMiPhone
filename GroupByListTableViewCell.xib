@@ -58,6 +58,9 @@
                     <constraint firstItem="iui-YM-GHl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="qCt-Z8-jjE"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="listPriceLabel" destination="O2d-wl-NLg" id="0Zu-z0-sKr"/>
+            </connections>
             <point key="canvasLocation" x="482" y="438"/>
         </tableViewCell>
     </objects>
