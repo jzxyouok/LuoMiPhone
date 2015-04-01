@@ -7,6 +7,7 @@
 //
 
 #import "GroupByListTableViewCell.h"
+#import "UIImageView+AddSubImageView.h"
 
 @implementation GroupByListTableViewCell
 
@@ -26,6 +27,8 @@
     self.listPriceLabel.text = modal.listPrice;
     self.listSalesLabel.text = modal.listSales;
     self.listTitleLabel.text = modal.listTitle;
+    [self.imageView addBookImageView];
+    
 }
 
 @end

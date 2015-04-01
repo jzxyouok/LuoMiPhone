@@ -19,6 +19,7 @@
 @implementation SelectedBrandMenuViewCell
 
 - (void)awakeFromNib {
+    
     // Initialization code
     self.lmTimerLabel = [[LMTimerLabel alloc] initWithLabel:self.timeLabel];
     [self.lmTimerLabel setTimerToStopInterval:60*60*10]; //** Or you can use [timer3 setCountDownToDate:aDate];

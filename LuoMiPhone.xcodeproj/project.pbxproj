@@ -21,6 +21,8 @@
 		7F2C30531ACA811600181E65 /* GroupByListModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C30521ACA811600181E65 /* GroupByListModal.m */; };
 		7F2C30581ACA9EE800181E65 /* GroupListHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C30561ACA9EE800181E65 /* GroupListHeaderTableViewCell.m */; };
 		7F2C30591ACA9EE800181E65 /* GroupListHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2C30571ACA9EE800181E65 /* GroupListHeaderTableViewCell.xib */; };
+		7F4D959F1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D959E1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m */; };
+		7F4D95A21ACB8BB400FA7A37 /* UILabel+ChangeText.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D95A11ACB8BB400FA7A37 /* UILabel+ChangeText.m */; };
 		7F5D1AAE1AC577BF0028536F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1AAD1AC577BF0028536F /* main.m */; };
 		7F5D1AB11AC577BF0028536F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1AB01AC577BF0028536F /* AppDelegate.m */; };
 		7F5D1ABA1AC577BF0028536F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5D1AB81AC577BF0028536F /* Main.storyboard */; };
@@ -79,6 +81,10 @@
 		7F2C30551ACA9EE800181E65 /* GroupListHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupListHeaderTableViewCell.h; sourceTree = "<group>"; };
 		7F2C30561ACA9EE800181E65 /* GroupListHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupListHeaderTableViewCell.m; sourceTree = "<group>"; };
 		7F2C30571ACA9EE800181E65 /* GroupListHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupListHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		7F4D959D1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AddSubImageView.h"; sourceTree = "<group>"; };
+		7F4D959E1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AddSubImageView.m"; sourceTree = "<group>"; };
+		7F4D95A01ACB8BB400FA7A37 /* UILabel+ChangeText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ChangeText.h"; sourceTree = "<group>"; };
+		7F4D95A11ACB8BB400FA7A37 /* UILabel+ChangeText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ChangeText.m"; sourceTree = "<group>"; };
 		7F5D1AA81AC577BF0028536F /* LuoMiPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuoMiPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F5D1AAC1AC577BF0028536F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F5D1AAD1AC577BF0028536F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -174,6 +180,17 @@
 			name = Modal;
 			sourceTree = "<group>";
 		};
+		7F4D95961ACAFD2300FA7A37 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				7F4D959D1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.h */,
+				7F4D959E1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m */,
+				7F4D95A01ACB8BB400FA7A37 /* UILabel+ChangeText.h */,
+				7F4D95A11ACB8BB400FA7A37 /* UILabel+ChangeText.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		7F5D1A9F1AC577BF0028536F = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +212,7 @@
 		7F5D1AAA1AC577BF0028536F /* LuoMiPhone */ = {
 			isa = PBXGroup;
 			children = (
+				7F4D95961ACAFD2300FA7A37 /* Category */,
 				7F2C30541ACA812200181E65 /* Modal */,
 				7F2296BC1AC975D100932E7B /* CustomCollectionViewCell */,
 				7F7CB9601AC6A4980009738E /* CustomView */,
@@ -444,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F4D959F1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m in Sources */,
 				7F5D1AF01AC57DBE0028536F /* MoreViewController.m in Sources */,
 				7F5D1B061AC58D5A0028536F /* GroupbyScrollTableViewCell.m in Sources */,
 				7F2296C01AC975F500932E7B /* SelectedBrandCollectionViewCell.m in Sources */,
@@ -460,6 +479,7 @@
 				7F7CB9641AC6A4FC0009738E /* FirstScrollMenuView.m in Sources */,
 				7F2C304F1ACA79C500181E65 /* GroupByListTableViewCell.m in Sources */,
 				7FA778901ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.m in Sources */,
+				7F4D95A21ACB8BB400FA7A37 /* UILabel+ChangeText.m in Sources */,
 				7F5D1AF61AC585F90028536F /* InfiniteScrollView.m in Sources */,
 				7F2C30491ACA6E8800181E65 /* CountDownTimerView.m in Sources */,
 				7F5D1AEB1AC57DB40028536F /* MyViewController.m in Sources */,
