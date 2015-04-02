@@ -13,6 +13,11 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    UITextView *priceTextView = [[UITextView alloc] init];
+    priceTextView.text = @"dfsdf";
+    priceTextView.backgroundColor = [UIColor redColor];
+    priceTextView.frame = CGRectMake(self.listDetailLabel.frame.origin.x, self.listDetailLabel.frame.origin.y + self.listDetailLabel.frame.size.height, self.listDetailLabel.frame.size.width, 20);
+    [self addSubview:priceTextView];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -24,11 +29,9 @@
 -(void)setGroupByListModal:(GroupByListModal *)modal{
     self.imageView.image = modal.image;
     self.listDetailLabel.text = modal.listDetail;
-    self.listPriceLabel.text = modal.listPrice;
-    self.listSalesLabel.text = modal.listSales;
+    self.listPriceTextView.text = modal.listPrice;
     self.listTitleLabel.text = modal.listTitle;
     [self.imageView addBookImageView];
-    [self.listPriceLabel changeAttributedString];
 }
 
 @end

@@ -23,6 +23,8 @@
 		7F2C30591ACA9EE800181E65 /* GroupListHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2C30571ACA9EE800181E65 /* GroupListHeaderTableViewCell.xib */; };
 		7F4D959F1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D959E1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m */; };
 		7F4D95A21ACB8BB400FA7A37 /* UILabel+ChangeText.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D95A11ACB8BB400FA7A37 /* UILabel+ChangeText.m */; };
+		7F5245521ACD16F100BB518F /* LMTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5245511ACD16F100BB518F /* LMTextStorage.m */; };
+		7F5245551ACD170F00BB518F /* LMLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5245541ACD170F00BB518F /* LMLayoutManager.m */; };
 		7F5D1AAE1AC577BF0028536F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1AAD1AC577BF0028536F /* main.m */; };
 		7F5D1AB11AC577BF0028536F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1AB01AC577BF0028536F /* AppDelegate.m */; };
 		7F5D1ABA1AC577BF0028536F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5D1AB81AC577BF0028536F /* Main.storyboard */; };
@@ -86,6 +88,10 @@
 		7F4D959E1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AddSubImageView.m"; sourceTree = "<group>"; };
 		7F4D95A01ACB8BB400FA7A37 /* UILabel+ChangeText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ChangeText.h"; sourceTree = "<group>"; };
 		7F4D95A11ACB8BB400FA7A37 /* UILabel+ChangeText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ChangeText.m"; sourceTree = "<group>"; };
+		7F5245501ACD16F100BB518F /* LMTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMTextStorage.h; sourceTree = "<group>"; };
+		7F5245511ACD16F100BB518F /* LMTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMTextStorage.m; sourceTree = "<group>"; };
+		7F5245531ACD170F00BB518F /* LMLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLayoutManager.h; sourceTree = "<group>"; };
+		7F5245541ACD170F00BB518F /* LMLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLayoutManager.m; sourceTree = "<group>"; };
 		7F5D1AA81AC577BF0028536F /* LuoMiPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuoMiPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F5D1AAC1AC577BF0028536F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F5D1AAD1AC577BF0028536F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -187,6 +193,17 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		7F52454F1ACD16B400BB518F /* LMTextLayOut */ = {
+			isa = PBXGroup;
+			children = (
+				7F5245501ACD16F100BB518F /* LMTextStorage.h */,
+				7F5245511ACD16F100BB518F /* LMTextStorage.m */,
+				7F5245531ACD170F00BB518F /* LMLayoutManager.h */,
+				7F5245541ACD170F00BB518F /* LMLayoutManager.m */,
+			);
+			name = LMTextLayOut;
+			sourceTree = "<group>";
+		};
 		7F5D1A9F1AC577BF0028536F = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +283,7 @@
 		7F5D1AF21AC585CC0028536F /* CustomLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				7F52454F1ACD16B400BB518F /* LMTextLayOut */,
 				7F2296B81AC9600500932E7B /* LMTimerLabel */,
 				7F7CB95A1AC690C20009738E /* LMPullToRefresh */,
 				7F5D1AF31AC585E80028536F /* InfiniteScrollView */,
@@ -479,6 +497,8 @@
 				7F5D1AF61AC585F90028536F /* InfiniteScrollView.m in Sources */,
 				7F2C30491ACA6E8800181E65 /* CountDownTimerView.m in Sources */,
 				7F5D1AEB1AC57DB40028536F /* MyViewController.m in Sources */,
+				7F5245521ACD16F100BB518F /* LMTextStorage.m in Sources */,
+				7F5245551ACD170F00BB518F /* LMLayoutManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

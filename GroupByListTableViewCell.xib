@@ -21,25 +21,23 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1毛钱吃麦当劳" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iui-YM-GHl">
-                        <rect key="frame" x="116" y="14" width="112" height="21"/>
+                        <rect key="frame" x="116" y="14" width="112" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1毛钱吃麦当劳原味板烧鸡腿堡" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRK-9n-qup">
-                        <rect key="frame" x="116" y="37" width="177" height="16"/>
+                        <rect key="frame" x="116" y="36" width="176.5" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥0.1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2d-wl-NLg">
-                        <rect key="frame" x="115" y="54" width="37" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" red="1" green="0.27450980392156865" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已售344245" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOl-lh-4u1">
-                        <rect key="frame" x="118" y="74" width="55" height="12"/>
+                        <rect key="frame" x="118" y="75" width="55" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="7H4-gu-i62"/>
+                            <constraint firstAttribute="width" constant="55" id="rcA-yR-xfX"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -48,20 +46,19 @@
                 <constraints>
                     <constraint firstItem="Kgr-0u-3xz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="4kJ-cY-qIJ"/>
                     <constraint firstItem="pRK-9n-qup" firstAttribute="top" secondItem="iui-YM-GHl" secondAttribute="bottom" constant="2" id="CUH-VT-tva"/>
-                    <constraint firstItem="O2d-wl-NLg" firstAttribute="leading" secondItem="sOl-lh-4u1" secondAttribute="leading" constant="-3" id="Grb-yF-sJI"/>
-                    <constraint firstItem="O2d-wl-NLg" firstAttribute="leading" secondItem="pRK-9n-qup" secondAttribute="leading" constant="-1" id="N9o-U9-hIN"/>
                     <constraint firstItem="Kgr-0u-3xz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Qmj-ko-N8L"/>
-                    <constraint firstItem="O2d-wl-NLg" firstAttribute="top" secondItem="pRK-9n-qup" secondAttribute="bottom" constant="1" id="VDM-oW-dUx"/>
+                    <constraint firstItem="sOl-lh-4u1" firstAttribute="top" secondItem="pRK-9n-qup" secondAttribute="bottom" constant="23" id="YUd-HW-Xly"/>
                     <constraint firstItem="pRK-9n-qup" firstAttribute="leading" secondItem="iui-YM-GHl" secondAttribute="leading" id="aJQ-4d-Iaf"/>
+                    <constraint firstItem="sOl-lh-4u1" firstAttribute="leading" secondItem="Kgr-0u-3xz" secondAttribute="trailing" constant="10" id="iDB-9H-KV5"/>
                     <constraint firstItem="iui-YM-GHl" firstAttribute="leading" secondItem="Kgr-0u-3xz" secondAttribute="trailing" constant="8" id="j7H-hl-B1v"/>
-                    <constraint firstItem="sOl-lh-4u1" firstAttribute="top" secondItem="O2d-wl-NLg" secondAttribute="bottom" constant="2" id="php-1J-VVk"/>
                     <constraint firstItem="iui-YM-GHl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="qCt-Z8-jjE"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="listPriceLabel" destination="O2d-wl-NLg" id="0Zu-z0-sKr"/>
+                <outlet property="imageView" destination="Kgr-0u-3xz" id="uL7-1Z-9xu"/>
+                <outlet property="listDetailLabel" destination="pRK-9n-qup" id="lfg-nE-zHA"/>
             </connections>
-            <point key="canvasLocation" x="482" y="438"/>
+            <point key="canvasLocation" x="399" y="423"/>
         </tableViewCell>
     </objects>
     <resources>
