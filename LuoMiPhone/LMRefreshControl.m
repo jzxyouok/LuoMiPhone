@@ -72,7 +72,6 @@ static const CGFloat imageViewDefaultHeight = 20;
         
     }
     
-    NSLog(@"frame = %@",NSStringFromCGRect(self.scrollView.frame));
 }
 
 - (void)endRefresh{

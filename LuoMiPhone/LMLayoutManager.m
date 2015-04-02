@@ -37,9 +37,9 @@
                       inContext:(CGContextRef)context {
     if (color) {
         CGContextSaveGState(context);
-        [color setFill];
+       // [color setFill];
         CGContextTranslateCTM(context, origin.x, origin.y);
-        
+        [color set];
         NSRange
         highlightedGlyphRange = [self glyphRangeForCharacterRange:highlightedCharacterRange
                                              actualCharacterRange:NULL];
@@ -58,9 +58,8 @@
 }
 
 - (void)drawHighlightInRect:(CGRect)rect {
-    CGRect highlightRect = CGRectInset(rect, -3, -3);
-    UIRectFill(highlightRect);
-    [[UIBezierPath bezierPathWithOvalInRect:highlightRect] stroke];
+    CGRect highlightRect = CGRectInset(rect, 0, 3);
+    [[UIBezierPath bezierPathWithRect:highlightRect] stroke];
 }
 
 

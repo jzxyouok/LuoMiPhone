@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LuoMiPhone/InfiniteScrollView.m"
-            timestampString = "449497026.618997"
+            timestampString = "449666310.558708"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "-initWithFrame:withViews:"
             landmarkType = "5">
          </BreakpointContent>
@@ -60,6 +60,22 @@
             startingLineNumber = "16"
             endingLineNumber = "16"
             landmarkName = "-changeAttributedString"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LuoMiPhone/LMTextStorage.m"
+            timestampString = "449668322.334373"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "-applyTokenAttributesToRange:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

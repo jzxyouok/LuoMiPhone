@@ -88,22 +88,26 @@ NSString * const PTLHighlightColorAttributeName = @"PTLHighlightColorAttributeNa
     NSDictionary *defaultAttributes = self.tokens[PTLDefaultTokenName];
     
     NSString *string = [self.backingStore string];
-    [string enumerateSubstringsInRange:searchRange
-                               options:NSStringEnumerationByWords
-                            usingBlock:^(NSString *substring,
-                                         NSRange substringRange,
-                                         NSRange enclosingRange,
-                                         BOOL *stop) {
-                                NSDictionary *
-                                attributesForToken = self.tokens[substring];
-                                
-                                if(!attributesForToken)
-                                    attributesForToken = defaultAttributes;
-                                
-                                if(attributesForToken)
-                                    [self setAttributes:attributesForToken
-                                                  range:substringRange];
-                            }];
+    NSArray *textArray = [string componentsSeparatedByString:@" "];
+    for (NSString *subString in textArray) {
+        NSDictionary *attributesForToken = self.tokens[subString];
+        
+        if(!attributesForToken)
+            attributesForToken = defaultAttributes;
+        
+        if(attributesForToken)
+            [self setAttributes:attributesForToken
+                          range:[string rangeOfString:subString]];
+    }
+//    [string enumerateSubstringsInRange:searchRange
+//                               options:NSStringEnumerationByWords
+//                            usingBlock:^(NSString *substring,
+//                                         NSRange substringRange,
+//                                         NSRange enclosingRange,
+//                                         BOOL *stop) {
+//
+//                                
+//                            }];
 }
 
 

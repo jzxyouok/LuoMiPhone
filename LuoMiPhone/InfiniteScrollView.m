@@ -91,7 +91,6 @@
 }
 
 -(void)autoScroll{
-    NSLog(@"auto scroll invoked");
     [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x + self.scrollView.frame.size.width, self.scrollView.contentOffset.y) animated:YES];
 }
 
