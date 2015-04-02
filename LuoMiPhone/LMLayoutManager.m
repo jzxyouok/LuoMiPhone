@@ -51,15 +51,20 @@
                           withinSelectedGlyphRange:NSMakeRange(NSNotFound, 0)
                                    inTextContainer:container
                                         usingBlock:^(CGRect rect, BOOL *stop){
-                                            [self drawHighlightInRect:rect];
+                                            
+                                            CGRect highlightRect = CGRectMake(rect.origin.x, rect.origin.y + 5, rect.size.width, rect.size.height-6);
+                                            if (highlightedCharacterRange.length == 4) {
+                                                 highlightRect = CGRectMake(rect.origin.x, rect.origin.y + 8, rect.size.width, rect.size.height-9);
+                                            }
+                                            [self drawHighlightInRect:highlightRect];
                                         }];
         CGContextRestoreGState(context);
     }
 }
 
 - (void)drawHighlightInRect:(CGRect)rect {
-    CGRect highlightRect = CGRectInset(rect, 0, 3);
-    [[UIBezierPath bezierPathWithRect:highlightRect] stroke];
+
+    [[UIBezierPath bezierPathWithRect:rect] stroke];
 }
 
 

@@ -28,6 +28,10 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1毛钱吃麦当劳原味板烧鸡腿堡" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRK-9n-qup">
                         <rect key="frame" x="116" y="36" width="176.5" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="Y2m-og-6Ay"/>
+                            <constraint firstAttribute="width" constant="176.5" id="n7s-FF-pMa"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -57,6 +61,7 @@
             <connections>
                 <outlet property="imageView" destination="Kgr-0u-3xz" id="uL7-1Z-9xu"/>
                 <outlet property="listDetailLabel" destination="pRK-9n-qup" id="lfg-nE-zHA"/>
+                <outlet property="listSalesLabel" destination="sOl-lh-4u1" id="TBs-OT-l8I"/>
             </connections>
             <point key="canvasLocation" x="399" y="423"/>
         </tableViewCell>

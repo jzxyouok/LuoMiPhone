@@ -17,5 +17,5 @@
 @property(nonatomic,weak) IBOutlet UILabel *listDetailLabel;
 @property(nonatomic,weak) IBOutlet UITextView *listPriceTextView;
 @property(nonatomic,weak) IBOutlet UILabel *listSalesLabel;
-
+@property(nonatomic,strong) UITextView *textView;
 @end
