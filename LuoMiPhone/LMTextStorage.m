@@ -81,6 +81,7 @@ NSString * const PTLHighlightColorAttributeName = @"PTLHighlightColorAttributeNa
         self.dynamicTextNeedsUpdate = NO;
         [self performReplacementsForCharacterChangeInRange:[self editedRange]];
     }
+    NSLog(@"dd");
     [super processEditing];
 }
 

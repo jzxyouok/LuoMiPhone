@@ -16,6 +16,7 @@
 #import "GroupByListModal.h"
 #import "CheckAllGroupByButtonTableViewCell.h"
 #import "GroupListHeaderTableViewCell.h"
+#import "LuoMiPhone-swift.h"
 
 #define groupbyScrollTableViewCellIdentifier  @"GroupbyScrollTableViewCell"
 #define selectedBrandTableViewCellIdentifier @"SelectedBrandMenuViewCell"
@@ -23,7 +24,7 @@
 #define groupByListTableViewCellIdentifier @"GroupByListTableViewCell"
 #define checkAllGroupByButtonTableViewCellIdentifer @"CheckAllGroupByButtonTableViewCell"
 #define groupListHeaderTableViewCellIdentifer @"GroupListHeaderTableViewCell"
-
+#define MasonryTableViewCellIdentifier @"MasonryTableViewCellIdentifier"
 @interface GroupBuyViewController () <UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,assign) CGFloat scrollPicHeight;
@@ -50,7 +51,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:groupByListTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:groupByListTableViewCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:checkAllGroupByButtonTableViewCellIdentifer bundle:nil] forCellReuseIdentifier:checkAllGroupByButtonTableViewCellIdentifer];
     [self.tableView registerNib:[UINib nibWithNibName:groupListHeaderTableViewCellIdentifer bundle:nil] forCellReuseIdentifier:groupListHeaderTableViewCellIdentifer];
-    
+    [self.tableView registerNib:[UINib nibWithNibName:@"MasonryTableViewCell" bundle:nil] forCellReuseIdentifier:MasonryTableViewCellIdentifier];
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[UIImage imageNamed:@"mc"],@"image",@"1毛钱吃麦当劳",@"listTitle",@"1毛钱吃麦当劳原味板烧鸡腿堡",@"listDetail",@"￥0.1",@"listPrice",@"已售344245",@"listSales", nil];
     self.groupListModal = [[GroupByListModal alloc] initWith:dic];
     self.tableRows = 20;
@@ -89,11 +90,14 @@
     [groupbyScrollTableViewCell layoutIfNeeded];
     
     CGSize groupbyScrollTableViewCellSize = [groupbyScrollTableViewCell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    if (indexPath.row == self.tableRows - 1) {
+    if (indexPath.row == self.tableRows - 2) {
         return 70;
     }
     if (indexPath.row == 6) {
         return 40;
+    }
+    if (indexPath.row == self.tableRows - 1) {
+        return 200;
     }
     if (indexPath.row == 0) {
         //return groupbyScrollTableViewCellSize.height + 1;
@@ -115,6 +119,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    if (indexPath.row ==  self.tableRows - 1) {
+        static NSString *mansoryTableViewCellIdentifier = MasonryTableViewCellIdentifier;
+        MasonryTableViewCell *cell = (MasonryTableViewCell *)[tableView dequeueReusableCellWithIdentifier:mansoryTableViewCellIdentifier forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }
+    
     if (indexPath.row == 6){
         static NSString *ListHeaderTableViewCell = groupListHeaderTableViewCellIdentifer;
         GroupListHeaderTableViewCell *cell = (GroupListHeaderTableViewCell *)[tableView dequeueReusableCellWithIdentifier:ListHeaderTableViewCell forIndexPath:indexPath];
@@ -122,7 +133,7 @@
         return cell;
     }
     
-    if (indexPath.row == self.tableRows - 1){
+    if (indexPath.row == self.tableRows - 2){
         static NSString *checkAllGroupByButtonTableViewCell = checkAllGroupByButtonTableViewCellIdentifer;
         CheckAllGroupByButtonTableViewCell *cell = (CheckAllGroupByButtonTableViewCell *)[tableView dequeueReusableCellWithIdentifier:checkAllGroupByButtonTableViewCell forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;

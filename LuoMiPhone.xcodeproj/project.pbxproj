@@ -48,6 +48,8 @@
 		7F7CB9661AC6A51A0009738E /* FirstScrollMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7CB9651AC6A51A0009738E /* FirstScrollMenuView.xib */; };
 		7FA778901ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7788E1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.m */; };
 		7FA778911ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA7788F1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib */; };
+		7FAA1AF31AD6D1610067F7E6 /* MasonryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAA1AF11AD6D1610067F7E6 /* MasonryTableViewCell.swift */; };
+		7FAA1AF41AD6D1610067F7E6 /* MasonryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FAA1AF21AD6D1610067F7E6 /* MasonryTableViewCell.xib */; };
 		7FB9F8DC1ACBC0F400B8199A /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB9F8DB1ACBC0F400B8199A /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +131,9 @@
 		7FA7788D1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckAllGroupByButtonTableViewCell.h; sourceTree = "<group>"; };
 		7FA7788E1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckAllGroupByButtonTableViewCell.m; sourceTree = "<group>"; };
 		7FA7788F1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckAllGroupByButtonTableViewCell.xib; sourceTree = "<group>"; };
+		7FAA1AF01AD6D1600067F7E6 /* LuoMiPhone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LuoMiPhone-Bridging-Header.h"; sourceTree = "<group>"; };
+		7FAA1AF11AD6D1610067F7E6 /* MasonryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasonryTableViewCell.swift; sourceTree = "<group>"; };
+		7FAA1AF21AD6D1610067F7E6 /* MasonryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasonryTableViewCell.xib; sourceTree = "<group>"; };
 		7FB9F8DB1ACBC0F400B8199A /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -330,6 +335,9 @@
 				7FA7788D1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.h */,
 				7FA7788E1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.m */,
 				7FA7788F1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib */,
+				7FAA1AF11AD6D1610067F7E6 /* MasonryTableViewCell.swift */,
+				7FAA1AF21AD6D1610067F7E6 /* MasonryTableViewCell.xib */,
+				7FAA1AF01AD6D1600067F7E6 /* LuoMiPhone-Bridging-Header.h */,
 			);
 			name = "团购";
 			sourceTree = "<group>";
@@ -459,6 +467,7 @@
 				7F5D1AE21AC57D8F0028536F /* GroupBuyViewController.xib in Resources */,
 				7F2C304B1ACA6E9200181E65 /* CountDownTimerView.xib in Resources */,
 				7F2296C11AC975F500932E7B /* SelectedBrandCollectionViewCell.xib in Resources */,
+				7FAA1AF41AD6D1610067F7E6 /* MasonryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +494,7 @@
 				7F2296BB1AC9604900932E7B /* LMTimerLabel.m in Sources */,
 				7F2296B61AC94C8E00932E7B /* SelectedBrandMenuViewCell.m in Sources */,
 				7F5D1AE61AC57DA90028536F /* NearbyViewController.m in Sources */,
+				7FAA1AF31AD6D1610067F7E6 /* MasonryTableViewCell.swift in Sources */,
 				7F7CB95E1AC690DA0009738E /* LMRefreshControl.m in Sources */,
 				7F5D1AAE1AC577BF0028536F /* main.m in Sources */,
 				7F2296C51AC97EE500932E7B /* CommentGiftTableViewCell.m in Sources */,
@@ -620,9 +630,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/LuoMiPhone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = LuoMiPhone;
+				SWIFT_OBJC_BRIDGING_HEADER = "LuoMiPhone-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -630,9 +644,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/LuoMiPhone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = LuoMiPhone;
+				SWIFT_OBJC_BRIDGING_HEADER = "LuoMiPhone-Bridging-Header.h";
 			};
 			name = Release;
 		};
