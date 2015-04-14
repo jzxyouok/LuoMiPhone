@@ -42,6 +42,9 @@
 		7F5D1AF61AC585F90028536F /* InfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1AF51AC585F90028536F /* InfiniteScrollView.m */; };
 		7F5D1B061AC58D5A0028536F /* GroupbyScrollTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1B041AC58D5A0028536F /* GroupbyScrollTableViewCell.m */; };
 		7F5D1B071AC58D5A0028536F /* GroupbyScrollTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F5D1B051AC58D5A0028536F /* GroupbyScrollTableViewCell.xib */; };
+		7F7752CB1ADBDF7B00861D27 /* MasonryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7752C91ADBDF7B00861D27 /* MasonryCollectionViewCell.swift */; };
+		7F7752CC1ADBDF7B00861D27 /* MasonryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7752CA1ADBDF7B00861D27 /* MasonryCollectionViewCell.xib */; };
+		7F7752CF1ADBF39000861D27 /* MKMasonryViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7752CE1ADBF39000861D27 /* MKMasonryViewLayout.swift */; };
 		7F7CB95E1AC690DA0009738E /* LMRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7CB95C1AC690DA0009738E /* LMRefreshControl.m */; };
 		7F7CB95F1AC690DA0009738E /* LMRefreshControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7CB95D1AC690DA0009738E /* LMRefreshControl.xib */; };
 		7F7CB9641AC6A4FC0009738E /* FirstScrollMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7CB9631AC6A4FC0009738E /* FirstScrollMenuView.m */; };
@@ -122,6 +125,9 @@
 		7F5D1B031AC58D5A0028536F /* GroupbyScrollTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupbyScrollTableViewCell.h; sourceTree = "<group>"; };
 		7F5D1B041AC58D5A0028536F /* GroupbyScrollTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupbyScrollTableViewCell.m; sourceTree = "<group>"; };
 		7F5D1B051AC58D5A0028536F /* GroupbyScrollTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupbyScrollTableViewCell.xib; sourceTree = "<group>"; };
+		7F7752C91ADBDF7B00861D27 /* MasonryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasonryCollectionViewCell.swift; sourceTree = "<group>"; };
+		7F7752CA1ADBDF7B00861D27 /* MasonryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasonryCollectionViewCell.xib; sourceTree = "<group>"; };
+		7F7752CE1ADBF39000861D27 /* MKMasonryViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMasonryViewLayout.swift; sourceTree = "<group>"; };
 		7F7CB95B1AC690DA0009738E /* LMRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMRefreshControl.h; sourceTree = "<group>"; };
 		7F7CB95C1AC690DA0009738E /* LMRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMRefreshControl.m; sourceTree = "<group>"; };
 		7F7CB95D1AC690DA0009738E /* LMRefreshControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LMRefreshControl.xib; sourceTree = "<group>"; };
@@ -174,6 +180,8 @@
 				7F2296BD1AC975F500932E7B /* SelectedBrandCollectionViewCell.h */,
 				7F2296BE1AC975F500932E7B /* SelectedBrandCollectionViewCell.m */,
 				7F2296BF1AC975F500932E7B /* SelectedBrandCollectionViewCell.xib */,
+				7F7752C91ADBDF7B00861D27 /* MasonryCollectionViewCell.swift */,
+				7F7752CA1ADBDF7B00861D27 /* MasonryCollectionViewCell.xib */,
 			);
 			name = CustomCollectionViewCell;
 			sourceTree = "<group>";
@@ -231,6 +239,7 @@
 		7F5D1AAA1AC577BF0028536F /* LuoMiPhone */ = {
 			isa = PBXGroup;
 			children = (
+				7F7752CD1ADBF36C00861D27 /* CustomCollectionViewLayout */,
 				7F4D95961ACAFD2300FA7A37 /* Category */,
 				7F2C30541ACA812200181E65 /* Modal */,
 				7F2296BC1AC975D100932E7B /* CustomCollectionViewCell */,
@@ -340,6 +349,14 @@
 				7FAA1AF01AD6D1600067F7E6 /* LuoMiPhone-Bridging-Header.h */,
 			);
 			name = "团购";
+			sourceTree = "<group>";
+		};
+		7F7752CD1ADBF36C00861D27 /* CustomCollectionViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				7F7752CE1ADBF39000861D27 /* MKMasonryViewLayout.swift */,
+			);
+			name = CustomCollectionViewLayout;
 			sourceTree = "<group>";
 		};
 		7F7CB95A1AC690C20009738E /* LMPullToRefresh */ = {
@@ -457,6 +474,7 @@
 				7F5D1B071AC58D5A0028536F /* GroupbyScrollTableViewCell.xib in Resources */,
 				7F2296C61AC97EE500932E7B /* CommentGiftTableViewCell.xib in Resources */,
 				7F7CB9661AC6A51A0009738E /* FirstScrollMenuView.xib in Resources */,
+				7F7752CC1ADBDF7B00861D27 /* MasonryCollectionViewCell.xib in Resources */,
 				7F5D1AEC1AC57DB40028536F /* MyViewController.xib in Resources */,
 				7F7CB95F1AC690DA0009738E /* LMRefreshControl.xib in Resources */,
 				7F5D1AE71AC57DA90028536F /* NearbyViewController.xib in Resources */,
@@ -503,8 +521,10 @@
 				7F7CB9641AC6A4FC0009738E /* FirstScrollMenuView.m in Sources */,
 				7F2C304F1ACA79C500181E65 /* GroupByListTableViewCell.m in Sources */,
 				7FA778901ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.m in Sources */,
+				7F7752CF1ADBF39000861D27 /* MKMasonryViewLayout.swift in Sources */,
 				7F4D95A21ACB8BB400FA7A37 /* UILabel+ChangeText.m in Sources */,
 				7F5D1AF61AC585F90028536F /* InfiniteScrollView.m in Sources */,
+				7F7752CB1ADBDF7B00861D27 /* MasonryCollectionViewCell.swift in Sources */,
 				7F2C30491ACA6E8800181E65 /* CountDownTimerView.m in Sources */,
 				7F5D1AEB1AC57DB40028536F /* MyViewController.m in Sources */,
 				7F5245521ACD16F100BB518F /* LMTextStorage.m in Sources */,

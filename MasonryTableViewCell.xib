@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -14,7 +14,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="D8I-Ea-j5e">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TOw-GI-4LK">
                             <size key="itemSize" width="50" height="50"/>
@@ -23,8 +23,8 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <connections>
-                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="RBo-ha-qOZ"/>
-                            <outlet property="delegate" destination="KGk-i7-Jjw" id="PAq-ZC-YNh"/>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="Oez-2O-XkC"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="QGM-Zw-xVe"/>
                         </connections>
                     </collectionView>
                 </subviews>
@@ -32,9 +32,12 @@
                     <constraint firstAttribute="trailing" secondItem="D8I-Ea-j5e" secondAttribute="trailing" id="72q-ye-HTm"/>
                     <constraint firstItem="D8I-Ea-j5e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8SY-9b-XC5"/>
                     <constraint firstItem="D8I-Ea-j5e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TiC-BC-hCZ"/>
-                    <constraint firstAttribute="bottom" secondItem="D8I-Ea-j5e" secondAttribute="bottom" id="r03-9h-qvu"/>
+                    <constraint firstAttribute="bottom" secondItem="D8I-Ea-j5e" secondAttribute="bottom" constant="-1" id="r03-9h-qvu"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="D8I-Ea-j5e" id="ooh-CL-ap4"/>
+            </connections>
             <point key="canvasLocation" x="139" y="218.5"/>
         </tableViewCell>
     </objects>

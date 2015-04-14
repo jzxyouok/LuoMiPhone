@@ -81,15 +81,19 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static GroupbyScrollTableViewCell *groupbyScrollTableViewCell;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        groupbyScrollTableViewCell = (GroupbyScrollTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:groupbyScrollTableViewCellIdentifier];
-    });
-    [groupbyScrollTableViewCell setNeedsDisplay];
-    [groupbyScrollTableViewCell layoutIfNeeded];
-    
-    CGSize groupbyScrollTableViewCellSize = [groupbyScrollTableViewCell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+//    static GroupbyScrollTableViewCell *groupbyScrollTableViewCell;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        groupbyScrollTableViewCell = (GroupbyScrollTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:groupbyScrollTableViewCellIdentifier];
+//    });
+//    [groupbyScrollTableViewCell setNeedsDisplay];
+//    [groupbyScrollTableViewCell layoutIfNeeded];
+//    
+//    CGSize groupbyScrollTableViewCellSize = [groupbyScrollTableViewCell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    return [self heightForIndex:indexPath];
+}
+
+-(CGFloat)heightForIndex:(NSIndexPath *)indexPath{
     if (indexPath.row == self.tableRows - 2) {
         return 70;
     }
@@ -97,12 +101,12 @@
         return 40;
     }
     if (indexPath.row == self.tableRows - 1) {
-        return 200;
+        return 415;
     }
     if (indexPath.row == 0) {
         //return groupbyScrollTableViewCellSize.height + 1;
-       // return 280;
-       return  self.scrollPicHeight ;
+        // return 280;
+        return  self.scrollPicHeight ;
     } else if (indexPath.row == 2){
         return 164;
     } else if (indexPath.row == 4){
@@ -116,6 +120,10 @@
     return 100;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [self heightForIndex:indexPath];
+
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
