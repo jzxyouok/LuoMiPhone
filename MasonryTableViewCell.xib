@@ -1,44 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MasonryTableViewCellIdentifier" rowHeight="200" id="KGk-i7-Jjw" customClass="MasonryTableViewCell" customModule="LuoMiPhone" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX">
             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="D8I-Ea-j5e">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TOw-GI-4LK">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <connections>
-                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="Oez-2O-XkC"/>
-                            <outlet property="delegate" destination="KGk-i7-Jjw" id="QGM-Zw-xVe"/>
-                        </connections>
-                    </collectionView>
-                </subviews>
-                <constraints>
-                    <constraint firstAttribute="trailing" secondItem="D8I-Ea-j5e" secondAttribute="trailing" id="72q-ye-HTm"/>
-                    <constraint firstItem="D8I-Ea-j5e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8SY-9b-XC5"/>
-                    <constraint firstItem="D8I-Ea-j5e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TiC-BC-hCZ"/>
-                    <constraint firstAttribute="bottom" secondItem="D8I-Ea-j5e" secondAttribute="bottom" constant="-1" id="r03-9h-qvu"/>
-                </constraints>
-            </tableViewCellContentView>
-            <connections>
-                <outlet property="collectionView" destination="D8I-Ea-j5e" id="ooh-CL-ap4"/>
-            </connections>
-            <point key="canvasLocation" x="139" y="218.5"/>
-        </tableViewCell>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+        </collectionViewCell>
     </objects>
 </document>

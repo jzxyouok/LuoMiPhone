@@ -1,48 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MasonryCollectionViewCellIdentifier" id="gTV-IL-0wX" customClass="MasonryCollectionViewCell" customModule="LuoMiPhone" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX">
             <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MansoryPlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="Hfg-Bd-B0m">
-                        <rect key="frame" x="22" y="72" width="56" height="50"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人气周边游" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlb-1p-QvT">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人气周边游" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xx1-dp-AON">
                         <rect key="frame" x="8" y="8" width="85" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="赏春限时立减" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRa-9S-jRC">
-                        <rect key="frame" x="5" y="37" width="90" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="赏春限时立减" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaV-CF-wDc">
+                        <rect key="frame" x="5" y="31" width="90" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="56" placeholderIntrinsicHeight="50" image="MansoryPlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="Mjq-Mu-PvD">
+                        <rect key="frame" x="22" y="65" width="56" height="50"/>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="dlb-1p-QvT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="Fob-Tw-hfg"/>
-                <constraint firstAttribute="bottom" secondItem="Hfg-Bd-B0m" secondAttribute="bottom" constant="8" id="GqL-yQ-AkC"/>
-                <constraint firstAttribute="centerX" secondItem="dlb-1p-QvT" secondAttribute="centerX" id="PaA-Bs-AqN"/>
-                <constraint firstItem="Hfg-Bd-B0m" firstAttribute="top" secondItem="SRa-9S-jRC" secondAttribute="bottom" constant="17" id="Yca-nf-714"/>
-                <constraint firstAttribute="trailing" secondItem="Hfg-Bd-B0m" secondAttribute="trailing" constant="22" id="a2r-jk-dqT"/>
-                <constraint firstAttribute="centerX" secondItem="SRa-9S-jRC" secondAttribute="centerX" id="qNL-Vj-Izp"/>
-                <constraint firstItem="Hfg-Bd-B0m" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="22" id="wu2-Wd-978"/>
-                <constraint firstItem="SRa-9S-jRC" firstAttribute="top" secondItem="dlb-1p-QvT" secondAttribute="bottom" constant="8" id="xkO-5L-37D"/>
+                <constraint firstAttribute="centerX" secondItem="eaV-CF-wDc" secondAttribute="centerX" id="CxS-CD-znj"/>
+                <constraint firstItem="eaV-CF-wDc" firstAttribute="top" secondItem="Xx1-dp-AON" secondAttribute="bottom" constant="2" id="Fnh-qQ-jOI"/>
+                <constraint firstAttribute="bottom" secondItem="Mjq-Mu-PvD" secondAttribute="bottom" constant="15" id="J5b-sL-dtb"/>
+                <constraint firstItem="Xx1-dp-AON" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="Twu-oJ-bYC"/>
+                <constraint firstItem="Mjq-Mu-PvD" firstAttribute="top" secondItem="eaV-CF-wDc" secondAttribute="bottom" constant="16" id="YJH-NT-2Sz"/>
+                <constraint firstAttribute="centerX" secondItem="Xx1-dp-AON" secondAttribute="centerX" id="iup-qa-8vd"/>
+                <constraint firstAttribute="trailing" secondItem="Mjq-Mu-PvD" secondAttribute="trailing" constant="22" id="mCp-if-xTk"/>
+                <constraint firstItem="Mjq-Mu-PvD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="22" id="rau-sJ-h9D"/>
             </constraints>
-            <size key="customSize" width="91" height="176"/>
-            <point key="canvasLocation" x="252" y="183"/>
+            <size key="customSize" width="57" height="69"/>
+            <point key="canvasLocation" x="143.5" y="163.5"/>
         </collectionViewCell>
     </objects>
     <resources>
