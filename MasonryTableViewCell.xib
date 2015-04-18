@@ -6,13 +6,38 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ydU-L0-UqR" customClass="MasonryTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="415"/>
             <autoresizingMask key="autoresizingMask"/>
-            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-            </view>
-        </collectionViewCell>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ydU-L0-UqR" id="XWP-d9-9XH">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="R7e-uR-MoF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="414"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hsY-Qp-uFe" customClass="MKMasonryViewLayout">
+                            <size key="itemSize" width="100" height="130"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="ydU-L0-UqR" id="4iH-iy-tqD"/>
+                            <outlet property="delegate" destination="ydU-L0-UqR" id="V7u-Gi-WJ0"/>
+                        </connections>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="R7e-uR-MoF" firstAttribute="top" secondItem="XWP-d9-9XH" secondAttribute="top" id="4HH-Sq-Z4N"/>
+                    <constraint firstAttribute="bottom" secondItem="R7e-uR-MoF" secondAttribute="bottom" id="WsU-va-5nd"/>
+                    <constraint firstItem="R7e-uR-MoF" firstAttribute="leading" secondItem="XWP-d9-9XH" secondAttribute="leading" id="yDc-77-hWL"/>
+                    <constraint firstAttribute="trailing" secondItem="R7e-uR-MoF" secondAttribute="trailing" id="zJH-n6-Czh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectView" destination="R7e-uR-MoF" id="aaS-1x-hfr"/>
+            </connections>
+            <point key="canvasLocation" x="254" y="277"/>
+        </tableViewCell>
     </objects>
 </document>

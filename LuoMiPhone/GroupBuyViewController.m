@@ -16,7 +16,7 @@
 #import "GroupByListModal.h"
 #import "CheckAllGroupByButtonTableViewCell.h"
 #import "GroupListHeaderTableViewCell.h"
-#import "LuoMiPhone-swift.h"
+#import "MasonryTableViewCell.h"
 
 #define groupbyScrollTableViewCellIdentifier  @"GroupbyScrollTableViewCell"
 #define selectedBrandTableViewCellIdentifier @"SelectedBrandMenuViewCell"
@@ -24,7 +24,7 @@
 #define groupByListTableViewCellIdentifier @"GroupByListTableViewCell"
 #define checkAllGroupByButtonTableViewCellIdentifer @"CheckAllGroupByButtonTableViewCell"
 #define groupListHeaderTableViewCellIdentifer @"GroupListHeaderTableViewCell"
-#define MasonryTableViewCellIdentifier @"MasonryTableViewCellIdentifier"
+#define MasonryTableViewCellIdentifier @"MasonryTableViewCell"
 @interface GroupBuyViewController () <UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,assign) CGFloat scrollPicHeight;
@@ -51,7 +51,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:groupByListTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:groupByListTableViewCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:checkAllGroupByButtonTableViewCellIdentifer bundle:nil] forCellReuseIdentifier:checkAllGroupByButtonTableViewCellIdentifer];
     [self.tableView registerNib:[UINib nibWithNibName:groupListHeaderTableViewCellIdentifer bundle:nil] forCellReuseIdentifier:groupListHeaderTableViewCellIdentifer];
-    [self.tableView registerNib:[UINib nibWithNibName:@"MasonryTableViewCell" bundle:nil] forCellReuseIdentifier:MasonryTableViewCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:MasonryTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:MasonryTableViewCellIdentifier];
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[UIImage imageNamed:@"mc"],@"image",@"1毛钱吃麦当劳",@"listTitle",@"1毛钱吃麦当劳原味板烧鸡腿堡",@"listDetail",@"￥0.1",@"listPrice",@"已售344245",@"listSales", nil];
     self.groupListModal = [[GroupByListModal alloc] initWith:dic];
     self.tableRows = 20;
@@ -130,7 +130,6 @@
     if (indexPath.row ==  self.tableRows - 1) {
         static NSString *mansoryTableViewCellIdentifier = MasonryTableViewCellIdentifier;
         MasonryTableViewCell *cell = (MasonryTableViewCell *)[tableView dequeueReusableCellWithIdentifier:mansoryTableViewCellIdentifier forIndexPath:indexPath];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
     

@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasonryTableViewCell : UICollectionViewCell
+@interface MasonryTableViewCell : UITableViewCell
+
+
+
+@property(nonatomic,weak) IBOutlet UICollectionView *collectView;
+
+
 
 @end

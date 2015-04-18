@@ -10,7 +10,8 @@
 		7F11FCEF1AE205030097520B /* MasonryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F11FCED1AE205030097520B /* MasonryCollectionViewCell.m */; };
 		7F11FCF01AE205030097520B /* MasonryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F11FCEE1AE205030097520B /* MasonryCollectionViewCell.xib */; };
 		7F11FCF41AE207130097520B /* MasonryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F11FCF21AE207130097520B /* MasonryTableViewCell.m */; };
-		7F11FCF51AE207130097520B /* MasonryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F11FCF31AE207130097520B /* MasonryTableViewCell.xib */; };
+		7F11FCF71AE218A40097520B /* MasonryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F11FCF61AE218A40097520B /* MasonryTableViewCell.xib */; };
+		7F11FCFA1AE21AC40097520B /* MKMasonryViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F11FCF91AE21AC40097520B /* MKMasonryViewLayout.m */; };
 		7F2296B61AC94C8E00932E7B /* SelectedBrandMenuViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2296B41AC94C8E00932E7B /* SelectedBrandMenuViewCell.m */; };
 		7F2296B71AC94C8E00932E7B /* SelectedBrandMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2296B51AC94C8E00932E7B /* SelectedBrandMenuViewCell.xib */; };
 		7F2296BB1AC9604900932E7B /* LMTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2296BA1AC9604900932E7B /* LMTimerLabel.m */; };
@@ -71,7 +72,9 @@
 		7F11FCEE1AE205030097520B /* MasonryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasonryCollectionViewCell.xib; sourceTree = "<group>"; };
 		7F11FCF11AE207130097520B /* MasonryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryTableViewCell.h; sourceTree = "<group>"; };
 		7F11FCF21AE207130097520B /* MasonryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryTableViewCell.m; sourceTree = "<group>"; };
-		7F11FCF31AE207130097520B /* MasonryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasonryTableViewCell.xib; sourceTree = "<group>"; };
+		7F11FCF61AE218A40097520B /* MasonryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasonryTableViewCell.xib; sourceTree = "<group>"; };
+		7F11FCF81AE21AC40097520B /* MKMasonryViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMasonryViewLayout.h; sourceTree = "<group>"; };
+		7F11FCF91AE21AC40097520B /* MKMasonryViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMasonryViewLayout.m; sourceTree = "<group>"; };
 		7F2296B31AC94C8E00932E7B /* SelectedBrandMenuViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectedBrandMenuViewCell.h; path = LuoMiPhone/SelectedBrandMenuViewCell.h; sourceTree = "<group>"; };
 		7F2296B41AC94C8E00932E7B /* SelectedBrandMenuViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectedBrandMenuViewCell.m; path = LuoMiPhone/SelectedBrandMenuViewCell.m; sourceTree = "<group>"; };
 		7F2296B51AC94C8E00932E7B /* SelectedBrandMenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SelectedBrandMenuViewCell.xib; path = LuoMiPhone/SelectedBrandMenuViewCell.xib; sourceTree = "<group>"; };
@@ -346,7 +349,7 @@
 				7FA7788F1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib */,
 				7F11FCF11AE207130097520B /* MasonryTableViewCell.h */,
 				7F11FCF21AE207130097520B /* MasonryTableViewCell.m */,
-				7F11FCF31AE207130097520B /* MasonryTableViewCell.xib */,
+				7F11FCF61AE218A40097520B /* MasonryTableViewCell.xib */,
 			);
 			name = "团购";
 			sourceTree = "<group>";
@@ -354,6 +357,8 @@
 		7F7752CD1ADBF36C00861D27 /* CustomCollectionViewLayout */ = {
 			isa = PBXGroup;
 			children = (
+				7F11FCF81AE21AC40097520B /* MKMasonryViewLayout.h */,
+				7F11FCF91AE21AC40097520B /* MKMasonryViewLayout.m */,
 			);
 			name = CustomCollectionViewLayout;
 			sourceTree = "<group>";
@@ -479,7 +484,7 @@
 				7F5D1AE71AC57DA90028536F /* NearbyViewController.xib in Resources */,
 				7F5D1AF11AC57DBE0028536F /* MoreViewController.xib in Resources */,
 				7F5D1ABC1AC577BF0028536F /* Images.xcassets in Resources */,
-				7F11FCF51AE207130097520B /* MasonryTableViewCell.xib in Resources */,
+				7F11FCF71AE218A40097520B /* MasonryTableViewCell.xib in Resources */,
 				7F2C30591ACA9EE800181E65 /* GroupListHeaderTableViewCell.xib in Resources */,
 				7FA778911ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib in Resources */,
 				7F5D1AE21AC57D8F0028536F /* GroupBuyViewController.xib in Resources */,
@@ -502,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F11FCFA1AE21AC40097520B /* MKMasonryViewLayout.m in Sources */,
 				7F4D959F1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m in Sources */,
 				7F5D1AF01AC57DBE0028536F /* MoreViewController.m in Sources */,
 				7F5D1B061AC58D5A0028536F /* GroupbyScrollTableViewCell.m in Sources */,
