@@ -10,4 +10,6 @@
 
 @interface NearbyViewController : UIViewController
 
+@property(nonatomic,assign) IBOutlet UIView *menuView;
+
 @end

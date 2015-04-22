@@ -30,6 +30,15 @@
 		7F4D95A21ACB8BB400FA7A37 /* UILabel+ChangeText.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D95A11ACB8BB400FA7A37 /* UILabel+ChangeText.m */; };
 		7F5245521ACD16F100BB518F /* LMTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5245511ACD16F100BB518F /* LMTextStorage.m */; };
 		7F5245551ACD170F00BB518F /* LMLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5245541ACD170F00BB518F /* LMLayoutManager.m */; };
+		7F5465041AE7912900C3F34B /* ico_make.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F5464F41AE7912900C3F34B /* ico_make.png */; };
+		7F5465051AE7912900C3F34B /* JSBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5464F61AE7912900C3F34B /* JSBottomView.m */; };
+		7F5465061AE7912900C3F34B /* JSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5464F81AE7912900C3F34B /* JSCollectionViewCell.m */; };
+		7F5465071AE7912900C3F34B /* JSDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5464FA1AE7912900C3F34B /* JSDropDownMenu.m */; };
+		7F5465081AE7912900C3F34B /* JSIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5464FC1AE7912900C3F34B /* JSIndexPath.m */; };
+		7F5465091AE7912900C3F34B /* JSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5464FE1AE7912900C3F34B /* JSTableViewCell.m */; };
+		7F54650A1AE7912900C3F34B /* LeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5465001AE7912900C3F34B /* LeftTableViewCell.m */; };
+		7F54650B1AE7912900C3F34B /* LeftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F5465011AE7912900C3F34B /* LeftTableViewCell.xib */; };
+		7F54650C1AE7912900C3F34B /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5465031AE7912900C3F34B /* NSString+Size.m */; };
 		7F5D1AAE1AC577BF0028536F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1AAD1AC577BF0028536F /* main.m */; };
 		7F5D1AB11AC577BF0028536F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1AB01AC577BF0028536F /* AppDelegate.m */; };
 		7F5D1ABA1AC577BF0028536F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F5D1AB81AC577BF0028536F /* Main.storyboard */; };
@@ -105,6 +114,22 @@
 		7F5245511ACD16F100BB518F /* LMTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMTextStorage.m; sourceTree = "<group>"; };
 		7F5245531ACD170F00BB518F /* LMLayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLayoutManager.h; sourceTree = "<group>"; };
 		7F5245541ACD170F00BB518F /* LMLayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLayoutManager.m; sourceTree = "<group>"; };
+		7F5464F41AE7912900C3F34B /* ico_make.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_make.png; sourceTree = "<group>"; };
+		7F5464F51AE7912900C3F34B /* JSBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBottomView.h; sourceTree = "<group>"; };
+		7F5464F61AE7912900C3F34B /* JSBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBottomView.m; sourceTree = "<group>"; };
+		7F5464F71AE7912900C3F34B /* JSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCollectionViewCell.h; sourceTree = "<group>"; };
+		7F5464F81AE7912900C3F34B /* JSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCollectionViewCell.m; sourceTree = "<group>"; };
+		7F5464F91AE7912900C3F34B /* JSDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDropDownMenu.h; sourceTree = "<group>"; };
+		7F5464FA1AE7912900C3F34B /* JSDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDropDownMenu.m; sourceTree = "<group>"; };
+		7F5464FB1AE7912900C3F34B /* JSIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSIndexPath.h; sourceTree = "<group>"; };
+		7F5464FC1AE7912900C3F34B /* JSIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSIndexPath.m; sourceTree = "<group>"; };
+		7F5464FD1AE7912900C3F34B /* JSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTableViewCell.h; sourceTree = "<group>"; };
+		7F5464FE1AE7912900C3F34B /* JSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTableViewCell.m; sourceTree = "<group>"; };
+		7F5464FF1AE7912900C3F34B /* LeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftTableViewCell.h; sourceTree = "<group>"; };
+		7F5465001AE7912900C3F34B /* LeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftTableViewCell.m; sourceTree = "<group>"; };
+		7F5465011AE7912900C3F34B /* LeftTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftTableViewCell.xib; sourceTree = "<group>"; };
+		7F5465021AE7912900C3F34B /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		7F5465031AE7912900C3F34B /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
 		7F5D1AA81AC577BF0028536F /* LuoMiPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuoMiPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F5D1AAC1AC577BF0028536F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F5D1AAD1AC577BF0028536F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -220,6 +245,29 @@
 			name = LMTextLayOut;
 			sourceTree = "<group>";
 		};
+		7F5464F31AE7912900C3F34B /* JSDropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				7F5464F41AE7912900C3F34B /* ico_make.png */,
+				7F5464F51AE7912900C3F34B /* JSBottomView.h */,
+				7F5464F61AE7912900C3F34B /* JSBottomView.m */,
+				7F5464F71AE7912900C3F34B /* JSCollectionViewCell.h */,
+				7F5464F81AE7912900C3F34B /* JSCollectionViewCell.m */,
+				7F5464F91AE7912900C3F34B /* JSDropDownMenu.h */,
+				7F5464FA1AE7912900C3F34B /* JSDropDownMenu.m */,
+				7F5464FB1AE7912900C3F34B /* JSIndexPath.h */,
+				7F5464FC1AE7912900C3F34B /* JSIndexPath.m */,
+				7F5464FD1AE7912900C3F34B /* JSTableViewCell.h */,
+				7F5464FE1AE7912900C3F34B /* JSTableViewCell.m */,
+				7F5464FF1AE7912900C3F34B /* LeftTableViewCell.h */,
+				7F5465001AE7912900C3F34B /* LeftTableViewCell.m */,
+				7F5465011AE7912900C3F34B /* LeftTableViewCell.xib */,
+				7F5465021AE7912900C3F34B /* NSString+Size.h */,
+				7F5465031AE7912900C3F34B /* NSString+Size.m */,
+			);
+			path = JSDropDownMenu;
+			sourceTree = "<group>";
+		};
 		7F5D1A9F1AC577BF0028536F = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +290,7 @@
 		7F5D1AAA1AC577BF0028536F /* LuoMiPhone */ = {
 			isa = PBXGroup;
 			children = (
+				7F5464F31AE7912900C3F34B /* JSDropDownMenu */,
 				7F7752CD1ADBF36C00861D27 /* CustomCollectionViewLayout */,
 				7F4D95961ACAFD2300FA7A37 /* Category */,
 				7F2C30541ACA812200181E65 /* Modal */,
@@ -474,6 +523,7 @@
 				7F2C30501ACA79C500181E65 /* GroupByListTableViewCell.xib in Resources */,
 				7F2296B71AC94C8E00932E7B /* SelectedBrandMenuViewCell.xib in Resources */,
 				7F5D1ABA1AC577BF0028536F /* Main.storyboard in Resources */,
+				7F5465041AE7912900C3F34B /* ico_make.png in Resources */,
 				7F5D1ABF1AC577BF0028536F /* LaunchScreen.xib in Resources */,
 				7F5D1B071AC58D5A0028536F /* GroupbyScrollTableViewCell.xib in Resources */,
 				7F2296C61AC97EE500932E7B /* CommentGiftTableViewCell.xib in Resources */,
@@ -488,6 +538,7 @@
 				7F2C30591ACA9EE800181E65 /* GroupListHeaderTableViewCell.xib in Resources */,
 				7FA778911ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib in Resources */,
 				7F5D1AE21AC57D8F0028536F /* GroupBuyViewController.xib in Resources */,
+				7F54650B1AE7912900C3F34B /* LeftTableViewCell.xib in Resources */,
 				7F2C304B1ACA6E9200181E65 /* CountDownTimerView.xib in Resources */,
 				7F2296C11AC975F500932E7B /* SelectedBrandCollectionViewCell.xib in Resources */,
 			);
@@ -509,6 +560,9 @@
 			files = (
 				7F11FCFA1AE21AC40097520B /* MKMasonryViewLayout.m in Sources */,
 				7F4D959F1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m in Sources */,
+				7F5465081AE7912900C3F34B /* JSIndexPath.m in Sources */,
+				7F5465051AE7912900C3F34B /* JSBottomView.m in Sources */,
+				7F5465071AE7912900C3F34B /* JSDropDownMenu.m in Sources */,
 				7F5D1AF01AC57DBE0028536F /* MoreViewController.m in Sources */,
 				7F5D1B061AC58D5A0028536F /* GroupbyScrollTableViewCell.m in Sources */,
 				7F2296C01AC975F500932E7B /* SelectedBrandCollectionViewCell.m in Sources */,
@@ -527,9 +581,13 @@
 				7FA778901ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.m in Sources */,
 				7F4D95A21ACB8BB400FA7A37 /* UILabel+ChangeText.m in Sources */,
 				7F5D1AF61AC585F90028536F /* InfiniteScrollView.m in Sources */,
+				7F5465061AE7912900C3F34B /* JSCollectionViewCell.m in Sources */,
+				7F5465091AE7912900C3F34B /* JSTableViewCell.m in Sources */,
+				7F54650C1AE7912900C3F34B /* NSString+Size.m in Sources */,
 				7F2C30491ACA6E8800181E65 /* CountDownTimerView.m in Sources */,
 				7F11FCEF1AE205030097520B /* MasonryCollectionViewCell.m in Sources */,
 				7F5D1AEB1AC57DB40028536F /* MyViewController.m in Sources */,
+				7F54650A1AE7912900C3F34B /* LeftTableViewCell.m in Sources */,
 				7F5245521ACD16F100BB518F /* LMTextStorage.m in Sources */,
 				7F11FCF41AE207130097520B /* MasonryTableViewCell.m in Sources */,
 				7F5245551ACD170F00BB518F /* LMLayoutManager.m in Sources */,
