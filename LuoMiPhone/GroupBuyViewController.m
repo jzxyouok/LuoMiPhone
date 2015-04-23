@@ -17,6 +17,7 @@
 #import "CheckAllGroupByButtonTableViewCell.h"
 #import "GroupListHeaderTableViewCell.h"
 #import "MasonryTableViewCell.h"
+#import "CityListViewController.h"
 
 #define groupbyScrollTableViewCellIdentifier  @"GroupbyScrollTableViewCell"
 #define selectedBrandTableViewCellIdentifier @"SelectedBrandMenuViewCell"
@@ -57,7 +58,21 @@
     self.tableRows = 20;
     self.tableView.backgroundColor = [UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1.0];
     
-    
+    UIButton *currentCity = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [currentCity addTarget:self action:@selector(showCitySelected) forControlEvents:UIControlEventTouchUpInside];
+    [currentCity setTitle:@"上海" forState:UIControlStateNormal];
+    [currentCity setTitleColor:[UIColor colorWithRed:236/255.0 green:85/255.0 blue:140/255.0 alpha:1.0] forState:UIControlStateNormal];
+    currentCity.frame = CGRectMake(0, 0, 30, 30);
+    currentCity.backgroundColor = [UIColor colorWithRed:210/255.0 green:200/255.0 blue:200/255.0 alpha:1.0];
+    currentCity.layer.cornerRadius = currentCity.frame.size.width/2;
+    currentCity.layer.masksToBounds = YES;
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:currentCity] ;
+    self.navigationItem.leftBarButtonItem = backItem;
+}
+
+-(void)showCitySelected{
+    CityListViewController *cityList = [[CityListViewController alloc] init];
+    [self.navigationController pushViewController:cityList animated:YES];
 }
 
 -(void)startLoading{
@@ -205,6 +220,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
+    return self;
+}
+
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
+    return self;
+}
 
 
 @end

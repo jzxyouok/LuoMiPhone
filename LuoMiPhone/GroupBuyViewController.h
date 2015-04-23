@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "InfiniteScrollView.h"
-@interface GroupBuyViewController : UIViewController
+@interface GroupBuyViewController : UIViewController<UIViewControllerAnimatedTransitioning,UIViewControllerTransitioningDelegate>
 
 
 @property(nonatomic,weak) IBOutlet UITableView *tableView;
