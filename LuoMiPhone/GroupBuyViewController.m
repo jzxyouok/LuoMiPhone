@@ -56,6 +56,8 @@
     self.groupListModal = [[GroupByListModal alloc] initWith:dic];
     self.tableRows = 20;
     self.tableView.backgroundColor = [UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1.0];
+    
+    
 }
 
 -(void)startLoading{

@@ -60,6 +60,12 @@
 		7F7CB95F1AC690DA0009738E /* LMRefreshControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7CB95D1AC690DA0009738E /* LMRefreshControl.xib */; };
 		7F7CB9641AC6A4FC0009738E /* FirstScrollMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7CB9631AC6A4FC0009738E /* FirstScrollMenuView.m */; };
 		7F7CB9661AC6A51A0009738E /* FirstScrollMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7CB9651AC6A51A0009738E /* FirstScrollMenuView.xib */; };
+		7FA661011AE8C7D40001F2D3 /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FA660F81AE8C7D40001F2D3 /* citydict.plist */; };
+		7FA661021AE8C7D40001F2D3 /* CityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA660FA1AE8C7D40001F2D3 /* CityListViewController.m */; };
+		7FA661031AE8C7D40001F2D3 /* CitySelectCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA660FC1AE8C7D40001F2D3 /* CitySelectCollectionViewCell.m */; };
+		7FA661041AE8C7D40001F2D3 /* CitySelectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA660FD1AE8C7D40001F2D3 /* CitySelectCollectionViewCell.xib */; };
+		7FA661051AE8C7D40001F2D3 /* CitySelectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA660FF1AE8C7D40001F2D3 /* CitySelectTableViewCell.m */; };
+		7FA661061AE8C7D40001F2D3 /* CitySelectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA661001AE8C7D40001F2D3 /* CitySelectTableViewCell.xib */; };
 		7FA778901ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7788E1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.m */; };
 		7FA778911ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA7788F1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib */; };
 		7FB9F8DC1ACBC0F400B8199A /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB9F8DB1ACBC0F400B8199A /* CoreText.framework */; };
@@ -164,6 +170,15 @@
 		7F7CB9621AC6A4FC0009738E /* FirstScrollMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstScrollMenuView.h; sourceTree = "<group>"; };
 		7F7CB9631AC6A4FC0009738E /* FirstScrollMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstScrollMenuView.m; sourceTree = "<group>"; };
 		7F7CB9651AC6A51A0009738E /* FirstScrollMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstScrollMenuView.xib; sourceTree = "<group>"; };
+		7FA660F81AE8C7D40001F2D3 /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
+		7FA660F91AE8C7D40001F2D3 /* CityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityListViewController.h; sourceTree = "<group>"; };
+		7FA660FA1AE8C7D40001F2D3 /* CityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityListViewController.m; sourceTree = "<group>"; };
+		7FA660FB1AE8C7D40001F2D3 /* CitySelectCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitySelectCollectionViewCell.h; sourceTree = "<group>"; };
+		7FA660FC1AE8C7D40001F2D3 /* CitySelectCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitySelectCollectionViewCell.m; sourceTree = "<group>"; };
+		7FA660FD1AE8C7D40001F2D3 /* CitySelectCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CitySelectCollectionViewCell.xib; sourceTree = "<group>"; };
+		7FA660FE1AE8C7D40001F2D3 /* CitySelectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitySelectTableViewCell.h; sourceTree = "<group>"; };
+		7FA660FF1AE8C7D40001F2D3 /* CitySelectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitySelectTableViewCell.m; sourceTree = "<group>"; };
+		7FA661001AE8C7D40001F2D3 /* CitySelectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CitySelectTableViewCell.xib; sourceTree = "<group>"; };
 		7FA7788D1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckAllGroupByButtonTableViewCell.h; sourceTree = "<group>"; };
 		7FA7788E1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckAllGroupByButtonTableViewCell.m; sourceTree = "<group>"; };
 		7FA7788F1ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckAllGroupByButtonTableViewCell.xib; sourceTree = "<group>"; };
@@ -290,6 +305,7 @@
 		7F5D1AAA1AC577BF0028536F /* LuoMiPhone */ = {
 			isa = PBXGroup;
 			children = (
+				7FA660F71AE8C7D40001F2D3 /* CitySearch */,
 				7F5464F31AE7912900C3F34B /* JSDropDownMenu */,
 				7F7752CD1ADBF36C00861D27 /* CustomCollectionViewLayout */,
 				7F4D95961ACAFD2300FA7A37 /* Category */,
@@ -440,6 +456,22 @@
 			name = "团购";
 			sourceTree = "<group>";
 		};
+		7FA660F71AE8C7D40001F2D3 /* CitySearch */ = {
+			isa = PBXGroup;
+			children = (
+				7FA660F81AE8C7D40001F2D3 /* citydict.plist */,
+				7FA660F91AE8C7D40001F2D3 /* CityListViewController.h */,
+				7FA660FA1AE8C7D40001F2D3 /* CityListViewController.m */,
+				7FA660FB1AE8C7D40001F2D3 /* CitySelectCollectionViewCell.h */,
+				7FA660FC1AE8C7D40001F2D3 /* CitySelectCollectionViewCell.m */,
+				7FA660FD1AE8C7D40001F2D3 /* CitySelectCollectionViewCell.xib */,
+				7FA660FE1AE8C7D40001F2D3 /* CitySelectTableViewCell.h */,
+				7FA660FF1AE8C7D40001F2D3 /* CitySelectTableViewCell.m */,
+				7FA661001AE8C7D40001F2D3 /* CitySelectTableViewCell.xib */,
+			);
+			path = CitySearch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -526,15 +558,18 @@
 				7F5D1ABA1AC577BF0028536F /* Main.storyboard in Resources */,
 				7F5465041AE7912900C3F34B /* ico_make.png in Resources */,
 				7F5D1ABF1AC577BF0028536F /* LaunchScreen.xib in Resources */,
+				7FA661011AE8C7D40001F2D3 /* citydict.plist in Resources */,
 				7F5D1B071AC58D5A0028536F /* GroupbyScrollTableViewCell.xib in Resources */,
 				7F2296C61AC97EE500932E7B /* CommentGiftTableViewCell.xib in Resources */,
 				7F7CB9661AC6A51A0009738E /* FirstScrollMenuView.xib in Resources */,
 				7F11FCF01AE205030097520B /* MasonryCollectionViewCell.xib in Resources */,
 				7F5D1AEC1AC57DB40028536F /* MyViewController.xib in Resources */,
 				7F7CB95F1AC690DA0009738E /* LMRefreshControl.xib in Resources */,
+				7FA661041AE8C7D40001F2D3 /* CitySelectCollectionViewCell.xib in Resources */,
 				7F5D1AE71AC57DA90028536F /* NearbyViewController.xib in Resources */,
 				7F5D1AF11AC57DBE0028536F /* MoreViewController.xib in Resources */,
 				7F5D1ABC1AC577BF0028536F /* Images.xcassets in Resources */,
+				7FA661061AE8C7D40001F2D3 /* CitySelectTableViewCell.xib in Resources */,
 				7F11FCF71AE218A40097520B /* MasonryTableViewCell.xib in Resources */,
 				7F2C30591ACA9EE800181E65 /* GroupListHeaderTableViewCell.xib in Resources */,
 				7FA778911ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib in Resources */,
@@ -559,15 +594,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA661051AE8C7D40001F2D3 /* CitySelectTableViewCell.m in Sources */,
 				7F11FCFA1AE21AC40097520B /* MKMasonryViewLayout.m in Sources */,
 				7F4D959F1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m in Sources */,
 				7F5465081AE7912900C3F34B /* JSIndexPath.m in Sources */,
 				7F5465051AE7912900C3F34B /* JSBottomView.m in Sources */,
 				7F5465071AE7912900C3F34B /* JSDropDownMenu.m in Sources */,
+				7FA661031AE8C7D40001F2D3 /* CitySelectCollectionViewCell.m in Sources */,
 				7F5D1AF01AC57DBE0028536F /* MoreViewController.m in Sources */,
 				7F5D1B061AC58D5A0028536F /* GroupbyScrollTableViewCell.m in Sources */,
 				7F2296C01AC975F500932E7B /* SelectedBrandCollectionViewCell.m in Sources */,
 				7F5D1AB11AC577BF0028536F /* AppDelegate.m in Sources */,
+				7FA661021AE8C7D40001F2D3 /* CityListViewController.m in Sources */,
 				7F2C30531ACA811600181E65 /* GroupByListModal.m in Sources */,
 				7F2296BB1AC9604900932E7B /* LMTimerLabel.m in Sources */,
 				7F2296B61AC94C8E00932E7B /* SelectedBrandMenuViewCell.m in Sources */,
