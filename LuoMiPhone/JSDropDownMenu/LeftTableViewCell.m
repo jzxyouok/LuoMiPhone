@@ -31,13 +31,11 @@
 -(void)setstyleForSelected:(BOOL)selected{
     
     if (selected) {
-        NSLog(@"*******selected = yes********");
         self.menuTitle.textColor = SelectColorForMenuAndIndicator;
 
         self.iconImageView.highlighted = YES;
         self.contentView.backgroundColor = LeftSelectColor;
     }else{
-        NSLog(@"*******selected = no********");
 
         self.contentView.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:1.0];
         
