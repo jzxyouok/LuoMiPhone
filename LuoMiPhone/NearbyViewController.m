@@ -46,7 +46,7 @@
     _data3 = [NSMutableArray arrayWithObjects:@"默认排序", @"离我最近", @"评价最高", @"最新发布", @"销量最高", @"价格最低", @"价格最高", nil];
     _data4 = [NSMutableArray arrayWithObjects:@"筛选",  nil];
     
-    menu = [[JSDropDownMenu alloc] initWithOrigin:CGPointMake(0, 0) andHeight:40];
+    menu = [[JSDropDownMenu alloc] initWithOrigin:CGPointMake(0, 64) andHeight:40];
     menu.indicatorColor = [UIColor colorWithRed:175.0f/255.0f green:175.0f/255.0f blue:175.0f/255.0f alpha:1.0];
     menu.separatorColor = [UIColor colorWithRed:210.0f/255.0f green:210.0f/255.0f blue:210.0f/255.0f alpha:1.0];
     menu.textColor = [UIColor colorWithRed:83.f/255.0f green:83.f/255.0f blue:83.f/255.0f alpha:1.0f];
@@ -54,8 +54,8 @@
     
     menu.dataSource = self;
     menu.delegate = self;
-    menu.frame = self.menuView.frame;
-    [self.menuView addSubview:menu];
+    [self.view addSubview:menu];
+    self.title = @"附近";
     // Do any additional setup after loading the view from its nib.
 }
 

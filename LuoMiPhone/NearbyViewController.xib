@@ -6,7 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NearbyViewController">
             <connections>
-                <outlet property="menuView" destination="q5Y-Vb-RZP" id="5RW-mk-GN9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,26 +15,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="56G-eJ-o13">
-                    <rect key="frame" x="0.0" y="40" width="320" height="528"/>
+                    <rect key="frame" x="0.0" y="105" width="320" height="463"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
-                <view contentMode="scaleToFill" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="q5Y-Vb-RZP">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="56G-eJ-o13" secondAttribute="bottom" id="94I-99-Z9X"/>
-                <constraint firstItem="q5Y-Vb-RZP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GxM-Jq-d1q"/>
-                <constraint firstItem="q5Y-Vb-RZP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TcM-ud-9LY"/>
-                <constraint firstItem="56G-eJ-o13" firstAttribute="top" secondItem="q5Y-Vb-RZP" secondAttribute="bottom" id="dr4-ja-0Dy"/>
                 <constraint firstAttribute="trailing" secondItem="56G-eJ-o13" secondAttribute="trailing" id="fEG-rC-WdY"/>
                 <constraint firstItem="56G-eJ-o13" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="h8m-zK-YGL"/>
-                <constraint firstAttribute="trailing" secondItem="q5Y-Vb-RZP" secondAttribute="trailing" id="iiE-ee-4ZP"/>
                 <constraint firstItem="56G-eJ-o13" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lNx-It-QBE"/>
-                <constraint firstItem="56G-eJ-o13" firstAttribute="top" secondItem="q5Y-Vb-RZP" secondAttribute="bottom" id="uIH-tB-WIO"/>
+                <constraint firstItem="56G-eJ-o13" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="105" id="yXf-ah-FYK"/>
             </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <variation key="default">
                 <mask key="constraints">
