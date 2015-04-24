@@ -18,6 +18,7 @@ static NSString * const kFKRSearchBarTableViewControllerDefaultTableViewCellIden
 @property(nonatomic, strong, readwrite) UISearchBar *searchBar;
 @property(nonatomic, strong) NSArray *filteredCities;
 @property(nonatomic, strong) NSMutableArray *allCities;
+@property(nonatomic,strong) UIButton *button;
 
 @property(nonatomic, strong) UISearchDisplayController *strongSearchDisplayController; // UIViewController doesn't retain the search display controller if it's created programmatically: http://openradar.appspot.com/10254897
 @end
@@ -36,14 +37,29 @@ static NSString * const kFKRSearchBarTableViewControllerDefaultTableViewCellIden
     return self;
 }
 
+-(void)back{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"当前城市-上海市";
+    self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self.button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [self.button setTitleColor:[UIColor colorWithRed:236/255.0 green:85/255.0 blue:140/255.0 alpha:1.0] forState:UIControlStateNormal];
+    self.button.frame = CGRectMake(0, 0, 30, 30);
+    self.button.backgroundColor = [UIColor blackColor];
+    self.button.layer.cornerRadius = self.button.frame.size.width/2;
+    self.button.layer.masksToBounds = YES;
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:self.button] ;
+    self.navigationItem.leftBarButtonItem = leftItem;
+    
     
     [self getCityData];
     
 	// Do any additional setup after loading the view.
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 30, self.view.frame.size.width, self.view.frame.size.height - 30) style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 30) style:UITableViewStylePlain];
     _tableView.autoresizingMask = (UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight);
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.delegate = self;
@@ -172,8 +188,7 @@ static NSString * const kFKRSearchBarTableViewControllerDefaultTableViewCellIden
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
             if (cell == nil) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
-                cell.backgroundColor = [UIColor clearColor];
-                cell.contentView.backgroundColor = [UIColor clearColor];
+                cell.contentView.backgroundColor = [UIColor whiteColor];
                 cell.selectionStyle = UITableViewCellSelectionStyleNone;
                 
                 [cell.textLabel setTextColor:[UIColor blackColor]];

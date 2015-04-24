@@ -33,6 +33,8 @@
 @property(nonatomic,strong) LMRefreshControl *refreshControl;
 @property(nonatomic,strong) GroupByListModal *groupListModal;
 @property(nonatomic,assign) NSInteger tableRows;
+@property(nonatomic,strong) id <UIViewControllerContextTransitioning> transitionContext;
+@property(nonatomic,strong) UIButton *button;
 @end
 
 @implementation GroupBuyViewController
@@ -41,7 +43,9 @@
     [super viewDidLoad];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.automaticallyAdjustsScrollViewInsets = NO;
-   
+    
+    self.transitioningDelegate = self;
+
     self.refreshControl = [LMRefreshControl initRefreshControl:self targetAction:@selector(startLoading) scrollView:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -58,21 +62,25 @@
     self.tableRows = 20;
     self.tableView.backgroundColor = [UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1.0];
     
-    UIButton *currentCity = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [currentCity addTarget:self action:@selector(showCitySelected) forControlEvents:UIControlEventTouchUpInside];
-    [currentCity setTitle:@"上海" forState:UIControlStateNormal];
-    [currentCity setTitleColor:[UIColor colorWithRed:236/255.0 green:85/255.0 blue:140/255.0 alpha:1.0] forState:UIControlStateNormal];
-    currentCity.frame = CGRectMake(0, 0, 30, 30);
-    currentCity.backgroundColor = [UIColor colorWithRed:210/255.0 green:200/255.0 blue:200/255.0 alpha:1.0];
-    currentCity.layer.cornerRadius = currentCity.frame.size.width/2;
-    currentCity.layer.masksToBounds = YES;
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:currentCity] ;
-    self.navigationItem.leftBarButtonItem = backItem;
+    self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self.button addTarget:self action:@selector(showCitySelected) forControlEvents:UIControlEventTouchUpInside];
+    [self.button setTitle:@"上海" forState:UIControlStateNormal];
+    [self.button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    self.button.frame = CGRectMake(0, 0, 30, 30);
+    self.button.backgroundColor = [UIColor blackColor];
+    self.button.layer.cornerRadius = self.button.frame.size.width/2;
+    self.button.layer.masksToBounds = YES;
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:self.button] ;
+    self.navigationItem.leftBarButtonItem = leftItem;
 }
 
 -(void)showCitySelected{
     CityListViewController *cityList = [[CityListViewController alloc] init];
-    [self.navigationController pushViewController:cityList animated:YES];
+    cityList.transitioningDelegate = self;
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:cityList];
+   [self.navigationController presentViewController:cityList animated:YES completion:nil];
+   self.navigationController.delegate 
+//    [self.navigationController pushViewController:cityList animated:YES];
 }
 
 -(void)startLoading{
@@ -226,6 +234,47 @@
 
 - (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
     return self;
+}
+
+- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext{
+    return 0.5;
+}
+// This method can only  be a nop if the transition is interactive and not a percentDriven interactive transition.
+- (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext{
+    self.transitionContext = transitionContext;
+    UIView *containerView = self.transitionContext.containerView;
+    GroupBuyViewController *fromController = (GroupBuyViewController *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    
+//    UIButton *button = fromController.button;
+    CGRect buttonFrame = self.button.frame;
+
+    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    [containerView addSubview:toViewController.view];
+    
+//    UIBezierPath *circleMaskPathInitial = [UIBezierPath bezierPathWithOvalInRect:button.frame];
+//    CGPoint extremePoint = CGPointMake(button.center.x - 0, button.center.y - CGRectGetHeight(toViewController.view.bounds));
+//    CGFloat radius = sqrt((extremePoint.x*extremePoint.x) + (extremePoint.y*extremePoint.y));
+//    UIBezierPath *circleMaskPathFinal = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(button.frame, -radius, -radius)];
+    UIBezierPath *circleMaskPathInitial = [UIBezierPath bezierPathWithOvalInRect:buttonFrame];
+    CGPoint extremePoint = CGPointMake(15, 15 - CGRectGetHeight(toViewController.view.bounds));
+    CGFloat radius = sqrt((extremePoint.x*extremePoint.x) + (extremePoint.y*extremePoint.y));
+    UIBezierPath *circleMaskPathFinal = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(buttonFrame, -radius, -radius)];
+    
+    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    maskLayer.path = circleMaskPathFinal.CGPath;
+    toViewController.view.layer.mask = maskLayer;
+    
+    CABasicAnimation *maskLayerAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
+    maskLayerAnimation.fromValue = (__bridge id)(circleMaskPathInitial.CGPath);
+    maskLayerAnimation.toValue = (__bridge id)(circleMaskPathFinal.CGPath);
+    maskLayerAnimation.duration = [self transitionDuration:transitionContext];
+    maskLayerAnimation.delegate = self;
+    [maskLayer addAnimation:maskLayerAnimation forKey:@"path"];
+}
+
+-(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    [self.transitionContext completeTransition:[self.transitionContext transitionWasCancelled]];
+    [self.transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey].view.layer.mask = nil;
 }
 
 
