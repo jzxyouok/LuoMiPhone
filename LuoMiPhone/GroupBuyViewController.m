@@ -18,6 +18,7 @@
 #import "GroupListHeaderTableViewCell.h"
 #import "MasonryTableViewCell.h"
 #import "CityListViewController.h"
+#import "MyViewController.h"
 
 #define groupbyScrollTableViewCellIdentifier  @"GroupbyScrollTableViewCell"
 #define selectedBrandTableViewCellIdentifier @"SelectedBrandMenuViewCell"
@@ -75,11 +76,15 @@
 }
 
 -(void)showCitySelected{
+    self.navigationController.delegate = self;
     CityListViewController *cityList = [[CityListViewController alloc] init];
     cityList.transitioningDelegate = self;
-    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:cityList];
-   [self.navigationController presentViewController:cityList animated:YES completion:nil];
-   self.navigationController.delegate 
+  //  cityList.view.frame = [UIScreen mainScreen].bounds;
+    MyViewController *my = [[ MyViewController alloc] initWithNibName:@"MyViewController" bundle:nil];
+    my.view.backgroundColor = [UIColor redColor];
+    my.transitioningDelegate = self;
+    my.tabBarController.tabBar.hidden  = YES;
+    [self.navigationController pushViewController:cityList animated:YES];
 //    [self.navigationController pushViewController:cityList animated:YES];
 }
 
@@ -270,12 +275,52 @@
     maskLayerAnimation.duration = [self transitionDuration:transitionContext];
     maskLayerAnimation.delegate = self;
     [maskLayer addAnimation:maskLayerAnimation forKey:@"path"];
+//    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+//    
+//    // 2. Set init frame for toVC
+//    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+//    CGRect finalFrame = [transitionContext finalFrameForViewController:toVC];
+//    toVC.view.frame = CGRectOffset(finalFrame, 0, screenBounds.size.height);
+//    
+//    // 3. Add toVC's view to containerView
+//    UIView *containerView = [transitionContext containerView];
+//    [containerView addSubview:toVC.view];
+//    
+//    // 4. Do animate now
+//    NSTimeInterval duration = [self transitionDuration:transitionContext];
+//    [UIView animateWithDuration:duration
+//                          delay:0.0
+//         usingSpringWithDamping:0.6
+//          initialSpringVelocity:0.0
+//                        options:UIViewAnimationOptionCurveLinear
+//                     animations:^{
+//                         toVC.view.frame = finalFrame;
+//                     } completion:^(BOOL finished) {
+//                         // 5. Tell context that we completed.
+//                         [transitionContext completeTransition:YES];
+//                     }];
+
 }
 
 -(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
-    [self.transitionContext completeTransition:[self.transitionContext transitionWasCancelled]];
-    [self.transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey].view.layer.mask = nil;
+   // BOOL yes = [self.transitionContext transitionWasCancelled];
+    [self.transitionContext completeTransition:YES];
+    UIViewController *toViewController = [self.transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+   
+  // [self.transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey].view.layer.mask = nil;
+    toViewController.view.layer.mask = nil;
 }
 
+//- (id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
+//                          interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>) animationController NS_AVAILABLE_IOS(7_0){
+//    return self;
+//}
+
+- (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                fromViewController:(UIViewController *)fromVC
+                                                  toViewController:(UIViewController *)toVC  NS_AVAILABLE_IOS(7_0){
+    return self;
+}
 
 @end

@@ -38,18 +38,22 @@ static NSString * const kFKRSearchBarTableViewControllerDefaultTableViewCellIden
 }
 
 -(void)back{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+    self.tabBarController.tabBar.hidden = NO;
+
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tabBarController.tabBar.hidden = YES;
     self.title = @"当前城市-上海市";
     self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [self.button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [self.button setTitleColor:[UIColor colorWithRed:236/255.0 green:85/255.0 blue:140/255.0 alpha:1.0] forState:UIControlStateNormal];
     self.button.frame = CGRectMake(0, 0, 30, 30);
     self.button.backgroundColor = [UIColor blackColor];
+    [self.button setTitle:@"上海" forState:UIControlStateNormal];
     self.button.layer.cornerRadius = self.button.frame.size.width/2;
     self.button.layer.masksToBounds = YES;
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:self.button] ;
@@ -59,7 +63,7 @@ static NSString * const kFKRSearchBarTableViewControllerDefaultTableViewCellIden
     [self getCityData];
     
 	// Do any additional setup after loading the view.
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 30) style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
     _tableView.autoresizingMask = (UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight);
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.delegate = self;
