@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationTableViewCellIdentifier" id="KGk-i7-Jjw" customClass="LocationTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfa-lq-rd7">
+                        <rect key="frame" x="20" y="6" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKx-FQ-TyP">
+                        <rect key="frame" x="291" y="5" width="21" height="24"/>
+                        <state key="normal" backgroundImage="LoadingLocation">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="update:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="11I-oW-UNI"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yfa-lq-rd7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ENh-B8-eQz"/>
+                    <constraint firstAttribute="centerY" secondItem="yfa-lq-rd7" secondAttribute="centerY" id="WQh-hI-g8s"/>
+                    <constraint firstAttribute="centerY" secondItem="BKx-FQ-TyP" secondAttribute="centerY" id="pJH-dh-3Uv"/>
+                    <constraint firstAttribute="trailing" secondItem="BKx-FQ-TyP" secondAttribute="trailing" constant="8" id="tcn-Yt-yY5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="locationLabel" destination="yfa-lq-rd7" id="z7j-Kr-vDk"/>
+                <outlet property="updateLocation" destination="BKx-FQ-TyP" id="pXO-Xp-L9L"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="LoadingLocation" width="21" height="24"/>
+    </resources>
+</document>

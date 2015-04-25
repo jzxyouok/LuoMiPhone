@@ -85,6 +85,9 @@ static NSString * const kFKRSearchBarTableViewControllerDefaultTableViewCellIden
     self.tableView.tableHeaderView = self.searchBar;
 
     
+    self.navigationController.navigationBar.translucent = NO;
+
+    
 }
 
 - (void)scrollTableViewToSearchBarAnimated:(BOOL)animated

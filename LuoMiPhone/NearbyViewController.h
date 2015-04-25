@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NearbyViewController : UIViewController
+@interface NearbyViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
-@property(nonatomic,assign) IBOutlet UIView *menuView;
+@property(nonatomic,assign)  UIView *menuView;
+
+
+@property(nonatomic,assign) IBOutlet UITableView *tableView;
 
 @end

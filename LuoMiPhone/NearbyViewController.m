@@ -9,6 +9,15 @@
 #import "NearbyViewController.h"
 #import "JSDropDownMenu.h"
 #import "JSIndexPath.h"
+#import "LocationTableViewCell.h"
+#import "GroupByListTableViewCell.h"
+#import "ListHeaderView.h"
+#import "ListFooterView.h"
+
+
+#define LocationTableViewCellIdentifier @"LocationTableViewCellIdentifier"
+#define groupByListTableViewCellIdentifier @"GroupByListTableViewCell"
+
 
 @interface NearbyViewController ()<JSDropDownMenuDataSource,JSDropDownMenuDelegate>{
     NSMutableArray *_data1;
@@ -25,6 +34,7 @@
     JSDropDownMenu *menu;
     
 }
+@property(nonatomic,strong) GroupByListModal *groupListModal;
 
 @end
 
@@ -34,7 +44,9 @@
     [super viewDidLoad];
     _currentData1Index = 1;
     _currentData1SelectedIndex = 1;
-    
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[UIImage imageNamed:@"mc"],@"image",@"1毛钱吃麦当劳",@"listTitle",@"1毛钱吃麦当劳原味板烧鸡腿堡",@"listDetail",@"￥0.1",@"listPrice",@"已售344245",@"listSales", nil];
+    self.groupListModal = [[GroupByListModal alloc] initWith:dic];
+     [self.tableView registerNib:[UINib nibWithNibName:groupByListTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:groupByListTableViewCellIdentifier];
     NSArray *quanbufenlei = @[];
     NSArray *jinrixindan = @[];
     NSArray *dianying = @[];
@@ -56,8 +68,77 @@
     menu.delegate = self;
     [self.view addSubview:menu];
     self.title = @"附近";
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LocationTableViewCell class]) bundle:nil] forCellReuseIdentifier:LocationTableViewCellIdentifier];
     // Do any additional setup after loading the view from its nib.
 }
+
+#pragma uitableviewdelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (section == 0) {
+        return 1;
+    }
+    return 2;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 7;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        LocationTableViewCell *locationCell = (LocationTableViewCell *)[tableView dequeueReusableCellWithIdentifier:LocationTableViewCellIdentifier forIndexPath:indexPath];
+        locationCell.contentView.backgroundColor = [UIColor redColor];
+        [locationCell update:nil];
+        return locationCell;
+    }else{
+        static NSString *GroupByListTableViewCellIdentifier = groupByListTableViewCellIdentifier;
+        GroupByListTableViewCell *cell = (GroupByListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:GroupByListTableViewCellIdentifier forIndexPath:indexPath];
+        [cell setGroupByListModal:self.groupListModal];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }
+    
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"ListHeaderView" owner:self options:nil];
+    if (section != 0) {
+        ListHeaderView *headerView = (ListHeaderView *)[views lastObject];
+        return headerView;
+    }
+    return nil;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+   
+    if (section != 0) {
+        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"ListFooterView" owner:self options:nil];
+        ListFooterView *footerView = (ListFooterView *)[views lastObject];
+        return footerView;
+    }
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    if (section!=0) {
+        return 50;
+    }
+    return 0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section!=0) {
+        return 40;
+    }
+    return 0;}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section != 0) {
+        return 97;
+    }
+    return 40;
+}
+
 
 
 - (NSInteger)numberOfColumnsInMenu:(JSDropDownMenu *)menu {

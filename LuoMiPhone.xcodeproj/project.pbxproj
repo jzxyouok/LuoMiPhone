@@ -26,6 +26,12 @@
 		7F2C30531ACA811600181E65 /* GroupByListModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C30521ACA811600181E65 /* GroupByListModal.m */; };
 		7F2C30581ACA9EE800181E65 /* GroupListHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C30561ACA9EE800181E65 /* GroupListHeaderTableViewCell.m */; };
 		7F2C30591ACA9EE800181E65 /* GroupListHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2C30571ACA9EE800181E65 /* GroupListHeaderTableViewCell.xib */; };
+		7F3B77261AEB51EB00981B2D /* LocationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3B77241AEB51EB00981B2D /* LocationTableViewCell.m */; };
+		7F3B77271AEB51EB00981B2D /* LocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F3B77251AEB51EB00981B2D /* LocationTableViewCell.xib */; };
+		7F3B772A1AEB6CE500981B2D /* ListHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3B77291AEB6CE500981B2D /* ListHeaderView.m */; };
+		7F3B772C1AEB6CF400981B2D /* ListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F3B772B1AEB6CF400981B2D /* ListHeaderView.xib */; };
+		7F3B772F1AEB6D0400981B2D /* ListFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3B772E1AEB6D0400981B2D /* ListFooterView.m */; };
+		7F3B77311AEB6D1000981B2D /* ListFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F3B77301AEB6D1000981B2D /* ListFooterView.xib */; };
 		7F4D959F1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D959E1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m */; };
 		7F4D95A21ACB8BB400FA7A37 /* UILabel+ChangeText.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D95A11ACB8BB400FA7A37 /* UILabel+ChangeText.m */; };
 		7F5245521ACD16F100BB518F /* LMTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5245511ACD16F100BB518F /* LMTextStorage.m */; };
@@ -112,6 +118,15 @@
 		7F2C30551ACA9EE800181E65 /* GroupListHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupListHeaderTableViewCell.h; sourceTree = "<group>"; };
 		7F2C30561ACA9EE800181E65 /* GroupListHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupListHeaderTableViewCell.m; sourceTree = "<group>"; };
 		7F2C30571ACA9EE800181E65 /* GroupListHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupListHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		7F3B77231AEB51EB00981B2D /* LocationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTableViewCell.h; sourceTree = "<group>"; };
+		7F3B77241AEB51EB00981B2D /* LocationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTableViewCell.m; sourceTree = "<group>"; };
+		7F3B77251AEB51EB00981B2D /* LocationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationTableViewCell.xib; sourceTree = "<group>"; };
+		7F3B77281AEB6CE500981B2D /* ListHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListHeaderView.h; sourceTree = "<group>"; };
+		7F3B77291AEB6CE500981B2D /* ListHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListHeaderView.m; sourceTree = "<group>"; };
+		7F3B772B1AEB6CF400981B2D /* ListHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListHeaderView.xib; sourceTree = "<group>"; };
+		7F3B772D1AEB6D0400981B2D /* ListFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListFooterView.h; sourceTree = "<group>"; };
+		7F3B772E1AEB6D0400981B2D /* ListFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListFooterView.m; sourceTree = "<group>"; };
+		7F3B77301AEB6D1000981B2D /* ListFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListFooterView.xib; sourceTree = "<group>"; };
 		7F4D959D1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AddSubImageView.h"; sourceTree = "<group>"; };
 		7F4D959E1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AddSubImageView.m"; sourceTree = "<group>"; };
 		7F4D95A01ACB8BB400FA7A37 /* UILabel+ChangeText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ChangeText.h"; sourceTree = "<group>"; };
@@ -236,6 +251,22 @@
 				7F2C30521ACA811600181E65 /* GroupByListModal.m */,
 			);
 			name = Modal;
+			sourceTree = "<group>";
+		};
+		7F3B771D1AEB517B00981B2D /* 附近 */ = {
+			isa = PBXGroup;
+			children = (
+				7F3B77231AEB51EB00981B2D /* LocationTableViewCell.h */,
+				7F3B77241AEB51EB00981B2D /* LocationTableViewCell.m */,
+				7F3B77251AEB51EB00981B2D /* LocationTableViewCell.xib */,
+				7F3B77281AEB6CE500981B2D /* ListHeaderView.h */,
+				7F3B77291AEB6CE500981B2D /* ListHeaderView.m */,
+				7F3B772B1AEB6CF400981B2D /* ListHeaderView.xib */,
+				7F3B772D1AEB6D0400981B2D /* ListFooterView.h */,
+				7F3B772E1AEB6D0400981B2D /* ListFooterView.m */,
+				7F3B77301AEB6D1000981B2D /* ListFooterView.xib */,
+			);
+			name = "附近";
 			sourceTree = "<group>";
 		};
 		7F4D95961ACAFD2300FA7A37 /* Category */ = {
@@ -385,6 +416,7 @@
 		7F5D1B011AC58D130028536F /* CustomTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				7F3B771D1AEB517B00981B2D /* 附近 */,
 				7F5D1B021AC58D1C0028536F /* 团购 */,
 			);
 			name = CustomTableViewCell;
@@ -566,12 +598,15 @@
 				7F5D1AEC1AC57DB40028536F /* MyViewController.xib in Resources */,
 				7F7CB95F1AC690DA0009738E /* LMRefreshControl.xib in Resources */,
 				7FA661041AE8C7D40001F2D3 /* CitySelectCollectionViewCell.xib in Resources */,
+				7F3B772C1AEB6CF400981B2D /* ListHeaderView.xib in Resources */,
 				7F5D1AE71AC57DA90028536F /* NearbyViewController.xib in Resources */,
 				7F5D1AF11AC57DBE0028536F /* MoreViewController.xib in Resources */,
+				7F3B77311AEB6D1000981B2D /* ListFooterView.xib in Resources */,
 				7F5D1ABC1AC577BF0028536F /* Images.xcassets in Resources */,
 				7FA661061AE8C7D40001F2D3 /* CitySelectTableViewCell.xib in Resources */,
 				7F11FCF71AE218A40097520B /* MasonryTableViewCell.xib in Resources */,
 				7F2C30591ACA9EE800181E65 /* GroupListHeaderTableViewCell.xib in Resources */,
+				7F3B77271AEB51EB00981B2D /* LocationTableViewCell.xib in Resources */,
 				7FA778911ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.xib in Resources */,
 				7F5D1AE21AC57D8F0028536F /* GroupBuyViewController.xib in Resources */,
 				7F54650B1AE7912900C3F34B /* LeftTableViewCell.xib in Resources */,
@@ -595,16 +630,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FA661051AE8C7D40001F2D3 /* CitySelectTableViewCell.m in Sources */,
+				7F3B772A1AEB6CE500981B2D /* ListHeaderView.m in Sources */,
 				7F11FCFA1AE21AC40097520B /* MKMasonryViewLayout.m in Sources */,
 				7F4D959F1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m in Sources */,
 				7F5465081AE7912900C3F34B /* JSIndexPath.m in Sources */,
 				7F5465051AE7912900C3F34B /* JSBottomView.m in Sources */,
 				7F5465071AE7912900C3F34B /* JSDropDownMenu.m in Sources */,
 				7FA661031AE8C7D40001F2D3 /* CitySelectCollectionViewCell.m in Sources */,
+				7F3B77261AEB51EB00981B2D /* LocationTableViewCell.m in Sources */,
 				7F5D1AF01AC57DBE0028536F /* MoreViewController.m in Sources */,
 				7F5D1B061AC58D5A0028536F /* GroupbyScrollTableViewCell.m in Sources */,
 				7F2296C01AC975F500932E7B /* SelectedBrandCollectionViewCell.m in Sources */,
 				7F5D1AB11AC577BF0028536F /* AppDelegate.m in Sources */,
+				7F3B772F1AEB6D0400981B2D /* ListFooterView.m in Sources */,
 				7FA661021AE8C7D40001F2D3 /* CityListViewController.m in Sources */,
 				7F2C30531ACA811600181E65 /* GroupByListModal.m in Sources */,
 				7F2296BB1AC9604900932E7B /* LMTimerLabel.m in Sources */,
