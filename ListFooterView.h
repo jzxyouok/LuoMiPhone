@@ -10,4 +10,7 @@
 
 @interface ListFooterView : UIView
 
+@property(nonatomic,copy) void(^footerViewClicked)(NSInteger section);
+@property(nonatomic,assign) NSInteger section;
+
 @end

@@ -175,13 +175,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LocationTableViewCell.m"
-            timestampString = "451634009.120131"
+            filePath = "ListFooterView.m"
+            timestampString = "451648709.341387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "-locationManager:didUpdateToLocation:fromLocation:"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "-drawRect:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -191,13 +191,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LocationTableViewCell.m"
-            timestampString = "451634009.120131"
+            filePath = "ListFooterView.m"
+            timestampString = "451649242.74384"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "-update:"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "-tapFooterView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

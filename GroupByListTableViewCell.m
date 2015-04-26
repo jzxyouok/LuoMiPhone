@@ -145,6 +145,8 @@ static int testint = 0;
     [self addSubview:textView];
     self.textView.backgroundColor = [UIColor redColor];
     [textView setTextContainerInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+    
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -159,6 +161,26 @@ static int testint = 0;
     self.listPriceTextView.text = modal.listPrice;
     self.listTitleLabel.text = modal.listTitle;
     [self.imageView addBookImageView];
+}
+
+- (void)drawRect:(CGRect)rect {
+    UIBezierPath *bezierPath = [UIBezierPath bezierPath];
+    
+    // Draw top line
+    
+    bezierPath = [UIBezierPath bezierPath];
+    
+    [bezierPath moveToPoint:CGPointMake(0, self.frame.size.height - 0.5 )];
+    
+    [bezierPath addLineToPoint:CGPointMake(self.frame.size.width, self.frame.size.height-0.5)];
+    
+    
+    [[UIColor lightGrayColor] setStroke];
+    
+    [bezierPath setLineWidth:.5];
+    
+    [bezierPath stroke];
+    
 }
 
 @end

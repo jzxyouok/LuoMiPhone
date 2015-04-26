@@ -32,6 +32,7 @@
 		7F3B772C1AEB6CF400981B2D /* ListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F3B772B1AEB6CF400981B2D /* ListHeaderView.xib */; };
 		7F3B772F1AEB6D0400981B2D /* ListFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3B772E1AEB6D0400981B2D /* ListFooterView.m */; };
 		7F3B77311AEB6D1000981B2D /* ListFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F3B77301AEB6D1000981B2D /* ListFooterView.xib */; };
+		7F3B77341AEB865A00981B2D /* ListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3B77331AEB865A00981B2D /* ListTableView.m */; };
 		7F4D959F1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D959E1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m */; };
 		7F4D95A21ACB8BB400FA7A37 /* UILabel+ChangeText.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D95A11ACB8BB400FA7A37 /* UILabel+ChangeText.m */; };
 		7F5245521ACD16F100BB518F /* LMTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5245511ACD16F100BB518F /* LMTextStorage.m */; };
@@ -127,6 +128,8 @@
 		7F3B772D1AEB6D0400981B2D /* ListFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListFooterView.h; sourceTree = "<group>"; };
 		7F3B772E1AEB6D0400981B2D /* ListFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListFooterView.m; sourceTree = "<group>"; };
 		7F3B77301AEB6D1000981B2D /* ListFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListFooterView.xib; sourceTree = "<group>"; };
+		7F3B77321AEB865A00981B2D /* ListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableView.h; sourceTree = "<group>"; };
+		7F3B77331AEB865A00981B2D /* ListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableView.m; sourceTree = "<group>"; };
 		7F4D959D1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AddSubImageView.h"; sourceTree = "<group>"; };
 		7F4D959E1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AddSubImageView.m"; sourceTree = "<group>"; };
 		7F4D95A01ACB8BB400FA7A37 /* UILabel+ChangeText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ChangeText.h"; sourceTree = "<group>"; };
@@ -363,6 +366,8 @@
 				7F5D1AED1AC57DBE0028536F /* MoreViewController.h */,
 				7F5D1AEE1AC57DBE0028536F /* MoreViewController.m */,
 				7F5D1AEF1AC57DBE0028536F /* MoreViewController.xib */,
+				7F3B77321AEB865A00981B2D /* ListTableView.h */,
+				7F3B77331AEB865A00981B2D /* ListTableView.m */,
 			);
 			path = LuoMiPhone;
 			sourceTree = "<group>";
@@ -662,6 +667,7 @@
 				7F5465091AE7912900C3F34B /* JSTableViewCell.m in Sources */,
 				7F54650C1AE7912900C3F34B /* NSString+Size.m in Sources */,
 				7F2C30491ACA6E8800181E65 /* CountDownTimerView.m in Sources */,
+				7F3B77341AEB865A00981B2D /* ListTableView.m in Sources */,
 				7F11FCEF1AE205030097520B /* MasonryCollectionViewCell.m in Sources */,
 				7F5D1AEB1AC57DB40028536F /* MyViewController.m in Sources */,
 				7F54650A1AE7912900C3F34B /* LeftTableViewCell.m in Sources */,

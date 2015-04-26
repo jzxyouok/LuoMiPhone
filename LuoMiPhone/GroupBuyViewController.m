@@ -16,9 +16,10 @@
 #import "GroupByListModal.h"
 #import "CheckAllGroupByButtonTableViewCell.h"
 #import "GroupListHeaderTableViewCell.h"
-#import "MasonryTableViewCell.h"
 #import "CityListViewController.h"
 #import "MyViewController.h"
+#import "MasonryTableViewCell.h"
+#define MasonryTableViewCellIdentifier @"MasonryTableViewCell"
 
 #define groupbyScrollTableViewCellIdentifier  @"GroupbyScrollTableViewCell"
 #define selectedBrandTableViewCellIdentifier @"SelectedBrandMenuViewCell"
@@ -26,7 +27,6 @@
 #define groupByListTableViewCellIdentifier @"GroupByListTableViewCell"
 #define checkAllGroupByButtonTableViewCellIdentifer @"CheckAllGroupByButtonTableViewCell"
 #define groupListHeaderTableViewCellIdentifer @"GroupListHeaderTableViewCell"
-#define MasonryTableViewCellIdentifier @"MasonryTableViewCell"
 @interface GroupBuyViewController () <UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,assign) CGFloat scrollPicHeight;

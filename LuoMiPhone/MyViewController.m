@@ -8,6 +8,9 @@
 
 #import "MyViewController.h"
 
+#import "MasonryTableViewCell.h"
+#define MasonryTableViewCellIdentifier @"MasonryTableViewCell"
+
 @interface MyViewController ()
 
 @end
@@ -16,7 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tabBarController.tabBar.hidden = YES;
+    [self.tableView registerNib:[UINib nibWithNibName:MasonryTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:MasonryTableViewCellIdentifier];
+    self.title = @"石工布局";
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -25,6 +29,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return 1;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+return 415;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+        static NSString *mansoryTableViewCellIdentifier = MasonryTableViewCellIdentifier;
+        MasonryTableViewCell *cell = (MasonryTableViewCell *)[tableView dequeueReusableCellWithIdentifier:mansoryTableViewCellIdentifier forIndexPath:indexPath];
+        return cell;
+    }
 /*
 #pragma mark - Navigation
 

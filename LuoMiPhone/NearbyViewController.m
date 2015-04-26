@@ -13,7 +13,7 @@
 #import "GroupByListTableViewCell.h"
 #import "ListHeaderView.h"
 #import "ListFooterView.h"
-
+#import "ListTableView.h"
 
 #define LocationTableViewCellIdentifier @"LocationTableViewCellIdentifier"
 #define groupByListTableViewCellIdentifier @"GroupByListTableViewCell"
@@ -69,6 +69,7 @@
     [self.view addSubview:menu];
     self.title = @"附近";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LocationTableViewCell class]) bundle:nil] forCellReuseIdentifier:LocationTableViewCellIdentifier];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -87,7 +88,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         LocationTableViewCell *locationCell = (LocationTableViewCell *)[tableView dequeueReusableCellWithIdentifier:LocationTableViewCellIdentifier forIndexPath:indexPath];
-        locationCell.contentView.backgroundColor = [UIColor redColor];
+        locationCell.contentView.backgroundColor = [UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1.0];
         [locationCell update:nil];
         return locationCell;
     }else{
@@ -114,6 +115,12 @@
     if (section != 0) {
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"ListFooterView" owner:self options:nil];
         ListFooterView *footerView = (ListFooterView *)[views lastObject];
+        footerView.section = section;
+        footerView.footerViewClicked = ^(NSInteger section){
+            
+//          self.tableView insertRowsAtIndexPaths:<#(NSArray *)#> withRowAnimation:<#(UITableViewRowAnimation)#>
+            
+        };
         return footerView;
     }
     return nil;
@@ -136,7 +143,7 @@
     if (indexPath.section != 0) {
         return 97;
     }
-    return 40;
+    return 30;
 }
 
 
