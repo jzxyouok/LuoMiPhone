@@ -176,12 +176,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ListFooterView.m"
-            timestampString = "451648709.341387"
+            timestampString = "451649242.74384"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "-drawRect:"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "-tapFooterView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -191,13 +191,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ListFooterView.m"
-            timestampString = "451649242.74384"
+            filePath = "LuoMiPhone/NearbyViewController.m"
+            timestampString = "451755192.064575"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "-tapFooterView"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "-tableView:heightForFooterInSection:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

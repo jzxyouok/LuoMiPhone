@@ -34,7 +34,12 @@
     JSDropDownMenu *menu;
     
 }
+
 @property(nonatomic,strong) GroupByListModal *groupListModal;
+
+@property(nonatomic,strong) NSMutableDictionary *rowsNumberForSection;
+@property(nonatomic,strong) NSMutableDictionary *sectionFooterViewHight;
+@property(nonatomic,strong) NSMutableDictionary *sectionFooterView;
 
 @end
 
@@ -70,6 +75,35 @@
     self.title = @"附近";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LocationTableViewCell class]) bundle:nil] forCellReuseIdentifier:LocationTableViewCellIdentifier];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.rowsNumberForSection = [[NSMutableDictionary alloc] init];
+    self.sectionFooterViewHight = [[NSMutableDictionary alloc] init];
+    self.sectionFooterView = [[NSMutableDictionary alloc] init];
+    for (int i = 1; i < 7; i++) {
+        [self.rowsNumberForSection setValue:[NSNumber numberWithInt:2]
+                                     forKey:[NSString stringWithFormat:@"%d",i]];
+        [self.sectionFooterViewHight setValue:[NSNumber numberWithInt:50]
+                                     forKey:[NSString stringWithFormat:@"%d",i]];
+        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"ListFooterView" owner:self options:nil];
+        ListFooterView *footerView = (ListFooterView *)[views lastObject];
+        footerView.section = i;
+        [self.sectionFooterView setValue:footerView forKey:[NSString stringWithFormat:@"%d",i]];
+        footerView.footerViewClicked = ^(NSInteger section){
+            NSIndexPath *indexPath1 = [NSIndexPath indexPathForRow:2 inSection:section];
+            NSIndexPath *indexPath2 = [NSIndexPath indexPathForRow:3 inSection:section];
+            NSArray *insertIndexPaths = [NSArray arrayWithObjects:indexPath1,indexPath2,nil];
+            //同样，将数据加到list中，用的row
+            [self.rowsNumberForSection setValue:[NSNumber numberWithInt:4]
+                                         forKey:[NSString stringWithFormat:@"%d",(int)section]];
+            [self.sectionFooterViewHight setValue:[NSNumber numberWithInt:10]
+                                           forKey:[NSString stringWithFormat:@"%d",(int)section]];
+            UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 10)];
+            view.backgroundColor = [UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1.0];
+            [self.sectionFooterView setValue:view forKey:[NSString stringWithFormat:@"%d",i]];
+            [self.tableView insertRowsAtIndexPaths:insertIndexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+            
+        };
+    }
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -78,7 +112,9 @@
     if (section == 0) {
         return 1;
     }
-    return 2;
+    int i = (int)section;
+    NSNumber *number = [self.rowsNumberForSection objectForKey:[NSString stringWithFormat:@"%d",i]];
+    return number.integerValue;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -113,14 +149,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
    
     if (section != 0) {
-        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"ListFooterView" owner:self options:nil];
-        ListFooterView *footerView = (ListFooterView *)[views lastObject];
-        footerView.section = section;
-        footerView.footerViewClicked = ^(NSInteger section){
-            
-//          self.tableView insertRowsAtIndexPaths:<#(NSArray *)#> withRowAnimation:<#(UITableViewRowAnimation)#>
-            
-        };
+        UIView *footerView = [self.sectionFooterView objectForKey:[NSString stringWithFormat:@"%d",(int)section]];
         return footerView;
     }
     return nil;
@@ -128,7 +157,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     if (section!=0) {
-        return 50;
+        NSNumber *number = [self.sectionFooterViewHight objectForKey:[NSString stringWithFormat:@"%d",(int)section]];
+        return number.floatValue;
     }
     return 0;
 }
