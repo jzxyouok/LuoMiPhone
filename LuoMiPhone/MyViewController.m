@@ -21,7 +21,7 @@
     [super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:MasonryTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:MasonryTableViewCellIdentifier];
     self.title = @"石工布局";
-    self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+  //  self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
 
     // Do any additional setup after loading the view from its nib.
 }
