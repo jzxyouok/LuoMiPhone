@@ -21,6 +21,10 @@
 
 @implementation MyViewController
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext{
     
     if ([[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey] isKindOfClass:[MyViewController class]]) {
@@ -35,26 +39,37 @@
         UIView *containerView = [transitionContext containerView];
         
         
-        [srcVC.tableView setContentOffset:CGPointMake(0, -400) animated:YES];
         [containerView addSubview:toVC.view];
         // 4. Do animate now
         NSTimeInterval duration = [self transitionDuration:transitionContext];
         
-        [UIView animateWithDuration:duration
-                              delay:0.0
-             usingSpringWithDamping:0.6
-              initialSpringVelocity:0.0
-                            options:UIViewAnimationOptionCurveLinear
-                         animations:^{
-                             
-                             
-                             
-                         } completion:^(BOOL finished) {
-                             // 5. Tell context that we completed.
-                             toVC.view.frame = finalFrame;
-                             
-                             [transitionContext completeTransition:YES];
-                         }];
+       // [srcVC.tableView setContentOffset:CGPointMake(0, se) animated:YES];
+
+//        [UIView animateWithDuration:duration
+//                              delay:0.0
+//             usingSpringWithDamping:0.6
+//              initialSpringVelocity:0.0
+//                            options:UIViewAnimationOptionCurveLinear
+//                         animations:^{
+//                             
+//                             [srcVC.tableView setContentOffset:CGPointMake(0, -[[UIScreen mainScreen] bounds].size.height) animated:NO];
+//
+//                             
+//                         } completion:^(BOOL finished) {
+//                             // 5. Tell context that we completed.
+//                             toVC.view.frame = finalFrame;
+//                             
+//                             [transitionContext completeTransition:YES];
+//                         }];
+       
+     [srcVC.tableView setContentOffset:CGPointMake(0, -200) animated:NO];
+        [UIView animateWithDuration:duration animations:^{
+         [srcVC.tableView setContentOffset:CGPointMake(0, -[[UIScreen mainScreen] bounds].size.height) animated:YES];
+        } completion:^(BOOL finished){
+            toVC.view.frame = finalFrame;
+            
+            [transitionContext completeTransition:YES];
+        }];
         //        double delayInSeconds = 2.0;
         //        //创建一个调度时间,相对于默认时钟或修改现有的调度时间。
         //        dispatch_time_t delayInNanoSeconds =dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);

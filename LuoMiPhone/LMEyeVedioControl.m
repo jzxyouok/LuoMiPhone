@@ -23,7 +23,9 @@ static const CGFloat EyeBecomeToWhiteColor = 110;
 
 static const CGFloat EyeOrbitalMaskHeight = 45;
 
-static const CGFloat EyeVedioShowHeight = 150;
+static const CGFloat EyeAnimationForShowVedio = 150;
+
+static const CGFloat EyeVedioShowHeight = 568;
 
 #define EyeColor [UIColor colorWithRed:158/255.0 green:153/255.0 blue:150/255.0 alpha:1.0]
 
@@ -53,6 +55,8 @@ static const CGFloat EyeVedioShowHeight = 150;
 @property(nonatomic,weak) IBOutlet UIView *eyeView;
 
 @property(nonatomic,assign) BOOL hasShowVideo;
+
+@property(nonatomic,assign) BOOL hasBeginOffsexAnimation;
 
 @property(strong,nonatomic) CameraImageHelper *CameraHelper;
 
@@ -245,6 +249,12 @@ static const CGFloat EyeVedioShowHeight = 150;
         NSLog(@"frame = %@",NSStringFromCGRect(self.orbitalMaskLayer.frame));
     }
     
+    if (offsexY >= EyeAnimationForShowVedio && !self.hasBeginOffsexAnimation) {
+        self.hasBeginOffsexAnimation = YES;
+       // [self.scrollView setContentOffset:CGPointMake(0, -EyeVedioShowHeight) animated:YES];
+        [self.scrollView setContentInset:UIEdgeInsetsMake(568, 0, 0, 0)];
+    }
+    
     if (offsexY >= EyeVedioShowHeight && !self.hasShowVideo) {
         self.hasShowVideo = YES;
         if (self.beginShowVideo) {
@@ -279,6 +289,7 @@ static const CGFloat EyeVedioShowHeight = 150;
     self.orbitalDownPath.CGPath = [UIBezierPath bezierPath].CGPath;
     [self setStrokeColorToEyeColor];
     self.hasShowVideo = NO;
+    self.hasBeginOffsexAnimation = NO;
     [self.scrollView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
     self.isDragging = YES;
 }
