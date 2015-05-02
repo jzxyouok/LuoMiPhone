@@ -97,6 +97,9 @@ static const CGFloat imageViewDefaultHeight = 20;
    if ((ABS(self.scrollView.contentOffset.y) > RefreshControlDefaultLoadingHeight) && (self.scrollView.contentOffset.y < 0)){
         
         [self.scrollView setContentInset:UIEdgeInsetsMake(RefreshControlAnimationHeight, 0, 0, 0)];
+    //   [self.scrollView setContentOffset:CGPointMake(0, -RefreshControlAnimationHeight) animated:YES];
+       [self.scrollView setContentOffset:CGPointMake(0, -400) animated:YES];
+
         self.imageViewHeightConstraint.constant = self.imageView.image.size.height;
         self.imageViewWidthConstraint.constant = self.imageView.image.size.width;
         [self.imageView startAnimating];

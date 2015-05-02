@@ -256,10 +256,7 @@
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     [containerView addSubview:toViewController.view];
     
-//    UIBezierPath *circleMaskPathInitial = [UIBezierPath bezierPathWithOvalInRect:button.frame];
-//    CGPoint extremePoint = CGPointMake(button.center.x - 0, button.center.y - CGRectGetHeight(toViewController.view.bounds));
-//    CGFloat radius = sqrt((extremePoint.x*extremePoint.x) + (extremePoint.y*extremePoint.y));
-//    UIBezierPath *circleMaskPathFinal = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(button.frame, -radius, -radius)];
+
     UIBezierPath *circleMaskPathInitial = [UIBezierPath bezierPathWithOvalInRect:buttonFrame];
     CGPoint extremePoint = CGPointMake(15, 15 - CGRectGetHeight(toViewController.view.bounds));
     CGFloat radius = sqrt((extremePoint.x*extremePoint.x) + (extremePoint.y*extremePoint.y));
@@ -275,30 +272,7 @@
     maskLayerAnimation.duration = [self transitionDuration:transitionContext];
     maskLayerAnimation.delegate = self;
     [maskLayer addAnimation:maskLayerAnimation forKey:@"path"];
-//    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-//    
-//    // 2. Set init frame for toVC
-//    CGRect screenBounds = [[UIScreen mainScreen] bounds];
-//    CGRect finalFrame = [transitionContext finalFrameForViewController:toVC];
-//    toVC.view.frame = CGRectOffset(finalFrame, 0, screenBounds.size.height);
-//    
-//    // 3. Add toVC's view to containerView
-//    UIView *containerView = [transitionContext containerView];
-//    [containerView addSubview:toVC.view];
-//    
-//    // 4. Do animate now
-//    NSTimeInterval duration = [self transitionDuration:transitionContext];
-//    [UIView animateWithDuration:duration
-//                          delay:0.0
-//         usingSpringWithDamping:0.6
-//          initialSpringVelocity:0.0
-//                        options:UIViewAnimationOptionCurveLinear
-//                     animations:^{
-//                         toVC.view.frame = finalFrame;
-//                     } completion:^(BOOL finished) {
-//                         // 5. Tell context that we completed.
-//                         [transitionContext completeTransition:YES];
-//                     }];
+
 
 }
 
