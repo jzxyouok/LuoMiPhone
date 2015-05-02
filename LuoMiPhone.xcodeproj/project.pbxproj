@@ -33,6 +33,23 @@
 		7F3B772F1AEB6D0400981B2D /* ListFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3B772E1AEB6D0400981B2D /* ListFooterView.m */; };
 		7F3B77311AEB6D1000981B2D /* ListFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F3B77301AEB6D1000981B2D /* ListFooterView.xib */; };
 		7F3B77341AEB865A00981B2D /* ListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3B77331AEB865A00981B2D /* ListTableView.m */; };
+		7F406BC91AF4B5C600D5CB4B /* LMEyeVedioControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F406BC21AF4B5C600D5CB4B /* LMEyeVedioControl.m */; };
+		7F406BCA1AF4B5C600D5CB4B /* LMEyeVedioControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F406BC31AF4B5C600D5CB4B /* LMEyeVedioControl.xib */; };
+		7F406BCB1AF4B5C600D5CB4B /* EyeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F406BC51AF4B5C600D5CB4B /* EyeView.m */; };
+		7F406BCC1AF4B5C600D5CB4B /* VedioRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F406BC71AF4B5C600D5CB4B /* VedioRecordViewController.m */; };
+		7F406BCD1AF4B5C600D5CB4B /* VedioRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F406BC81AF4B5C600D5CB4B /* VedioRecordViewController.xib */; };
+		7F406BD11AF4CB0C00D5CB4B /* CameraImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F406BD01AF4CB0C00D5CB4B /* CameraImageHelper.m */; };
+		7F406BD31AF4CB2F00D5CB4B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F406BD21AF4CB2F00D5CB4B /* ImageIO.framework */; };
+		7F406BD51AF4CB3800D5CB4B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F406BD41AF4CB3800D5CB4B /* QuartzCore.framework */; };
+		7F406BD71AF4CB4300D5CB4B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F406BD61AF4CB4300D5CB4B /* CoreMedia.framework */; };
+		7F406BD91AF4CB4900D5CB4B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F406BD81AF4CB4900D5CB4B /* CoreVideo.framework */; };
+		7F406BDB1AF4CB5200D5CB4B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F406BDA1AF4CB5200D5CB4B /* AVFoundation.framework */; };
+		7F406BDD1AF4CB5A00D5CB4B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F406BDC1AF4CB5A00D5CB4B /* UIKit.framework */; };
+		7F406BDF1AF4CB6200D5CB4B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F406BDE1AF4CB6200D5CB4B /* CoreGraphics.framework */; };
+		7F406BE11AF4CB6800D5CB4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F406BE01AF4CB6800D5CB4B /* Foundation.framework */; };
+		7F406BE51AF4DAB200D5CB4B /* RecordingCircleOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F406BE41AF4DAB200D5CB4B /* RecordingCircleOverlayView.m */; };
+		7F406BE91AF4E13800D5CB4B /* FowardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F406BE71AF4E13800D5CB4B /* FowardViewController.m */; };
+		7F406BEA1AF4E13800D5CB4B /* FowardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F406BE81AF4E13800D5CB4B /* FowardViewController.xib */; };
 		7F4D959F1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D959E1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m */; };
 		7F4D95A21ACB8BB400FA7A37 /* UILabel+ChangeText.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4D95A11ACB8BB400FA7A37 /* UILabel+ChangeText.m */; };
 		7F5245521ACD16F100BB518F /* LMTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5245511ACD16F100BB518F /* LMTextStorage.m */; };
@@ -130,6 +147,29 @@
 		7F3B77301AEB6D1000981B2D /* ListFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListFooterView.xib; sourceTree = "<group>"; };
 		7F3B77321AEB865A00981B2D /* ListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableView.h; sourceTree = "<group>"; };
 		7F3B77331AEB865A00981B2D /* ListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableView.m; sourceTree = "<group>"; };
+		7F406BC11AF4B5C600D5CB4B /* LMEyeVedioControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMEyeVedioControl.h; sourceTree = "<group>"; };
+		7F406BC21AF4B5C600D5CB4B /* LMEyeVedioControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMEyeVedioControl.m; sourceTree = "<group>"; };
+		7F406BC31AF4B5C600D5CB4B /* LMEyeVedioControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LMEyeVedioControl.xib; sourceTree = "<group>"; };
+		7F406BC41AF4B5C600D5CB4B /* EyeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EyeView.h; sourceTree = "<group>"; };
+		7F406BC51AF4B5C600D5CB4B /* EyeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EyeView.m; sourceTree = "<group>"; };
+		7F406BC61AF4B5C600D5CB4B /* VedioRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VedioRecordViewController.h; sourceTree = "<group>"; };
+		7F406BC71AF4B5C600D5CB4B /* VedioRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VedioRecordViewController.m; sourceTree = "<group>"; };
+		7F406BC81AF4B5C600D5CB4B /* VedioRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VedioRecordViewController.xib; sourceTree = "<group>"; };
+		7F406BCF1AF4CB0C00D5CB4B /* CameraImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraImageHelper.h; sourceTree = "<group>"; };
+		7F406BD01AF4CB0C00D5CB4B /* CameraImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraImageHelper.m; sourceTree = "<group>"; };
+		7F406BD21AF4CB2F00D5CB4B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		7F406BD41AF4CB3800D5CB4B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7F406BD61AF4CB4300D5CB4B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		7F406BD81AF4CB4900D5CB4B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		7F406BDA1AF4CB5200D5CB4B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7F406BDC1AF4CB5A00D5CB4B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7F406BDE1AF4CB6200D5CB4B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7F406BE01AF4CB6800D5CB4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7F406BE31AF4DAB200D5CB4B /* RecordingCircleOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordingCircleOverlayView.h; sourceTree = "<group>"; };
+		7F406BE41AF4DAB200D5CB4B /* RecordingCircleOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordingCircleOverlayView.m; sourceTree = "<group>"; };
+		7F406BE61AF4E13800D5CB4B /* FowardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FowardViewController.h; sourceTree = "<group>"; };
+		7F406BE71AF4E13800D5CB4B /* FowardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FowardViewController.m; sourceTree = "<group>"; };
+		7F406BE81AF4E13800D5CB4B /* FowardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FowardViewController.xib; sourceTree = "<group>"; };
 		7F4D959D1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AddSubImageView.h"; sourceTree = "<group>"; };
 		7F4D959E1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AddSubImageView.m"; sourceTree = "<group>"; };
 		7F4D95A01ACB8BB400FA7A37 /* UILabel+ChangeText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ChangeText.h"; sourceTree = "<group>"; };
@@ -208,6 +248,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F406BE11AF4CB6800D5CB4B /* Foundation.framework in Frameworks */,
+				7F406BDF1AF4CB6200D5CB4B /* CoreGraphics.framework in Frameworks */,
+				7F406BDD1AF4CB5A00D5CB4B /* UIKit.framework in Frameworks */,
+				7F406BDB1AF4CB5200D5CB4B /* AVFoundation.framework in Frameworks */,
+				7F406BD91AF4CB4900D5CB4B /* CoreVideo.framework in Frameworks */,
+				7F406BD71AF4CB4300D5CB4B /* CoreMedia.framework in Frameworks */,
+				7F406BD51AF4CB3800D5CB4B /* QuartzCore.framework in Frameworks */,
+				7F406BD31AF4CB2F00D5CB4B /* ImageIO.framework in Frameworks */,
 				7FB9F8DC1ACBC0F400B8199A /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +320,42 @@
 			name = "附近";
 			sourceTree = "<group>";
 		};
+		7F406BC01AF4B58D00D5CB4B /* EyeVedio */ = {
+			isa = PBXGroup;
+			children = (
+				7F406BC11AF4B5C600D5CB4B /* LMEyeVedioControl.h */,
+				7F406BC21AF4B5C600D5CB4B /* LMEyeVedioControl.m */,
+				7F406BC31AF4B5C600D5CB4B /* LMEyeVedioControl.xib */,
+				7F406BC41AF4B5C600D5CB4B /* EyeView.h */,
+				7F406BC51AF4B5C600D5CB4B /* EyeView.m */,
+				7F406BC61AF4B5C600D5CB4B /* VedioRecordViewController.h */,
+				7F406BC71AF4B5C600D5CB4B /* VedioRecordViewController.m */,
+				7F406BC81AF4B5C600D5CB4B /* VedioRecordViewController.xib */,
+				7F406BE61AF4E13800D5CB4B /* FowardViewController.h */,
+				7F406BE71AF4E13800D5CB4B /* FowardViewController.m */,
+				7F406BE81AF4E13800D5CB4B /* FowardViewController.xib */,
+			);
+			name = EyeVedio;
+			sourceTree = "<group>";
+		};
+		7F406BCE1AF4CAFD00D5CB4B /* CemeraImage */ = {
+			isa = PBXGroup;
+			children = (
+				7F406BCF1AF4CB0C00D5CB4B /* CameraImageHelper.h */,
+				7F406BD01AF4CB0C00D5CB4B /* CameraImageHelper.m */,
+			);
+			name = CemeraImage;
+			sourceTree = "<group>";
+		};
+		7F406BE21AF4DA9C00D5CB4B /* VedioCircle */ = {
+			isa = PBXGroup;
+			children = (
+				7F406BE31AF4DAB200D5CB4B /* RecordingCircleOverlayView.h */,
+				7F406BE41AF4DAB200D5CB4B /* RecordingCircleOverlayView.m */,
+			);
+			name = VedioCircle;
+			sourceTree = "<group>";
+		};
 		7F4D95961ACAFD2300FA7A37 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +404,14 @@
 		7F5D1A9F1AC577BF0028536F = {
 			isa = PBXGroup;
 			children = (
+				7F406BE01AF4CB6800D5CB4B /* Foundation.framework */,
+				7F406BDE1AF4CB6200D5CB4B /* CoreGraphics.framework */,
+				7F406BDC1AF4CB5A00D5CB4B /* UIKit.framework */,
+				7F406BDA1AF4CB5200D5CB4B /* AVFoundation.framework */,
+				7F406BD81AF4CB4900D5CB4B /* CoreVideo.framework */,
+				7F406BD61AF4CB4300D5CB4B /* CoreMedia.framework */,
+				7F406BD41AF4CB3800D5CB4B /* QuartzCore.framework */,
+				7F406BD21AF4CB2F00D5CB4B /* ImageIO.framework */,
 				7FB9F8DB1ACBC0F400B8199A /* CoreText.framework */,
 				7F5D1AAA1AC577BF0028536F /* LuoMiPhone */,
 				7F5D1AC71AC577BF0028536F /* LuoMiPhoneTests */,
@@ -401,6 +493,9 @@
 		7F5D1AF21AC585CC0028536F /* CustomLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				7F406BE21AF4DA9C00D5CB4B /* VedioCircle */,
+				7F406BCE1AF4CAFD00D5CB4B /* CemeraImage */,
+				7F406BC01AF4B58D00D5CB4B /* EyeVedio */,
 				7F52454F1ACD16B400BB518F /* LMTextLayOut */,
 				7F2296B81AC9600500932E7B /* LMTimerLabel */,
 				7F7CB95A1AC690C20009738E /* LMPullToRefresh */,
@@ -605,9 +700,12 @@
 				7FA661041AE8C7D40001F2D3 /* CitySelectCollectionViewCell.xib in Resources */,
 				7F3B772C1AEB6CF400981B2D /* ListHeaderView.xib in Resources */,
 				7F5D1AE71AC57DA90028536F /* NearbyViewController.xib in Resources */,
+				7F406BEA1AF4E13800D5CB4B /* FowardViewController.xib in Resources */,
 				7F5D1AF11AC57DBE0028536F /* MoreViewController.xib in Resources */,
 				7F3B77311AEB6D1000981B2D /* ListFooterView.xib in Resources */,
 				7F5D1ABC1AC577BF0028536F /* Images.xcassets in Resources */,
+				7F406BCA1AF4B5C600D5CB4B /* LMEyeVedioControl.xib in Resources */,
+				7F406BCD1AF4B5C600D5CB4B /* VedioRecordViewController.xib in Resources */,
 				7FA661061AE8C7D40001F2D3 /* CitySelectTableViewCell.xib in Resources */,
 				7F11FCF71AE218A40097520B /* MasonryTableViewCell.xib in Resources */,
 				7F2C30591ACA9EE800181E65 /* GroupListHeaderTableViewCell.xib in Resources */,
@@ -637,6 +735,7 @@
 				7FA661051AE8C7D40001F2D3 /* CitySelectTableViewCell.m in Sources */,
 				7F3B772A1AEB6CE500981B2D /* ListHeaderView.m in Sources */,
 				7F11FCFA1AE21AC40097520B /* MKMasonryViewLayout.m in Sources */,
+				7F406BE91AF4E13800D5CB4B /* FowardViewController.m in Sources */,
 				7F4D959F1ACAFEA400FA7A37 /* UIImageView+AddSubImageView.m in Sources */,
 				7F5465081AE7912900C3F34B /* JSIndexPath.m in Sources */,
 				7F5465051AE7912900C3F34B /* JSBottomView.m in Sources */,
@@ -648,18 +747,21 @@
 				7F2296C01AC975F500932E7B /* SelectedBrandCollectionViewCell.m in Sources */,
 				7F5D1AB11AC577BF0028536F /* AppDelegate.m in Sources */,
 				7F3B772F1AEB6D0400981B2D /* ListFooterView.m in Sources */,
+				7F406BD11AF4CB0C00D5CB4B /* CameraImageHelper.m in Sources */,
 				7FA661021AE8C7D40001F2D3 /* CityListViewController.m in Sources */,
 				7F2C30531ACA811600181E65 /* GroupByListModal.m in Sources */,
 				7F2296BB1AC9604900932E7B /* LMTimerLabel.m in Sources */,
 				7F2296B61AC94C8E00932E7B /* SelectedBrandMenuViewCell.m in Sources */,
 				7F5D1AE61AC57DA90028536F /* NearbyViewController.m in Sources */,
 				7F7CB95E1AC690DA0009738E /* LMRefreshControl.m in Sources */,
+				7F406BCB1AF4B5C600D5CB4B /* EyeView.m in Sources */,
 				7F5D1AAE1AC577BF0028536F /* main.m in Sources */,
 				7F2296C51AC97EE500932E7B /* CommentGiftTableViewCell.m in Sources */,
 				7F5D1AE11AC57D8F0028536F /* GroupBuyViewController.m in Sources */,
 				7F2C30581ACA9EE800181E65 /* GroupListHeaderTableViewCell.m in Sources */,
 				7F7CB9641AC6A4FC0009738E /* FirstScrollMenuView.m in Sources */,
 				7F2C304F1ACA79C500181E65 /* GroupByListTableViewCell.m in Sources */,
+				7F406BCC1AF4B5C600D5CB4B /* VedioRecordViewController.m in Sources */,
 				7FA778901ACAB6760072E6DC /* CheckAllGroupByButtonTableViewCell.m in Sources */,
 				7F4D95A21ACB8BB400FA7A37 /* UILabel+ChangeText.m in Sources */,
 				7F5D1AF61AC585F90028536F /* InfiniteScrollView.m in Sources */,
@@ -667,8 +769,10 @@
 				7F5465091AE7912900C3F34B /* JSTableViewCell.m in Sources */,
 				7F54650C1AE7912900C3F34B /* NSString+Size.m in Sources */,
 				7F2C30491ACA6E8800181E65 /* CountDownTimerView.m in Sources */,
+				7F406BC91AF4B5C600D5CB4B /* LMEyeVedioControl.m in Sources */,
 				7F3B77341AEB865A00981B2D /* ListTableView.m in Sources */,
 				7F11FCEF1AE205030097520B /* MasonryCollectionViewCell.m in Sources */,
+				7F406BE51AF4DAB200D5CB4B /* RecordingCircleOverlayView.m in Sources */,
 				7F5D1AEB1AC57DB40028536F /* MyViewController.m in Sources */,
 				7F54650A1AE7912900C3F34B /* LeftTableViewCell.m in Sources */,
 				7F5245521ACD16F100BB518F /* LMTextStorage.m in Sources */,

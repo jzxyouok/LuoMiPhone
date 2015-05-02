@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LMEyeVedioControl"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="jcm-v8-cwz" customClass="LMEyeVedioControl">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0c8-sD-3Mq">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                    <subviews>
+                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="20g-5C-cZx">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ufq-SH-Pyb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="gX6-If-SRC">
+                                        <rect key="frame" x="124" y="14" width="73" height="57"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="57" id="DlX-0F-JMp"/>
+                                            <constraint firstAttribute="width" constant="73" id="Rm2-Ec-for"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="gX6-If-SRC" secondAttribute="centerX" id="RcC-7v-1aH"/>
+                                    <constraint firstAttribute="centerY" secondItem="gX6-If-SRC" secondAttribute="centerY" id="h6G-22-atu"/>
+                                </constraints>
+                            </view>
+                            <blurEffect style="light"/>
+                        </visualEffectView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="20g-5C-cZx" secondAttribute="trailing" id="60J-Qd-Wa6"/>
+                        <constraint firstItem="20g-5C-cZx" firstAttribute="top" secondItem="0c8-sD-3Mq" secondAttribute="top" id="IJS-bN-Q0S"/>
+                        <constraint firstAttribute="bottom" secondItem="20g-5C-cZx" secondAttribute="bottom" id="V4M-Ij-Dh8"/>
+                        <constraint firstItem="20g-5C-cZx" firstAttribute="leading" secondItem="0c8-sD-3Mq" secondAttribute="leading" id="qTk-Ta-wL0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0c8-sD-3Mq" firstAttribute="top" secondItem="jcm-v8-cwz" secondAttribute="top" id="GWM-TS-Bti"/>
+                <constraint firstAttribute="bottom" secondItem="0c8-sD-3Mq" secondAttribute="bottom" id="MDL-FP-7gO"/>
+                <constraint firstItem="0c8-sD-3Mq" firstAttribute="leading" secondItem="jcm-v8-cwz" secondAttribute="leading" id="Mq2-Jj-dRH"/>
+                <constraint firstAttribute="trailing" secondItem="0c8-sD-3Mq" secondAttribute="trailing" id="V3i-ES-JJx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="eyeView" destination="gX6-If-SRC" id="O6p-6x-SaW"/>
+            </connections>
+            <point key="canvasLocation" x="199" y="70"/>
+        </view>
+    </objects>
+</document>

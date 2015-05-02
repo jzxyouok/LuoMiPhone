@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyViewController : UIViewController
+@interface MyViewController : UIViewController<UINavigationControllerDelegate,UIViewControllerAnimatedTransitioning,UIViewControllerTransitioningDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,weak) IBOutlet UITableView *tableView;
 
