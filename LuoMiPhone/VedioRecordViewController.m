@@ -14,6 +14,7 @@
 
 @property(strong,nonatomic) CameraImageHelper *CameraHelper;
 @property (weak, nonatomic) IBOutlet UIView *liveView;
+@property(nonatomic,strong) UIVisualEffectView *visualEffectView;
 
 @end
 
@@ -49,6 +50,15 @@
     [_CameraHelper CaptureStillImage];
     [self performSelector:@selector(getImage) withObject:nil afterDelay:0.5];
 }
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [UIView animateWithDuration:2.0 animations:^{
+    
+        self.visualEffectView.alpha = 0.3;
+    }];
+}
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
@@ -65,6 +75,11 @@
     UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:@"转发到朋友圈" style:UIBarButtonItemStylePlain target:self action:@selector(foward)];
     [right setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = right;
+    
+    self.visualEffectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
+    self.visualEffectView.frame = self.liveView.bounds;
+    self.visualEffectView.alpha = 1.0;
+    [self.liveView addSubview:self.visualEffectView];
 
 }
 

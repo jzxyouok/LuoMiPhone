@@ -62,8 +62,8 @@ preview = [AVCaptureVideoPreviewLayer layerWithSession: session];
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if( [keyPath isEqualToString:@"adjustingFocus"] ){
         BOOL adjustingFocus = [ [change objectForKey:NSKeyValueChangeNewKey] isEqualToNumber:[NSNumber numberWithInt:1] ];
-        NSLog(@"Is adjusting focus? %@", adjustingFocus ? @"YES" : @"NO" );
-        NSLog(@"Change dictionary: %@", change);
+//        NSLog(@"Is adjusting focus? %@", adjustingFocus ? @"YES" : @"NO" );
+//        NSLog(@"Change dictionary: %@", change);
         if (delegate) {
             [delegate foucusStatus:adjustingFocus];
         }
@@ -78,8 +78,24 @@ preview = [AVCaptureVideoPreviewLayer layerWithSession: session];
     preview.frame = aView.bounds;
     preview.videoGravity = AVLayerVideoGravityResizeAspectFill; 
     [aView.layer addSublayer: preview];
-
 }
+
+-(void) embedPreviewWithVisualEffectView: (UIView *) aView {
+    if (!session) return;
+    //设置取景
+    preview = [AVCaptureVideoPreviewLayer layerWithSession: session];
+    preview.frame = aView.bounds;
+    preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    [aView.layer addSublayer: preview];
+    
+    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
+    visualEffectView.frame = aView.bounds;
+    visualEffectView.alpha = 1.0;
+    [aView addSubview:visualEffectView];
+    
+    
+}
+
 
 - (void)changePreviewOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -135,11 +151,14 @@ preview = [AVCaptureVideoPreviewLayer layerWithSession: session];
          }
          
          // Continue as appropriate.
-         NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
-         UIImage *t_image = [UIImage imageWithData:imageData];   
-         image = [[UIImage alloc]initWithCGImage:t_image.CGImage scale:1.0 orientation:g_orientation];
-
-         [self giveImg2Delegate];
+         if (imageSampleBuffer != nil) {
+             NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
+             UIImage *t_image = [UIImage imageWithData:imageData];
+             image = [[UIImage alloc]initWithCGImage:t_image.CGImage scale:1.0 orientation:g_orientation];
+             
+             [self giveImg2Delegate];
+         }
+         
      }];
 }
 

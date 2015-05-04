@@ -13,4 +13,6 @@
 
 @property(nonatomic,weak) IBOutlet UITableView *tableView;
 
+@property(nonatomic,weak) IBOutlet NSLayoutConstraint *topTableViewConstraint;
+
 @end

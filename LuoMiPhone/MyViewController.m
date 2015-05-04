@@ -23,6 +23,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext{
@@ -62,9 +63,9 @@
 //                             [transitionContext completeTransition:YES];
 //                         }];
        
-     [srcVC.tableView setContentOffset:CGPointMake(0, -200) animated:NO];
+    // [srcVC.tableView setContentOffset:CGPointMake(0, -200) animated:NO];
         [UIView animateWithDuration:duration animations:^{
-         [srcVC.tableView setContentOffset:CGPointMake(0, -[[UIScreen mainScreen] bounds].size.height) animated:YES];
+       //  [srcVC.tableView setContentOffset:CGPointMake(0, -[[UIScreen mainScreen] bounds].size.height) animated:YES];
         } completion:^(BOOL finished){
             toVC.view.frame = finalFrame;
             
@@ -97,7 +98,7 @@
         
         // 4. Do animate now
         NSTimeInterval duration = [self transitionDuration:transitionContext];
-        [toVC.tableView setContentOffset:CGPointMake(0, -[[UIScreen mainScreen] bounds].size.height) animated:NO];
+        //[toVC.tableView setContentOffset:CGPointMake(0, -[[UIScreen mainScreen] bounds].size.height) animated:NO];
         
         [UIView animateWithDuration:duration
                               delay:0.0
@@ -105,13 +106,13 @@
               initialSpringVelocity:0.0
                             options:UIViewAnimationOptionCurveLinear
                          animations:^{
-                             
+                            // [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
                              [self.tableView setContentOffset:CGPointMake(0, 0) animated:YES];
                              
                          } completion:^(BOOL finished) {
                              // 5. Tell context that we completed.
                              toVC.view.frame = finalFrame;
-                             
+                             // [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
                              [transitionContext completeTransition:YES];
                          }];
     }
@@ -129,7 +130,12 @@
 }
 
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext{
-    return 1;
+    return 0.1;
+//    if ([[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey] isKindOfClass:[MyViewController class]]) {
+//        
+//    }else{
+//        
+//    }
 }
 
 - (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
@@ -193,7 +199,7 @@
     return 1;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-return 815;
+return 415;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

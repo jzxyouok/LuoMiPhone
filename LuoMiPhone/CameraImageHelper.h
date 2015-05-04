@@ -33,6 +33,7 @@
 -(void)setDelegate:(id<AVHelperDelegate>)_delegate;
 -(void)CaptureStillImage;
 - (void)embedPreviewInView: (UIView *) aView;
+-(void) embedPreviewWithVisualEffectView: (UIView *) aView;
 - (void)changePreviewOrientation:(UIInterfaceOrientation)interfaceOrientation;
 @end
 

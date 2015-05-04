@@ -58,7 +58,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:checkAllGroupByButtonTableViewCellIdentifer bundle:nil] forCellReuseIdentifier:checkAllGroupByButtonTableViewCellIdentifer];
     [self.tableView registerNib:[UINib nibWithNibName:groupListHeaderTableViewCellIdentifer bundle:nil] forCellReuseIdentifier:groupListHeaderTableViewCellIdentifer];
     [self.tableView registerNib:[UINib nibWithNibName:MasonryTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:MasonryTableViewCellIdentifier];
-    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[UIImage imageNamed:@"mc"],@"image",@"1毛钱吃麦当劳",@"listTitle",@"1毛钱吃麦当劳原味板烧鸡腿堡",@"listDetail",@"￥0.1",@"listPrice",@"已售344245",@"listSales", nil];
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[UIImage imageNamed:@"mc0"],@"image",@"1毛钱吃麦当劳",@"listTitle",@"1毛钱吃麦当劳原味板烧鸡腿堡",@"listDetail",@"￥0.1",@"listPrice",@"已售344245",@"listSales", nil];
     self.groupListModal = [[GroupByListModal alloc] initWith:dic];
     self.tableRows = 20;
     self.tableView.backgroundColor = [UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1.0];
@@ -73,6 +73,16 @@
     self.button.layer.masksToBounds = YES;
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:self.button] ;
     self.navigationItem.leftBarButtonItem = leftItem;
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+   // self.view.backgroundColor = [UIColor redColor];
+//    NSLog(@"***********%f",self.topTableViewConstraint.constant);
+//    NSLog(@"***********%@",NSStringFromCGRect(self.tableView.frame));
+//    NSLog(@"***********%@",NSStringFromCGRect(self.view.frame));
+    self.view.frame = [[UIScreen mainScreen] bounds];
+
 }
 
 -(void)showCitySelected{

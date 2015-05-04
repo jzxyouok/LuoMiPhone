@@ -35,7 +35,7 @@
                             <blurEffect style="light"/>
                         </visualEffectView>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="20g-5C-cZx" secondAttribute="trailing" id="60J-Qd-Wa6"/>
                         <constraint firstItem="20g-5C-cZx" firstAttribute="top" secondItem="0c8-sD-3Mq" secondAttribute="top" id="IJS-bN-Q0S"/>
@@ -44,7 +44,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="0c8-sD-3Mq" firstAttribute="top" secondItem="jcm-v8-cwz" secondAttribute="top" id="GWM-TS-Bti"/>
                 <constraint firstAttribute="bottom" secondItem="0c8-sD-3Mq" secondAttribute="bottom" id="MDL-FP-7gO"/>
@@ -54,6 +53,8 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="eyeView" destination="gX6-If-SRC" id="O6p-6x-SaW"/>
+                <outlet property="liveView" destination="0c8-sD-3Mq" id="YKI-U5-OCz"/>
+                <outlet property="visualView" destination="20g-5C-cZx" id="xkF-c4-lHj"/>
             </connections>
             <point key="canvasLocation" x="199" y="70"/>
         </view>

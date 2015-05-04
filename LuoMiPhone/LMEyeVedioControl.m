@@ -60,7 +60,9 @@ static const CGFloat EyeVedioShowHeight = 568;
 
 @property(strong,nonatomic) CameraImageHelper *CameraHelper;
 
+@property(nonatomic,assign) BOOL HaveCaptureImage;
 
+@property(nonatomic,strong) UIImageView *redView;
 @end
 
 
@@ -89,12 +91,15 @@ static const CGFloat EyeVedioShowHeight = 568;
 }
 
 -(void)initialEyeLayer{
-//    _CameraHelper = [[CameraImageHelper alloc]init];
-//    
-//    // 开始实时取景
-//    [_CameraHelper startRunning];
-//    
-//    [self.liveView bringSubviewToFront:self.visualView];
+    
+    _CameraHelper = [[CameraImageHelper alloc]init];
+    [_CameraHelper startRunning];
+
+    self.redView = [[UIImageView alloc] init];
+    self.redView.frame = self.liveView.bounds;
+    
+    [self.liveView insertSubview:self.redView belowSubview:self.visualView];
+    
     
     self.hasShowVideo = NO;
 
@@ -151,6 +156,13 @@ static const CGFloat EyeVedioShowHeight = 568;
     
 
     [self setStrokeColorToEyeColor];
+    
+    if (!self.HaveCaptureImage) {
+            self.HaveCaptureImage = YES;
+            [self snapPressed:nil];
+    }
+    [_CameraHelper changePreviewOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
+
 }
 
 -(void)setStrokeColorToEyeColor{
@@ -167,17 +179,44 @@ static const CGFloat EyeVedioShowHeight = 568;
     self.circleLayer.strokeColor = [UIColor whiteColor].CGColor;
 }
 
+-(void)getImage
+{
+    UIImage *image = [_CameraHelper image];
+    
+    self.redView.image = image;
+}
+
+- (IBAction)snapPressed:(id)sender {
+    [_CameraHelper CaptureStillImage];
+    [self performSelector:@selector(getImage) withObject:nil afterDelay:0.5];
+}
+
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
     self.frame = CGRectMake(0, 0, self.scrollView.frame.size.width, self.scrollView.contentOffset.y);
     CGFloat offsexY = ABS(self.scrollView.contentOffset.y);
-    
-//   [_CameraHelper embedPreviewInView:self.liveView];
+    CGFloat offsexYNoABS = self.scrollView.contentOffset.y;
+    if( self.scrollView.contentOffset.y >= 0){
+        return;
+    }
+    self.redView.frame = self.liveView.bounds;
+//    [self snapPressed:nil];
     
     self.eyeLayer.path = self.eyePath.CGPath;
     self.circleLayer.path = self.circlePath.CGPath;
     self.orbitalLayer.path = self.orbitalPath.CGPath;
     self.orbitalDownLayer.path = self.orbitalDownPath.CGPath;
 
+//    if (!self.HaveCaptureImage) {
+//        self.HaveCaptureImage = YES;
+//        [self snapPressed:nil];
+//    }
+    if (offsexY > 100) {
+            if (!self.HaveCaptureImage) {
+                self.HaveCaptureImage = YES;
+                [self snapPressed:nil];
+            }
+    }
+    
     if(  offsexY >= EyeBeginHeight && offsexY <= EyeBallShowHeight){
         float eyeBallShowPercent = (offsexY - EyeBeginHeight) / (EyeBallShowHeight - EyeBeginHeight);
         [self.eyePath moveToPoint:CGPointMake(24, 27)];
@@ -251,8 +290,9 @@ static const CGFloat EyeVedioShowHeight = 568;
     
     if (offsexY >= EyeAnimationForShowVedio && !self.hasBeginOffsexAnimation) {
         self.hasBeginOffsexAnimation = YES;
-       // [self.scrollView setContentOffset:CGPointMake(0, -EyeVedioShowHeight) animated:YES];
         [self.scrollView setContentInset:UIEdgeInsetsMake(568, 0, 0, 0)];
+        [self.scrollView setContentOffset:CGPointMake(0, -EyeVedioShowHeight) animated:YES];
+        
     }
     
     if (offsexY >= EyeVedioShowHeight && !self.hasShowVideo) {
@@ -269,6 +309,8 @@ static const CGFloat EyeVedioShowHeight = 568;
     [self.eyeLayer setNeedsDisplay];
     [self.circleLayer setNeedsDisplay];
     [self.eyeView setNeedsDisplay];
+    
+  
 }
 
 - (void)endRefresh{
@@ -290,6 +332,7 @@ static const CGFloat EyeVedioShowHeight = 568;
     [self setStrokeColorToEyeColor];
     self.hasShowVideo = NO;
     self.hasBeginOffsexAnimation = NO;
+    self.HaveCaptureImage = NO;
     [self.scrollView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
     self.isDragging = YES;
 }
