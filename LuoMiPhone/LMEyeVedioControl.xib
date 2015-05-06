@@ -35,7 +35,7 @@
                             <blurEffect style="light"/>
                         </visualEffectView>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="20g-5C-cZx" secondAttribute="trailing" id="60J-Qd-Wa6"/>
                         <constraint firstItem="20g-5C-cZx" firstAttribute="top" secondItem="0c8-sD-3Mq" secondAttribute="top" id="IJS-bN-Q0S"/>

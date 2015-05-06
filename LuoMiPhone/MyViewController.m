@@ -163,7 +163,6 @@
     [self.tableView registerNib:[UINib nibWithNibName:MasonryTableViewCellIdentifier bundle:nil] forCellReuseIdentifier:MasonryTableViewCellIdentifier];
     self.title = @"石工布局";
     
-   self.automaticallyAdjustsScrollViewInsets = NO;
     self.refreshControl = [LMEyeVedioControl initRefreshControl:self targetAction:@selector(startLoading) scrollView:self.tableView];
     
     
@@ -184,6 +183,8 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
   //  self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
 
     // Do any additional setup after loading the view from its nib.

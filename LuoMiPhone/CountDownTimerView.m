@@ -86,6 +86,7 @@
     
     NSDate *timeToShow = [NSDate date];
     NSTimeInterval timerInterval = [[NSDate date] timeIntervalSinceDate:startCountDate];
+   // NSLog(@"%@",[self.timerToStop description]);
     timeToShow = [self.timerToStop dateByAddingTimeInterval:timerInterval * -1];
     if ([self.dateFormatter stringFromDate:timeToShow].length > 0) {
         NSString *timeString = [self.dateFormatter stringFromDate:timeToShow];

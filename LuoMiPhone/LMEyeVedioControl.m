@@ -157,11 +157,11 @@ static const CGFloat EyeVedioShowHeight = 568;
 
     [self setStrokeColorToEyeColor];
     
-    if (!self.HaveCaptureImage) {
-            self.HaveCaptureImage = YES;
-            [self snapPressed:nil];
-    }
-    [_CameraHelper changePreviewOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
+//    if (!self.HaveCaptureImage) {
+//            self.HaveCaptureImage = YES;
+//            [self snapPressed:nil];
+//    }
+//    [_CameraHelper changePreviewOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
 
 }
 
@@ -181,14 +181,14 @@ static const CGFloat EyeVedioShowHeight = 568;
 
 -(void)getImage
 {
-    UIImage *image = [_CameraHelper image];
-    
-    self.redView.image = image;
+//    UIImage *image = [_CameraHelper image];
+//    
+//    self.redView.image = image;
 }
 
 - (IBAction)snapPressed:(id)sender {
-    [_CameraHelper CaptureStillImage];
-    [self performSelector:@selector(getImage) withObject:nil afterDelay:0.5];
+//    [_CameraHelper CaptureStillImage];
+//    [self performSelector:@selector(getImage) withObject:nil afterDelay:0.5];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
@@ -210,12 +210,12 @@ static const CGFloat EyeVedioShowHeight = 568;
 //        self.HaveCaptureImage = YES;
 //        [self snapPressed:nil];
 //    }
-    if (offsexY > 100) {
-            if (!self.HaveCaptureImage) {
-                self.HaveCaptureImage = YES;
-                [self snapPressed:nil];
-            }
-    }
+//    if (offsexY > 100) {
+//            if (!self.HaveCaptureImage) {
+//                self.HaveCaptureImage = YES;
+//                [self snapPressed:nil];
+//            }
+//    }
     
     if(  offsexY >= EyeBeginHeight && offsexY <= EyeBallShowHeight){
         float eyeBallShowPercent = (offsexY - EyeBeginHeight) / (EyeBallShowHeight - EyeBeginHeight);

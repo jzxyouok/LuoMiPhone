@@ -43,7 +43,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     
     self.transitioningDelegate = self;
 
@@ -73,6 +73,8 @@
     self.button.layer.masksToBounds = YES;
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:self.button] ;
     self.navigationItem.leftBarButtonItem = leftItem;
+    
+    self.automaticallyAdjustsScrollViewInsets = YES;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -80,8 +82,8 @@
    // self.view.backgroundColor = [UIColor redColor];
 //    NSLog(@"***********%f",self.topTableViewConstraint.constant);
 //    NSLog(@"***********%@",NSStringFromCGRect(self.tableView.frame));
-//    NSLog(@"***********%@",NSStringFromCGRect(self.view.frame));
-    self.view.frame = [[UIScreen mainScreen] bounds];
+    NSLog(@"***********%@",NSStringFromCGRect(self.view.frame));
+   // self.view.frame = [[UIScreen mainScreen] bounds];
 
 }
 
@@ -90,10 +92,10 @@
     CityListViewController *cityList = [[CityListViewController alloc] init];
     cityList.transitioningDelegate = self;
   //  cityList.view.frame = [UIScreen mainScreen].bounds;
-    MyViewController *my = [[ MyViewController alloc] initWithNibName:@"MyViewController" bundle:nil];
-    my.view.backgroundColor = [UIColor redColor];
-    my.transitioningDelegate = self;
-    my.tabBarController.tabBar.hidden  = YES;
+//    MyViewController *my = [[ MyViewController alloc] initWithNibName:@"MyViewController" bundle:nil];
+//    my.view.backgroundColor = [UIColor redColor];
+//    my.transitioningDelegate = self;
+//    my.tabBarController.tabBar.hidden  = YES;
     [self.navigationController pushViewController:cityList animated:YES];
 //    [self.navigationController pushViewController:cityList animated:YES];
 }

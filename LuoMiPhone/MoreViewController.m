@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"更多";
+    self.navigationItem.prompt = @"test";
     // Do any additional setup after loading the view from its nib.
 }
 
