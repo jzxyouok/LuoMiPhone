@@ -91,7 +91,7 @@
     [super awakeFromNib];
  
     CATextLayer *title = [self createTextLayerWithNSString:@"查看其他2个团购" withColor:    [UIColor blackColor]
- andPosition:CGPointMake(0, 0)];
+    andPosition:CGPointMake(0, 0)];
     [self.layer addSublayer:title];
     
     //indicator

@@ -63,7 +63,7 @@ static NSString * const kFKRSearchBarTableViewControllerDefaultTableViewCellIden
     [self getCityData];
     
 	// Do any additional setup after loading the view.
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
     _tableView.autoresizingMask = (UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight);
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.delegate = self;
@@ -90,10 +90,10 @@ static NSString * const kFKRSearchBarTableViewControllerDefaultTableViewCellIden
     
 }
 
-- (void)scrollTableViewToSearchBarAnimated:(BOOL)animated
-{
-    [self.tableView scrollRectToVisible:self.searchBar.frame animated:animated];
-}
+//- (void)scrollTableViewToSearchBarAnimated:(BOOL)animated
+//{
+//    [self.tableView scrollRectToVisible:self.searchBar.frame animated:animated];
+//}
 
 #pragma mark - 获取城市数据
 -(void)getCityData

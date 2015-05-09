@@ -74,7 +74,7 @@
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:self.button] ;
     self.navigationItem.leftBarButtonItem = leftItem;
     
-    self.automaticallyAdjustsScrollViewInsets = YES;
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -285,7 +285,7 @@
     maskLayerAnimation.delegate = self;
     [maskLayer addAnimation:maskLayerAnimation forKey:@"path"];
 
-
+    toViewController.view.frame = [[UIScreen mainScreen] bounds]; 
 }
 
 -(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
